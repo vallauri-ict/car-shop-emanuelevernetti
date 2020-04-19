@@ -1,0 +1,259 @@
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe.config
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.pdb
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.dll
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.pdb
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csprojAssemblyReference.cache
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormMain.resources
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.Properties.Resources.resources
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.GenerateResource.cache
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CopyComplete
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.exe
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.pdb
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe.config
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.pdb
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.dll
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.pdb
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csprojAssemblyReference.cache
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormMain.resources
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.Properties.Resources.resources
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.GenerateResource.cache
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CopyComplete
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.exe
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.pdb
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDialogAggiungiVeicolo.resources
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe.config
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.pdb
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.dll
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.pdb
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csprojAssemblyReference.cache
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDialogAggiungiVeicolo.resources
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormMain.resources
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.Properties.Resources.resources
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.GenerateResource.cache
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CopyComplete
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.exe
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.pdb
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\Newtonsoft.Json.xml
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index-skeleton.html
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.html
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.js
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe.config
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.pdb
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\Newtonsoft.Json.dll
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.dll
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.pdb
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\Newtonsoft.Json.xml
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csprojAssemblyReference.cache
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDialogAggiungiVeicolo.resources
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormMain.resources
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.Properties.Resources.resources
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.GenerateResource.cache
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CopyComplete
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.exe
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.pdb
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index-skeleton.html
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.html
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.js
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe.config
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.pdb
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.dll
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.pdb
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csprojAssemblyReference.cache
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDialogAggiungiVeicolo.resources
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormMain.resources
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.Properties.Resources.resources
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.GenerateResource.cache
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CopyComplete
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.exe
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.pdb
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.css
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index-skeleton.html
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.css
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.html
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.js
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDialogAggiungiVeicolo.resources
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index-skeleton.html
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.html
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.js
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.css
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe.config
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.pdb
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.dll
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.pdb
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\Newtonsoft.Json.xml
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csprojAssemblyReference.cache
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDialogAggiungiVeicolo.resources
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormMain.resources
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.Properties.Resources.resources
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.GenerateResource.cache
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CopyComplete
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.exe
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.pdb
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index-skeleton.html
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.css
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.html
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.js
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe.config
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.pdb
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.dll
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.pdb
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\Newtonsoft.Json.xml
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csprojAssemblyReference.cache
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDialogAggiungiVeicolo.resources
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormMain.resources
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.Properties.Resources.resources
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.GenerateResource.cache
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CopyComplete
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.exe
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.pdb
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\jquery.js
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.css
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\jquery.js
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index-skeleton.html
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.css
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.html
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.js
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\jquery.js
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormVisualizzazioneVolantino.resources
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDettagliVeicolo.resources
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\jquery.js
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDettagliVeicolo.resources
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormVisualizzazioneVolantino.resources
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\bin\Debug\veicoli.dat
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\bin\Debug\veicoli.dat
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\jquery.js
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\bin\Debug\veicoli.dat
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDettagliVeicolo.resources
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormVisualizzazioneVolantino.resources
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index-skeleton.html
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.css
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.html
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.js
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\jquery.js
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\bin\Debug\veicoli.dat
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe.config
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.pdb
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.dll
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.pdb
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\Newtonsoft.Json.xml
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csprojAssemblyReference.cache
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDettagliVeicolo.resources
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDialogAggiungiVeicolo.resources
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormMain.resources
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormVisualizzazioneVolantino.resources
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.Properties.Resources.resources
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.GenerateResource.cache
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CopyComplete
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.exe
+E:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.pdb
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index-skeleton.html
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.css
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.html
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.js
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\jquery.js
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\bin\Debug\veicoli.dat
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe.config
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.pdb
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.dll
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.pdb
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\Newtonsoft.Json.xml
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csprojAssemblyReference.cache
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDettagliVeicolo.resources
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDialogAggiungiVeicolo.resources
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormMain.resources
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormVisualizzazioneVolantino.resources
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.Properties.Resources.resources
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.GenerateResource.cache
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CopyComplete
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.exe
+D:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.pdb
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index-skeleton.html
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.css
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.html
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\index.js
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\jquery.js
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\bin\Debug\veicoli.dat
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe.config
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.pdb
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.dll
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.pdb
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\Newtonsoft.Json.xml
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csprojAssemblyReference.cache
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDettagliVeicolo.resources
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDialogAggiungiVeicolo.resources
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormMain.resources
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormVisualizzazioneVolantino.resources
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.Properties.Resources.resources
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.GenerateResource.cache
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CopyComplete
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.exe
+F:\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.pdb
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\www\jquery.js
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\bin\Debug\veicoli.dat
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormAdminEdit.resources
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDettagliVeicolo.resources
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormVisualizzazioneVolantino.resources
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormAdminEdit.resources
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\bin\Debug\bin\Debug\veicoli.dat
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormAdminEdit.resources
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDettagliVeicolo.resources
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormVisualizzazioneVolantino.resources
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CoreCompileInputs.cache
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\bin\Debug\www\index-skeleton.html
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\bin\Debug\www\index.css
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\bin\Debug\www\index.html
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\bin\Debug\www\index.js
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\bin\Debug\www\jquery.js
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\bin\Debug\bin\Debug\veicoli.dat
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe.config
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.pdb
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.dll
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.pdb
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csprojAssemblyReference.cache
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDettagliVeicolo.resources
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDialogAggiungiVeicolo.resources
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormMain.resources
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormVisualizzazioneVolantino.resources
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.Properties.Resources.resources
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.GenerateResource.cache
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CoreCompileInputs.cache
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CopyComplete
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.exe
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.pdb
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\bin\Debug\www\index-skeleton.html
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\bin\Debug\www\index.css
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\bin\Debug\www\index.html
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\bin\Debug\www\index.js
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\bin\Debug\www\jquery.js
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\bin\Debug\bin\Debug\veicoli.dat
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe.config
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.exe
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\bin\Debug\WindowsFormsAppProject.pdb
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.dll
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.pdb
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csprojAssemblyReference.cache
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDettagliVeicolo.resources
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDialogAggiungiVeicolo.resources
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormMain.resources
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormVisualizzazioneVolantino.resources
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.Properties.Resources.resources
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.GenerateResource.cache
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CoreCompileInputs.cache
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CopyComplete
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.exe
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.pdb

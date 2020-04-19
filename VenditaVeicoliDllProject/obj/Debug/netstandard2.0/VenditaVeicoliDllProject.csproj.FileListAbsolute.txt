@@ -1,0 +1,99 @@
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.deps.json
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csprojAssemblyReference.cache
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfoInputs.cache
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+C:\Users\emanu\Desktop\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.deps.json
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfoInputs.cache
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+E:\Vallauri\4B INF\INFORMATICA\C#\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csprojAssemblyReference.cache
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.deps.json
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csprojAssemblyReference.cache
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfoInputs.cache
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.deps.json
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csprojAssemblyReference.cache
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfoInputs.cache
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+E:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.deps.json
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csprojAssemblyReference.cache
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfoInputs.cache
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+C:\Users\emanu\Desktop\C#\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.deps.json
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csprojAssemblyReference.cache
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfoInputs.cache
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+I:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.deps.json
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csprojAssemblyReference.cache
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfoInputs.cache
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+G:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+E:\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.deps.json
+E:\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+E:\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+E:\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csprojAssemblyReference.cache
+E:\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfoInputs.cache
+E:\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
+E:\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+E:\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+D:\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.deps.json
+D:\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+D:\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+D:\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csprojAssemblyReference.cache
+D:\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfoInputs.cache
+D:\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
+D:\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+D:\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+F:\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.deps.json
+F:\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+F:\VenditaVeicoliSolution\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+F:\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csprojAssemblyReference.cache
+F:\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfoInputs.cache
+F:\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
+F:\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+F:\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+F:\Vallauri\4B INF\INFORMATICA\C#\Progetti Laboratorio\VenditaVeicoliSolution\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csproj.CoreCompileInputs.cache
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.deps.json
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csprojAssemblyReference.cache
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csproj.CoreCompileInputs.cache
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfoInputs.cache
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+C:\Users\emanu\Desktop\VenditaVeicoliSolutionDatabase\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.deps.json
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csprojAssemblyReference.cache
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csproj.CoreCompileInputs.cache
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfoInputs.cache
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
