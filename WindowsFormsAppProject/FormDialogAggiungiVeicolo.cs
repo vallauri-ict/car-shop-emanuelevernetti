@@ -99,14 +99,6 @@ namespace WindowsFormsAppProject
                 }
                 try
                 {
-                    double pot = Convert.ToDouble(txtPotenzakW.Text);
-                }
-                catch (Exception)
-                {
-                    s += "\npotenzakW";
-                }
-                try
-                {
                     int kmp = Convert.ToInt32(nudKmPercorsi.Value);
                 }
                 catch (Exception)
@@ -136,7 +128,7 @@ namespace WindowsFormsAppProject
                 if (s != "")
                 {
                     MessageBox.Show("Inserire i dati correttamente." +
-                        "\nI dati da correggere sono: " + s);
+                        "\nI dati da correggere sono:\n" + s);
                 }
                 else if (cmbTipoVeicolo.SelectedIndex == 0)
                 {
@@ -145,7 +137,7 @@ namespace WindowsFormsAppProject
                     clsMetodi.caricaDgv(bindingListVeicoli, ((DataGridView)formMain.Controls["dgvVeicoli"]));
                     clsMetodi.checkMarca(txtMarca.Text);
                     clsMetodi.checkColore(cmbColore.Text);
-                    File.Copy(f, "img/img" + pos + ".jpg", true);
+                    File.Copy(f, "img/" + f, true);
                     formMain.salva();
 
                     //Aggiunta al DB
@@ -191,7 +183,7 @@ namespace WindowsFormsAppProject
                     clsMetodi.caricaDgv(bindingListVeicoli, ((DataGridView)formMain.Controls["dgvVeicoli"]));
                     clsMetodi.checkMarca(txtMarca.Text);
                     clsMetodi.checkColore(cmbColore.Text);
-                    File.Copy(f, "img/img" + pos + ".jpg", true);
+                    File.Copy(f, "img/" + f, true);
                     formMain.salva();
 
                     //Aggiunta al DB
@@ -308,6 +300,10 @@ namespace WindowsFormsAppProject
             {
                 filePicked = true;
                 path = "img/img" + pos + ".jpg";
+            }
+            else
+            {
+                filePicked = false;
             }
         }
     }

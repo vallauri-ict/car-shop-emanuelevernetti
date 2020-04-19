@@ -1,18 +1,5 @@
 [
   {
-    "NumAirbag": 1,
-    "Marca": "FIAT",
-    "Modello": "Punto",
-    "Colore": "Bianco",
-    "Cilindrata": 500,
-    "PotenzaKw": 90.0,
-    "Immatricolazione": "2020-01-29T00:00:00",
-    "IsUsato": false,
-    "IsKmZero": true,
-    "KmPercorsi": 0,
-    "Path": "img/img1.jpg"
-  },
-  {
     "MarcaSella": "1",
     "Marca": "MARCA1",
     "Modello": "modello1",
@@ -23,6 +10,19 @@
     "IsUsato": false,
     "IsKmZero": true,
     "KmPercorsi": 0,
-    "Path": "img/img2.jpg"
+    "Path": "img/img0.jpg"
+  },
+  {
+    "NumAirbag": 1,
+    "Marca": "MARCA2",
+    "Modello": "modello2",
+    "Colore": "Bianco",
+    "Cilindrata": 500,
+    "PotenzaKw": 100.0,
+    "Immatricolazione": "2020-04-19T00:00:00",
+    "IsUsato": false,
+    "IsKmZero": true,
+    "KmPercorsi": 0,
+    "Path": "img/img1.jpg"
   }
 ]

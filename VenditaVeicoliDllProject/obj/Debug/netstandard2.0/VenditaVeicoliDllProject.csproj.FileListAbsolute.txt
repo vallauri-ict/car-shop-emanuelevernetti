@@ -97,3 +97,12 @@ C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\VenditaVeicoliDllProject\
 C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
 C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
 C:\Users\emanu\Documents\GitHub\VenditaVeicoliDatabase\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+E:\Documenti\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.deps.json
+E:\Documenti\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+E:\Documenti\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+E:\Documenti\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csprojAssemblyReference.cache
+E:\Documenti\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csproj.CoreCompileInputs.cache
+E:\Documenti\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfoInputs.cache
+E:\Documenti\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
+E:\Documenti\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+E:\Documenti\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb

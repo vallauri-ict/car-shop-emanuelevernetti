@@ -204,19 +204,6 @@ namespace WindowsFormsAppProject
             }
         }
 
-        /// <summary>
-        /// Carica dei dati di prova nella lista
-        /// </summary>
-        //private void caricaDatiDiTest()
-        //{
-        //    Moto m = new Moto();
-        //    bindingListVeicoli.Add(m);
-        //    Moto m = new Moto("Honda", "Tsunami", "Rosso", 1000, 120, DateTime.Now, false, false, 0, "Quintino");
-        //    bindingListVeicoli.Add(m);
-        //    Auto a = new Auto("AlfaRomeo", "Stelvio", "Rosso", 1000, 150, DateTime.Now, false, false, 0, 8);
-        //    bindingListVeicoli.Add(a);
-        //}
-
 
         /// <summary>
         /// Crea un'istanza di FormDialogAggiungiVeicolo, la mostra e poi controlla se il veicolo è stato aggiunto o meno, in modo che, sulla generazione del evento Closing
