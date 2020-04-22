@@ -1,19 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
-using System.Drawing.Printing;
-using System.Diagnostics;
 using System.Data.OleDb;
-
-using Microsoft.VisualBasic;
-
+using System.Diagnostics;
+using System.Drawing.Printing;
+using System.IO;
+using System.Windows.Forms;
 using VenditaVeicoliDllProject;
 
 namespace WindowsFormsAppProject
@@ -31,7 +22,7 @@ namespace WindowsFormsAppProject
         /// Costruttore della form che provvede a settare il DataGridView
         /// </summary>
         public FormMain()
-        {   
+        {
             InitializeComponent();
             bindingListVeicoli = new BindingList<Veicolo>();
             clsMetodi.settaDgv(dgvVeicoli);
@@ -173,7 +164,7 @@ namespace WindowsFormsAppProject
                 //    toolStripComboBoxFiltro.Items.AddRange(vet);
                 //    toolStripComboBoxFiltro.SelectedIndex = 0;
                 //}
-                */ 
+                */
             #endregion
         }
 
@@ -182,9 +173,9 @@ namespace WindowsFormsAppProject
         /// </summary>
         private void DgvVeicoli_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex==10)
+            if (e.ColumnIndex == 10)
             {
-                DialogResult dg= MessageBox.Show("Si è sicuri di voler eliminare il veicolo? (questa operazione non può essere annullata)", "Cancellazione veicolo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dg = MessageBox.Show("Si è sicuri di voler eliminare il veicolo? (questa operazione non può essere annullata)", "Cancellazione veicolo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dg == DialogResult.Yes)
                 {
                     int pos = e.RowIndex;
@@ -213,7 +204,7 @@ namespace WindowsFormsAppProject
         private void nuovoToolStripButton_Click(object sender, EventArgs e)
         {
             int prevCount = bindingListVeicoli.Count;
-            FormDialogAggiungiVeicolo dialogAggiungi = new FormDialogAggiungiVeicolo(bindingListVeicoli,this);
+            FormDialogAggiungiVeicolo dialogAggiungi = new FormDialogAggiungiVeicolo(bindingListVeicoli, this);
             dialogAggiungi.ShowDialog();
         }
 
@@ -265,7 +256,7 @@ namespace WindowsFormsAppProject
 
         public void salva()
         {
-            using (StreamWriter sw = new StreamWriter("veicoli.dat", false)) 
+            using (StreamWriter sw = new StreamWriter("veicoli.dat", false))
             {
                 string s = null;
                 for (int i = 0; i < bindingListVeicoli.Count; i++)
@@ -336,12 +327,12 @@ namespace WindowsFormsAppProject
         {
             if (docModified)
             {
-                DialogResult dg=MessageBox.Show("Sono state apportate delle modifiche, si desidera salvarle?", "Attenzione", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
-                if (dg==DialogResult.Yes)
+                DialogResult dg = MessageBox.Show("Sono state apportate delle modifiche, si desidera salvarle?", "Attenzione", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                if (dg == DialogResult.Yes)
                 {
                     salva();
                 }
-                else if(dg==DialogResult.No)
+                else if (dg == DialogResult.No)
                 {
                     MessageBox.Show("Le modifiche non sono state salvate.", "Uscita");
                 }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace VenditaVeicoliDllProject
@@ -37,7 +35,7 @@ namespace VenditaVeicoliDllProject
             this.IsKmZero = isKmZero;
             this.KmPercorsi = kmPercorsi;
             this.Path = path;
-            
+
         }
 
         public string Marca { get => marca.ToUpper(); set => marca = value; }

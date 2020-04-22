@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using VenditaVeicoliDllProject;
 
@@ -189,17 +187,17 @@ namespace WindowsFormsAppProject
         {
             int posmin;
             string aus = "";
-            for (int i = 0; i <= (lista.Count-2); i++)
+            for (int i = 0; i <= (lista.Count - 2); i++)
             {
                 posmin = i;
-                for (int j = (i+1); j <=(lista.Count-1); j++)
+                for (int j = (i + 1); j <= (lista.Count - 1); j++)
                 {
-                    if (String.Compare(lista[posmin],lista[j])>0)
+                    if (String.Compare(lista[posmin], lista[j]) > 0)
                     {
                         posmin = j;
                     }
                 }
-                if (posmin!=i)
+                if (posmin != i)
                 {
                     aus = lista[i];
                     lista[i] = lista[posmin];
@@ -215,7 +213,7 @@ namespace WindowsFormsAppProject
         /// <param name="fil">Filtro</param>
         public static void ordinaListaVeicoli(BindingList<Veicolo> lista, string fil)
         {
-            if (lista.Count!=0)
+            if (lista.Count != 0)
             {
                 var type = lista.First().GetType().GetProperty(fil).PropertyType.Name;
                 if (type == "Int32")

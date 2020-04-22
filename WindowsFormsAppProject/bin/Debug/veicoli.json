@@ -24,5 +24,44 @@
     "IsKmZero": true,
     "KmPercorsi": 0,
     "Path": "img/img1.jpg"
+  },
+  {
+    "NumAirbag": 1,
+    "Marca": "MARCA3",
+    "Modello": "modello3",
+    "Colore": "Bianco",
+    "Cilindrata": 500,
+    "PotenzaKw": 100.0,
+    "Immatricolazione": "2020-04-20T00:00:00",
+    "IsUsato": false,
+    "IsKmZero": true,
+    "KmPercorsi": 0,
+    "Path": "img/img2.jpg"
+  },
+  {
+    "NumAirbag": 1,
+    "Marca": "MARCA4",
+    "Modello": "modello4",
+    "Colore": "Bianco",
+    "Cilindrata": 500,
+    "PotenzaKw": 100.0,
+    "Immatricolazione": "2020-04-20T00:00:00",
+    "IsUsato": false,
+    "IsKmZero": true,
+    "KmPercorsi": 0,
+    "Path": "img/img3.jpg"
+  },
+  {
+    "MarcaSella": "sella1",
+    "Marca": "MARCA5",
+    "Modello": "modello5",
+    "Colore": "Bianco",
+    "Cilindrata": 500,
+    "PotenzaKw": 100.0,
+    "Immatricolazione": "2020-04-21T22:45:34.1130395+02:00",
+    "IsUsato": false,
+    "IsKmZero": true,
+    "KmPercorsi": 0,
+    "Path": "C:\\Users\\emanu\\Desktop\\imgMotoTest.jpg"
   }
 ]

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using VenditaVeicoliDllProject;
 
@@ -35,7 +29,7 @@ namespace WindowsFormsAppProject
         /// <param name="e"></param>
         private void FormDettagliVeicolo_Load(object sender, EventArgs e)
         {
-            foreach  (var control in gpbAuto.Controls)
+            foreach (var control in gpbAuto.Controls)
             {
                 if (control is TextBox)
                 {

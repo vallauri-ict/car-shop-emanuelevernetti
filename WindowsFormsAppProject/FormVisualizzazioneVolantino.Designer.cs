@@ -80,7 +80,7 @@
             // colPicture
             // 
             this.colPicture.HeaderText = "Immagine";
-            this.colPicture.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.colPicture.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.colPicture.Name = "colPicture";
             // 
             // FormVisualizzazioneVolantino

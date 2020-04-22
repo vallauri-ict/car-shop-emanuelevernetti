@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
 using System.Data.OleDb;
-
+using System.IO;
+using System.Windows.Forms;
 using VenditaVeicoliDllProject;
 
 namespace WindowsFormsAppProject
@@ -24,7 +17,7 @@ namespace WindowsFormsAppProject
         string f = "";
         int pos = Int32.MinValue;
         OleDbConnection connection;
-        
+
         /// <summary>
         /// Costruttore della form
         /// </summary>
@@ -137,7 +130,7 @@ namespace WindowsFormsAppProject
                     clsMetodi.caricaDgv(bindingListVeicoli, ((DataGridView)formMain.Controls["dgvVeicoli"]));
                     clsMetodi.checkMarca(txtMarca.Text);
                     clsMetodi.checkColore(cmbColore.Text);
-                    File.Copy(f, "img/" + f, true);
+                    File.Copy(f, "img/" + Path.GetFileName(f));
                     formMain.salva();
 
                     //Aggiunta al DB
@@ -170,7 +163,7 @@ namespace WindowsFormsAppProject
                         command.Parameters.Add("@kmpercorsi", OleDbType.Integer).Value = Convert.ToInt32(nudKmPercorsi.Value);
                         command.Parameters.Add("@informazioni", OleDbType.VarChar, 255).Value = nudNumeroAirbag.Value.ToString();
                         command.Parameters.Add("@immagine", OleDbType.VarChar, 255).Value = path;
-                        
+
                         command.Prepare();
 
                         command.ExecuteNonQuery();
@@ -183,7 +176,12 @@ namespace WindowsFormsAppProject
                     clsMetodi.caricaDgv(bindingListVeicoli, ((DataGridView)formMain.Controls["dgvVeicoli"]));
                     clsMetodi.checkMarca(txtMarca.Text);
                     clsMetodi.checkColore(cmbColore.Text);
-                    File.Copy(f, "img/" + f, true);
+
+                    var fileName = "sourceFile.txt";
+                    var destinationFolder = Environment.CurrentDirectory + "\\img"; //directory delle immagini
+                    var destination = Path.Combine(destinationFolder, fileName);
+
+                    File.Copy(f, "img/" + Path.GetFileName(f));
                     formMain.salva();
 
                     //Aggiunta al DB
@@ -193,21 +191,21 @@ namespace WindowsFormsAppProject
                         connection.Open();
                         command.Connection = connection;
 
-                        command.CommandText= "INSERT INTO Veicoli (Tipologia, Marca, Modello, Colore, Cilindrata, PotenzaKw, Immatricolazione, IsUsato, IsKmZero, KmPercorsi, Informazioni, Immagine) VALUES" +
+                        command.CommandText = "INSERT INTO Veicoli (Tipologia, Marca, Modello, Colore, Cilindrata, PotenzaKw, Immatricolazione, IsUsato, IsKmZero, KmPercorsi, Informazioni, Immagine) VALUES" +
                             "(@tipologia, @marca, @modello, @colore, @cilindrata, @potenzakw, @immatricolazione, @isusato, @iskmzero, @iskmpercorsi, @informazioni, @immagine)";
 
                         command.Parameters.Add(new OleDbParameter("@tipologia", OleDbType.VarChar, 255)).Value = cmbTipoVeicolo.Text;
-                        command.Parameters.Add("@marca", OleDbType.VarChar).Value = txtMarca.Text;
-                        command.Parameters.Add("@modello", OleDbType.VarChar).Value = txtModello.Text;
-                        command.Parameters.Add("@colore", OleDbType.VarChar).Value = cmbColore.Text;
+                        command.Parameters.Add("@marca", OleDbType.VarChar, 255).Value = txtMarca.Text;
+                        command.Parameters.Add("@modello", OleDbType.VarChar, 255).Value = txtModello.Text;
+                        command.Parameters.Add("@colore", OleDbType.VarChar, 255).Value = cmbColore.Text;
                         command.Parameters.Add("@cilindrata", OleDbType.Integer).Value = Convert.ToInt32(nudCilindrata.Value);
                         command.Parameters.Add("@potenzakw", OleDbType.Integer).Value = Convert.ToInt32(txtPotenzakW.Text);
                         command.Parameters.Add("@immatricolazione", OleDbType.Date).Value = Convert.ToDateTime(dtpImmatricolazione.Value.ToShortDateString());
                         command.Parameters.Add("@isusato", OleDbType.Boolean).Value = usato;
                         command.Parameters.Add("@iskmzero", OleDbType.Boolean).Value = kmZero;
                         command.Parameters.Add("@kmpercorsi", OleDbType.Integer).Value = Convert.ToInt32(nudKmPercorsi.Value);
-                        command.Parameters.Add("@informazioni", OleDbType.VarChar).Value = txtSella.Text;
-                        command.Parameters.Add("@immagine", OleDbType.VarChar).Value = path;
+                        command.Parameters.Add("@informazioni", OleDbType.VarChar, 255).Value = txtSella.Text;
+                        command.Parameters.Add("@immagine", OleDbType.VarChar, 255).Value = path;
 
                         command.Prepare();
 
@@ -293,13 +291,13 @@ namespace WindowsFormsAppProject
         /// <param name="e"></param>
         private void btnScegliFile_Click(object sender, EventArgs e)
         {
-            pos = bindingListVeicoli.Count+1;
+            pos = bindingListVeicoli.Count + 1;
             openFileDialog.ShowDialog();
             f = openFileDialog.FileName;
             if ((f != "openFileDialog1") && (f != ""))
             {
                 filePicked = true;
-                path = "img/img" + pos + ".jpg";
+                path = f;
             }
             else
             {
