@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Documenti\\GitHub\\car-shop-emanuelevernetti\\VenditaVeicoliDllProject\\VenditaVeicoliDllProject.csproj": {}
+    "C:\\Users\\emanu\\Documents\\GitHub\\car-shop-emanuelevernetti\\VenditaVeicoliDllProject\\VenditaVeicoliDllProject.csproj": {}
   },
   "projects": {
-    "E:\\Documenti\\GitHub\\car-shop-emanuelevernetti\\VenditaVeicoliDllProject\\VenditaVeicoliDllProject.csproj": {
+    "C:\\Users\\emanu\\Documents\\GitHub\\car-shop-emanuelevernetti\\VenditaVeicoliDllProject\\VenditaVeicoliDllProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Documenti\\GitHub\\car-shop-emanuelevernetti\\VenditaVeicoliDllProject\\VenditaVeicoliDllProject.csproj",
+        "projectUniqueName": "C:\\Users\\emanu\\Documents\\GitHub\\car-shop-emanuelevernetti\\VenditaVeicoliDllProject\\VenditaVeicoliDllProject.csproj",
         "projectName": "VenditaVeicoliDllProject",
-        "projectPath": "E:\\Documenti\\GitHub\\car-shop-emanuelevernetti\\VenditaVeicoliDllProject\\VenditaVeicoliDllProject.csproj",
+        "projectPath": "C:\\Users\\emanu\\Documents\\GitHub\\car-shop-emanuelevernetti\\VenditaVeicoliDllProject\\VenditaVeicoliDllProject.csproj",
         "packagesPath": "C:\\Users\\emanu\\.nuget\\packages\\",
-        "outputPath": "E:\\Documenti\\GitHub\\car-shop-emanuelevernetti\\VenditaVeicoliDllProject\\obj\\",
+        "outputPath": "C:\\Users\\emanu\\Documents\\GitHub\\car-shop-emanuelevernetti\\VenditaVeicoliDllProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\emanu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,7 +59,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
