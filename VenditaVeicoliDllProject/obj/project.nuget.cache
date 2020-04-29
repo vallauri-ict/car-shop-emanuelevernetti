@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sWPlPUEIENWgVBPQztJSsJVCu+LntawFB9otkPP0J3XJ4QRJL0kdDaD6PdtrYb56KoGMBsKIBFGRh/lxC7gwZw==",
+  "dgSpecHash": "jrJfjADtSho0OXVZJAA+r8wdytM0nSd50tA/24aFD+Cx4VlkE+LXpbeYlnLI7g6iGbhY49VHVZrIepChNmRFpA==",
   "success": true,
-  "projectFilePath": "E:\\Documenti\\GitHub\\car-shop-emanuelevernetti\\VenditaVeicoliDllProject\\VenditaVeicoliDllProject.csproj",
+  "projectFilePath": "C:\\Users\\emanu\\Documents\\GitHub\\car-shop-emanuelevernetti\\VenditaVeicoliDllProject\\VenditaVeicoliDllProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\emanu\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\emanu\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
