@@ -26,7 +26,8 @@ namespace WindowsFormsAppProject
             InitializeComponent();
             bindingListVeicoli = new BindingList<Veicolo>();
             clsMetodi.settaDgv(dgvVeicoli);
-            connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Veicoli.accdb";
+            string path = Directory.GetParent(Application.StartupPath).Parent.Parent.FullName + "\\Utilities\\Veicoli.accdb";
+            connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path;
             connection = new OleDbConnection(connStr);
         }
 
@@ -43,48 +44,54 @@ namespace WindowsFormsAppProject
                 {
                     OleDbCommand command = new OleDbCommand("SELECT * FROM Veicoli", connection);
                     connection.Open();
-
-                    OleDbDataReader reader = command.ExecuteReader();
-
-                    if (reader.HasRows)
+                    try
                     {
-                        while (reader.Read()) //restituisce true finchè ci sono ancora delle righe
+                        OleDbDataReader reader = command.ExecuteReader();
+
+                        if (reader.HasRows)
                         {
-                            Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}",
-                                reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5),
-                                reader.GetInt32(6), reader.GetDateTime(7), reader.GetBoolean(8), reader.GetBoolean(9), reader.GetInt32(10),
-                                reader.GetString(11), reader.GetString(12));
-
-                            if (reader.GetString(1) == "MOTO")
+                            while (reader.Read()) //restituisce true finchè ci sono ancora delle righe
                             {
-                                Moto m = new Moto(reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), Convert.ToDouble(reader.GetInt32(6)), reader.GetDateTime(7),
-                                    reader.GetBoolean(8), reader.GetBoolean(9), reader.GetInt32(10), reader.GetString(11), reader.GetString(12));
-                                bindingListVeicoli.Add(m);
+                                Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}",
+                                    reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5),
+                                    reader.GetInt32(6), reader.GetDateTime(7), reader.GetBoolean(8), reader.GetBoolean(9), reader.GetInt32(10),
+                                    reader.GetString(11), reader.GetString(12));
 
-                                clsMetodi.checkMarca(reader.GetString(2));
-                                clsMetodi.checkColore(reader.GetString(4));
-                            }
-                            else
-                            {
-                                Auto a = new Auto(reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), Convert.ToDouble(reader.GetInt32(6)), reader.GetDateTime(7),
-                                    reader.GetBoolean(8), reader.GetBoolean(9), reader.GetInt32(10), Convert.ToInt32(reader.GetString(11)), reader.GetString(12));
-                                bindingListVeicoli.Add(a);
+                                if (reader.GetString(1) == "MOTO")
+                                {
+                                    Moto m = new Moto(reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), Convert.ToDouble(reader.GetInt32(6)), reader.GetDateTime(7),
+                                        reader.GetBoolean(8), reader.GetBoolean(9), reader.GetInt32(10), reader.GetString(11), reader.GetString(12));
+                                    bindingListVeicoli.Add(m);
 
-                                clsMetodi.checkMarca(reader.GetString(2));
-                                clsMetodi.checkColore(reader.GetString(4));
+                                    clsMetodi.checkMarca(reader.GetString(2));
+                                    clsMetodi.checkColore(reader.GetString(4));
+                                }
+                                else
+                                {
+                                    Auto a = new Auto(reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), Convert.ToDouble(reader.GetInt32(6)), reader.GetDateTime(7),
+                                        reader.GetBoolean(8), reader.GetBoolean(9), reader.GetInt32(10), Convert.ToInt32(reader.GetString(11)), reader.GetString(12));
+                                    bindingListVeicoli.Add(a);
+
+                                    clsMetodi.checkMarca(reader.GetString(2));
+                                    clsMetodi.checkColore(reader.GetString(4));
+                                }
                             }
                         }
+                        else
+                        {
+                            Console.WriteLine("No rows found");
+                        }
+                        clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "Marca");
+                        clsMetodi.caricaDgv(bindingListVeicoli, dgvVeicoli);
+                        dgvVeicoli.CellClick += DgvVeicoli_CellClick;
+                        object[] vet = { "Marca", "Modello", "Colore", "Cilindrata", "PotenzaKw", "Immatricolazione", "IsUsato", "IsKmZero", "KmPercorsi" };
+                        toolStripComboBoxFiltro.Items.AddRange(vet);
+                        toolStripComboBoxFiltro.SelectedIndex = 0;
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        Console.WriteLine("No rows found");
+                        MessageBox.Show(ex.Message);
                     }
-                    clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "Marca");
-                    clsMetodi.caricaDgv(bindingListVeicoli, dgvVeicoli);
-                    dgvVeicoli.CellClick += DgvVeicoli_CellClick;
-                    object[] vet = { "Marca", "Modello", "Colore", "Cilindrata", "PotenzaKw", "Immatricolazione", "IsUsato", "IsKmZero", "KmPercorsi" };
-                    toolStripComboBoxFiltro.Items.AddRange(vet);
-                    toolStripComboBoxFiltro.SelectedIndex = 0;
                 }
             }
             else

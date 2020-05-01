@@ -1,0 +1,7 @@
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\bin\Debug\ConsoleAppProject.exe.config
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\bin\Debug\ConsoleAppProject.exe
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\bin\Debug\ConsoleAppProject.pdb
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\obj\Debug\ConsoleAppProject.csprojAssemblyReference.cache
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\obj\Debug\ConsoleAppProject.csproj.CoreCompileInputs.cache
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\obj\Debug\ConsoleAppProject.exe
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\obj\Debug\ConsoleAppProject.pdb
