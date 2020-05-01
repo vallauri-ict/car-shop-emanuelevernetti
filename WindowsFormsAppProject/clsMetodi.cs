@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
+
 using VenditaVeicoliDllProject;
 
 namespace WindowsFormsAppProject
@@ -142,7 +143,7 @@ namespace WindowsFormsAppProject
             dgv.DataSource = lista;
             for (int i = 0; i < lista.Count; i++)
             {
-                dgv.Rows[i].Cells[10].Value = "ELIMINA";
+                //dgv.Rows[i].Cells[10].Value = "ELIMINA";
                 if (lista[i] is Auto)
                 {
                     dgv.Rows[i].HeaderCell.Value = "AUTO";

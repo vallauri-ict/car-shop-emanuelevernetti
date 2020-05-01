@@ -106,3 +106,12 @@ E:\Documenti\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\obj\Debug
 E:\Documenti\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
 E:\Documenti\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
 E:\Documenti\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+C:\Users\emanu\Downloads\car-shop-emanuelevernetti-master\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.deps.json
+C:\Users\emanu\Downloads\car-shop-emanuelevernetti-master\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+C:\Users\emanu\Downloads\car-shop-emanuelevernetti-master\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+C:\Users\emanu\Downloads\car-shop-emanuelevernetti-master\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csprojAssemblyReference.cache
+C:\Users\emanu\Downloads\car-shop-emanuelevernetti-master\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csproj.CoreCompileInputs.cache
+C:\Users\emanu\Downloads\car-shop-emanuelevernetti-master\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfoInputs.cache
+C:\Users\emanu\Downloads\car-shop-emanuelevernetti-master\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
+C:\Users\emanu\Downloads\car-shop-emanuelevernetti-master\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
+C:\Users\emanu\Downloads\car-shop-emanuelevernetti-master\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
