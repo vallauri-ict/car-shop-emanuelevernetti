@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Data.OleDb;
 using System.IO;
 using System.Windows.Forms;
+
 using VenditaVeicoliDllProject;
 
 namespace WindowsFormsAppProject
@@ -18,11 +19,6 @@ namespace WindowsFormsAppProject
         int pos = Int32.MinValue;
         OleDbConnection connection;
 
-        /// <summary>
-        /// Costruttore della form
-        /// </summary>
-        /// <param name="list">Lista contenente i veicoli</param>
-        /// <param name="f">FormMain (parametro necessario per accedere ai controlli della form principale)</param>
         public FormDialogAggiungiVeicolo(BindingList<Veicolo> list, FormMain f)
         {
             InitializeComponent();
@@ -32,21 +28,11 @@ namespace WindowsFormsAppProject
             connection = new OleDbConnection(connStr);
         }
 
-        /// <summary>
-        /// Chiude la FormDialogAggiungiVeicolo
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void btnAnnulla_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        /// <summary>
-        /// Effettua dei controlli sulla correttezza dei dati nel caso in cui non ci siano errori, provvede ad aggiungere il veicolo alla lista 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void btnAggiungi_Click(object sender, EventArgs e)
         {
             string s = "";
@@ -220,22 +206,12 @@ namespace WindowsFormsAppProject
             }
         }
 
-        /// <summary>
-        /// Imposta i valori delle due ComboBox
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void FormDialogAggiungiVeicolo_Load(object sender, EventArgs e)
         {
             cmbTipoVeicolo.SelectedIndex = 0;
             cmbColore.SelectedIndex = 0;
         }
 
-        /// <summary>
-        /// Visualizza il GroupBox relativo al tipo di veicolo selezionato e nasconde l'altro
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void cmbTipoVeicolo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbTipoVeicolo.SelectedIndex == 0)
@@ -250,11 +226,6 @@ namespace WindowsFormsAppProject
             }
         }
 
-        /// <summary>
-        /// A seconda del fatto che il checkbox sia selezionato o meno, imposta di conseguenza il NumericUpDown
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void rdbKmZeroSì_CheckedChanged(object sender, EventArgs e)
         {
             if (rdbKmZeroSì.Checked)
@@ -267,11 +238,6 @@ namespace WindowsFormsAppProject
             }
         }
 
-        /// <summary>
-        /// A seconda del fatto che il checkbox sia selezionato o meno, imposta di conseguenza il NumericUpDown
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void rdbUsatoSì_CheckedChanged(object sender, EventArgs e)
         {
             if (rdbUsatoSì.Checked)
@@ -284,11 +250,6 @@ namespace WindowsFormsAppProject
             }
         }
 
-        /// <summary>
-        /// Attraverso il controllo OpenFileDialog consente all'utente di selezionare il file contenente l'immagine da associare al veicolo
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void btnScegliFile_Click(object sender, EventArgs e)
         {
             pos = bindingListVeicoli.Count + 1;

@@ -10,10 +10,6 @@ namespace WindowsFormsAppProject
 {
     public class clsMetodi
     {
-        /// <summary>
-        /// Controlla se il colore è già contenuto nella listaColori e in caso negativo lo aggiunge
-        /// </summary>
-        /// <param name="color">Colore</param>
         public static void checkColore(string color)
         {
             bool ok = false;
@@ -143,7 +139,6 @@ namespace WindowsFormsAppProject
             dgv.DataSource = lista;
             for (int i = 0; i < lista.Count; i++)
             {
-                //dgv.Rows[i].Cells[10].Value = "ELIMINA";
                 if (lista[i] is Auto)
                 {
                     dgv.Rows[i].HeaderCell.Value = "AUTO";
@@ -159,10 +154,6 @@ namespace WindowsFormsAppProject
             dgv.AutoResizeRows();
         }
 
-        /// <summary>
-        /// Controlla se la marca è già contenuta nella listaColori e in caso negativo la aggiunge
-        /// </summary>
-        /// <param name="color">Colore</param>
         public static void checkMarca(string marca)
         {
             bool ok = false;
@@ -180,10 +171,6 @@ namespace WindowsFormsAppProject
             }
         }
 
-        /// <summary>
-        /// Ordinamento della lista passata come parametro
-        /// </summary>
-        /// <param name="lista"></param>
         public static void ordinaLista(List<string> lista)
         {
             int posmin;
@@ -207,11 +194,6 @@ namespace WindowsFormsAppProject
             }
         }
 
-        /// <summary>
-        /// Ordinamento della listaVeicoli, in base al tipo del secondo parametro
-        /// </summary>
-        /// <param name="lista">Lista contenente i veicoli</param>
-        /// <param name="fil">Filtro</param>
         public static void ordinaListaVeicoli(BindingList<Veicolo> lista, string fil)
         {
             if (lista.Count != 0)

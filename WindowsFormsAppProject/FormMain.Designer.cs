@@ -42,8 +42,6 @@
             this.toolStripComboBoxFiltro = new System.Windows.Forms.ToolStripComboBox();
             this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.dgvVeicoli = new System.Windows.Forms.DataGridView();
-            this.veicoloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coloreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +52,9 @@
             this.isKmZeroDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.kmPercorsiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.veicoloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnEliminaVeicolo = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeicoli)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource1)).BeginInit();
@@ -70,7 +71,8 @@
             this.toolStripButtonHtml,
             this.toolStripSeparator1,
             this.toolStripLabel1,
-            this.toolStripComboBoxFiltro});
+            this.toolStripComboBoxFiltro,
+            this.btnEliminaVeicolo});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(952, 25);
@@ -173,10 +175,6 @@
             this.dgvVeicoli.Size = new System.Drawing.Size(952, 362);
             this.dgvVeicoli.TabIndex = 2;
             // 
-            // veicoloBindingSource1
-            // 
-            this.veicoloBindingSource1.DataSource = typeof(VenditaVeicoliDllProject.Veicolo);
-            // 
             // marcaDataGridViewTextBoxColumn
             // 
             this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
@@ -257,6 +255,20 @@
             this.colInfo.ReadOnly = true;
             this.colInfo.ToolTipText = "Informazioni sul veicolo";
             // 
+            // veicoloBindingSource1
+            // 
+            this.veicoloBindingSource1.DataSource = typeof(VenditaVeicoliDllProject.Veicolo);
+            // 
+            // btnEliminaVeicolo
+            // 
+            this.btnEliminaVeicolo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnEliminaVeicolo.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminaVeicolo.Image")));
+            this.btnEliminaVeicolo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminaVeicolo.Name = "btnEliminaVeicolo";
+            this.btnEliminaVeicolo.Size = new System.Drawing.Size(91, 22);
+            this.btnEliminaVeicolo.Text = "Elimina veicolo";
+            this.btnEliminaVeicolo.Click += new System.EventHandler(this.btnEliminaVeicolo_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,6 +314,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn isKmZeroDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kmPercorsiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn colInfo;
+        private System.Windows.Forms.ToolStripButton btnEliminaVeicolo;
     }
 }
 

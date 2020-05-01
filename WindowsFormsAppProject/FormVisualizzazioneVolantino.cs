@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+
 using VenditaVeicoliDllProject;
 
 namespace WindowsFormsAppProject
@@ -11,11 +12,7 @@ namespace WindowsFormsAppProject
         public static Random rnd = new Random();
         FormMain f;
         BindingList<Veicolo> listVeicoli;
-        /// <summary>
-        /// Costruttore della form
-        /// </summary>
-        /// <param name="list">Lista contenente i veicoli</param>
-        /// <param name="f">FormMain (parametro necessario per accedere ai controlli della form principale)</param>
+
         public FormVisualizzazioneVolantino(BindingList<Veicolo> list, FormMain f)
         {
             this.f = f;
@@ -23,11 +20,6 @@ namespace WindowsFormsAppProject
             InitializeComponent();
         }
 
-        /// <summary>
-        /// Crea i controlli sulla form
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void FormVisualizzazioneVolantino_Load(object sender, EventArgs e)
         {
             toolStripComboBoxMarca.Items.Add("Tutti");
@@ -53,11 +45,6 @@ namespace WindowsFormsAppProject
             dgvPictures.AutoResizeRows();
         }
 
-        /// <summary>
-        /// Attraverso un'istanza di FormDettagliVeicolo, visualizza i dettagli relativi al veicolo selezionato
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void dgvPictures_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             FormDettagliVeicolo fd = new FormDettagliVeicolo(e.RowIndex, listVeicoli);

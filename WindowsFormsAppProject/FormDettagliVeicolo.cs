@@ -1,20 +1,16 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+
 using VenditaVeicoliDllProject;
 
 namespace WindowsFormsAppProject
 {
     public partial class FormDettagliVeicolo : Form
     {
-        int ind; //posizione del bottone cliccato e del corrispondente veicolo nella lista 
+        int ind;
         BindingList<Veicolo> lista;
 
-        /// <summary>
-        /// Costruttore della form
-        /// </summary>
-        /// <param name="pos">Indice del bottone che ha generato l'evento</param>
-        /// <param name="listVeicoli">Lista contenente i veicoli</param>
         public FormDettagliVeicolo(int pos, BindingList<Veicolo> listVeicoli)
         {
             InitializeComponent();
@@ -22,11 +18,6 @@ namespace WindowsFormsAppProject
             lista = listVeicoli;
         }
 
-        /// <summary>
-        /// Setta i vari campi della form per visualizzare i dettagli relativi al veicolo selezionato
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void FormDettagliVeicolo_Load(object sender, EventArgs e)
         {
             foreach (var control in gpbAuto.Controls)
@@ -57,9 +48,6 @@ namespace WindowsFormsAppProject
             }
         }
 
-        /// <summary>
-        /// Assegna i controlli 
-        /// </summary>
         private void assegnaControlliMoto()
         {
             txtMarcaMoto.Text = lista[ind].Marca;
@@ -99,9 +87,6 @@ namespace WindowsFormsAppProject
             gpbMoto.Select();
         }
 
-        /// <summary>
-        /// Assegna i controlli
-        /// </summary>
         private void assegnaControlliAuto()
         {
             txtMarcaAuto.Text = lista[ind].Marca;
