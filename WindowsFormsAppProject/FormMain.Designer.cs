@@ -42,6 +42,9 @@
             this.toolStripComboBoxFiltro = new System.Windows.Forms.ToolStripComboBox();
             this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.dgvVeicoli = new System.Windows.Forms.DataGridView();
+            this.veicoloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnEliminaVeicolo = new System.Windows.Forms.ToolStripButton();
             this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coloreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,9 +55,7 @@
             this.isKmZeroDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.kmPercorsiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.veicoloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnEliminaVeicolo = new System.Windows.Forms.ToolStripButton();
+            this.pathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeicoli)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource1)).BeginInit();
@@ -166,7 +167,8 @@
             this.isUsatoDataGridViewCheckBoxColumn,
             this.isKmZeroDataGridViewCheckBoxColumn,
             this.kmPercorsiDataGridViewTextBoxColumn,
-            this.colInfo});
+            this.colInfo,
+            this.pathDataGridViewTextBoxColumn});
             this.dgvVeicoli.DataSource = this.veicoloBindingSource1;
             this.dgvVeicoli.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVeicoli.Location = new System.Drawing.Point(0, 25);
@@ -174,86 +176,6 @@
             this.dgvVeicoli.RowHeadersWidth = 40;
             this.dgvVeicoli.Size = new System.Drawing.Size(952, 362);
             this.dgvVeicoli.TabIndex = 2;
-            // 
-            // marcaDataGridViewTextBoxColumn
-            // 
-            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
-            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
-            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
-            this.marcaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.marcaDataGridViewTextBoxColumn.ToolTipText = "Marca del veicolo";
-            // 
-            // modelloDataGridViewTextBoxColumn
-            // 
-            this.modelloDataGridViewTextBoxColumn.DataPropertyName = "Modello";
-            this.modelloDataGridViewTextBoxColumn.HeaderText = "Modello";
-            this.modelloDataGridViewTextBoxColumn.Name = "modelloDataGridViewTextBoxColumn";
-            this.modelloDataGridViewTextBoxColumn.ReadOnly = true;
-            this.modelloDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.modelloDataGridViewTextBoxColumn.ToolTipText = "Modello del veicolo";
-            // 
-            // coloreDataGridViewTextBoxColumn
-            // 
-            this.coloreDataGridViewTextBoxColumn.DataPropertyName = "Colore";
-            this.coloreDataGridViewTextBoxColumn.HeaderText = "Colore";
-            this.coloreDataGridViewTextBoxColumn.Name = "coloreDataGridViewTextBoxColumn";
-            this.coloreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.coloreDataGridViewTextBoxColumn.ToolTipText = "Colore del veicolo";
-            // 
-            // cilindrataDataGridViewTextBoxColumn
-            // 
-            this.cilindrataDataGridViewTextBoxColumn.DataPropertyName = "Cilindrata";
-            this.cilindrataDataGridViewTextBoxColumn.HeaderText = "Cilindrata";
-            this.cilindrataDataGridViewTextBoxColumn.Name = "cilindrataDataGridViewTextBoxColumn";
-            this.cilindrataDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cilindrataDataGridViewTextBoxColumn.ToolTipText = "Cilindrata del veicolo";
-            // 
-            // potenzaKwDataGridViewTextBoxColumn
-            // 
-            this.potenzaKwDataGridViewTextBoxColumn.DataPropertyName = "PotenzaKw";
-            this.potenzaKwDataGridViewTextBoxColumn.HeaderText = "PotenzaKw";
-            this.potenzaKwDataGridViewTextBoxColumn.Name = "potenzaKwDataGridViewTextBoxColumn";
-            this.potenzaKwDataGridViewTextBoxColumn.ReadOnly = true;
-            this.potenzaKwDataGridViewTextBoxColumn.ToolTipText = "Potenza del veicolo (Kw)";
-            // 
-            // immatricolazioneDataGridViewTextBoxColumn
-            // 
-            this.immatricolazioneDataGridViewTextBoxColumn.DataPropertyName = "Immatricolazione";
-            this.immatricolazioneDataGridViewTextBoxColumn.HeaderText = "Immatricolazione";
-            this.immatricolazioneDataGridViewTextBoxColumn.Name = "immatricolazioneDataGridViewTextBoxColumn";
-            this.immatricolazioneDataGridViewTextBoxColumn.ReadOnly = true;
-            this.immatricolazioneDataGridViewTextBoxColumn.ToolTipText = "Data di immatricolazione del veicolo";
-            // 
-            // isUsatoDataGridViewCheckBoxColumn
-            // 
-            this.isUsatoDataGridViewCheckBoxColumn.DataPropertyName = "IsUsato";
-            this.isUsatoDataGridViewCheckBoxColumn.HeaderText = "IsUsato";
-            this.isUsatoDataGridViewCheckBoxColumn.Name = "isUsatoDataGridViewCheckBoxColumn";
-            this.isUsatoDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.isUsatoDataGridViewCheckBoxColumn.ToolTipText = "Stato del veicolo (nuovo o usato)";
-            // 
-            // isKmZeroDataGridViewCheckBoxColumn
-            // 
-            this.isKmZeroDataGridViewCheckBoxColumn.DataPropertyName = "IsKmZero";
-            this.isKmZeroDataGridViewCheckBoxColumn.HeaderText = "IsKmZero";
-            this.isKmZeroDataGridViewCheckBoxColumn.Name = "isKmZeroDataGridViewCheckBoxColumn";
-            this.isKmZeroDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.isKmZeroDataGridViewCheckBoxColumn.ToolTipText = "Stato del veicolo (Km0)";
-            // 
-            // kmPercorsiDataGridViewTextBoxColumn
-            // 
-            this.kmPercorsiDataGridViewTextBoxColumn.DataPropertyName = "KmPercorsi";
-            this.kmPercorsiDataGridViewTextBoxColumn.HeaderText = "KmPercorsi";
-            this.kmPercorsiDataGridViewTextBoxColumn.Name = "kmPercorsiDataGridViewTextBoxColumn";
-            this.kmPercorsiDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kmPercorsiDataGridViewTextBoxColumn.ToolTipText = "Chilometri percorsi dal veicolo";
-            // 
-            // colInfo
-            // 
-            this.colInfo.HeaderText = "Informazioni";
-            this.colInfo.Name = "colInfo";
-            this.colInfo.ReadOnly = true;
-            this.colInfo.ToolTipText = "Informazioni sul veicolo";
             // 
             // veicoloBindingSource1
             // 
@@ -268,6 +190,73 @@
             this.btnEliminaVeicolo.Size = new System.Drawing.Size(91, 22);
             this.btnEliminaVeicolo.Text = "Elimina veicolo";
             this.btnEliminaVeicolo.Click += new System.EventHandler(this.btnEliminaVeicolo_Click);
+            // 
+            // marcaDataGridViewTextBoxColumn
+            // 
+            this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
+            this.marcaDataGridViewTextBoxColumn.HeaderText = "Marca";
+            this.marcaDataGridViewTextBoxColumn.Name = "marcaDataGridViewTextBoxColumn";
+            // 
+            // modelloDataGridViewTextBoxColumn
+            // 
+            this.modelloDataGridViewTextBoxColumn.DataPropertyName = "Modello";
+            this.modelloDataGridViewTextBoxColumn.HeaderText = "Modello";
+            this.modelloDataGridViewTextBoxColumn.Name = "modelloDataGridViewTextBoxColumn";
+            // 
+            // coloreDataGridViewTextBoxColumn
+            // 
+            this.coloreDataGridViewTextBoxColumn.DataPropertyName = "Colore";
+            this.coloreDataGridViewTextBoxColumn.HeaderText = "Colore";
+            this.coloreDataGridViewTextBoxColumn.Name = "coloreDataGridViewTextBoxColumn";
+            // 
+            // cilindrataDataGridViewTextBoxColumn
+            // 
+            this.cilindrataDataGridViewTextBoxColumn.DataPropertyName = "Cilindrata";
+            this.cilindrataDataGridViewTextBoxColumn.HeaderText = "Cilindrata";
+            this.cilindrataDataGridViewTextBoxColumn.Name = "cilindrataDataGridViewTextBoxColumn";
+            // 
+            // potenzaKwDataGridViewTextBoxColumn
+            // 
+            this.potenzaKwDataGridViewTextBoxColumn.DataPropertyName = "PotenzaKw";
+            this.potenzaKwDataGridViewTextBoxColumn.HeaderText = "PotenzaKw";
+            this.potenzaKwDataGridViewTextBoxColumn.Name = "potenzaKwDataGridViewTextBoxColumn";
+            // 
+            // immatricolazioneDataGridViewTextBoxColumn
+            // 
+            this.immatricolazioneDataGridViewTextBoxColumn.DataPropertyName = "Immatricolazione";
+            this.immatricolazioneDataGridViewTextBoxColumn.HeaderText = "Immatricolazione";
+            this.immatricolazioneDataGridViewTextBoxColumn.Name = "immatricolazioneDataGridViewTextBoxColumn";
+            // 
+            // isUsatoDataGridViewCheckBoxColumn
+            // 
+            this.isUsatoDataGridViewCheckBoxColumn.DataPropertyName = "IsUsato";
+            this.isUsatoDataGridViewCheckBoxColumn.HeaderText = "IsUsato";
+            this.isUsatoDataGridViewCheckBoxColumn.Name = "isUsatoDataGridViewCheckBoxColumn";
+            // 
+            // isKmZeroDataGridViewCheckBoxColumn
+            // 
+            this.isKmZeroDataGridViewCheckBoxColumn.DataPropertyName = "IsKmZero";
+            this.isKmZeroDataGridViewCheckBoxColumn.HeaderText = "IsKmZero";
+            this.isKmZeroDataGridViewCheckBoxColumn.Name = "isKmZeroDataGridViewCheckBoxColumn";
+            // 
+            // kmPercorsiDataGridViewTextBoxColumn
+            // 
+            this.kmPercorsiDataGridViewTextBoxColumn.DataPropertyName = "KmPercorsi";
+            this.kmPercorsiDataGridViewTextBoxColumn.HeaderText = "KmPercorsi";
+            this.kmPercorsiDataGridViewTextBoxColumn.Name = "kmPercorsiDataGridViewTextBoxColumn";
+            // 
+            // colInfo
+            // 
+            this.colInfo.HeaderText = "Informazioni";
+            this.colInfo.Name = "colInfo";
+            this.colInfo.ReadOnly = true;
+            this.colInfo.ToolTipText = "Informazioni sul veicolo";
+            // 
+            // pathDataGridViewTextBoxColumn
+            // 
+            this.pathDataGridViewTextBoxColumn.DataPropertyName = "Path";
+            this.pathDataGridViewTextBoxColumn.HeaderText = "Path";
+            this.pathDataGridViewTextBoxColumn.Name = "pathDataGridViewTextBoxColumn";
             // 
             // FormMain
             // 
@@ -304,6 +293,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBoxFiltro;
+        private System.Windows.Forms.ToolStripButton btnEliminaVeicolo;
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelloDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn coloreDataGridViewTextBoxColumn;
@@ -314,7 +304,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn isKmZeroDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kmPercorsiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn colInfo;
-        private System.Windows.Forms.ToolStripButton btnEliminaVeicolo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pathDataGridViewTextBoxColumn;
     }
 }
 

@@ -19,6 +19,7 @@ namespace WindowsFormsAppProject
         BindingList<Veicolo> bindingListVeicoli;
         PageSettings pageSettings = new PageSettings();
         bool docModified = false;
+        string path;
         OleDbConnection connection;
 
         public FormMain()
@@ -26,7 +27,7 @@ namespace WindowsFormsAppProject
             InitializeComponent();
             bindingListVeicoli = new BindingList<Veicolo>();
             clsMetodi.settaDgv(dgvVeicoli);
-            string path = Directory.GetParent(Application.StartupPath).Parent.Parent.FullName + "\\Utilities\\Veicoli.accdb";
+            path = Directory.GetParent(Application.StartupPath).Parent.Parent.FullName + "\\Utilities\\Veicoli.accdb";
             connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path;
             connection = new OleDbConnection(connStr);
         }
@@ -220,7 +221,23 @@ namespace WindowsFormsAppProject
         private void btnEliminaVeicolo_Click(object sender, EventArgs e)
         {
             int pos = Convert.ToInt32(Interaction.InputBox("Inserisci il codice univoco del veicolo da eliminare"));
-
+            OleDbConnection con = new OleDbConnection(connStr);
+            using (con)
+            {
+                OleDbCommand command = new OleDbCommand("DELETE FROM Veicoli WHERE CodVeicolo=@pos", con);
+                con.Open();
+                command.Parameters.Add("@pos", OleDbType.Integer).Value = pos;
+                try
+                {
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Veicolo eliminato");
+                    Application.Restart();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }
