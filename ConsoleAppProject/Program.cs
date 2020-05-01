@@ -234,7 +234,7 @@ namespace CarShopConsoleProject
                             Console.WriteLine("\n");
                             while (rdr.Read())
                             {
-                                Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}",
+                                Console.WriteLine("{0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} | {9} | {10} | {11} | {12}",
                                     rdr.GetInt32(0), rdr.GetString(1), rdr.GetString(2), rdr.GetString(3), rdr.GetString(4), rdr.GetInt32(5), rdr.GetInt32(6),
                                     rdr.GetDateTime(7).ToShortDateString(), rdr.GetBoolean(8), rdr.GetBoolean(9), rdr.GetInt32(10), rdr.GetString(11),
                                     rdr.GetString(12));
