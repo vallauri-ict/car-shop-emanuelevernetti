@@ -100,7 +100,7 @@ namespace CarShopConsoleProject
                     try
                     {
                         cmd.CommandText = @"CREATE TABLE Veicoli(
-                                            CodVeicolo AUTO_INCREMENT, 
+                                            CodVeicolo AUTOINCREMENT NOT NULL PRIMARY KEY, 
                                             Tipologia VARCHAR(255) NOT NULL, 
                                             Marca VARCHAR(255) NOT NULL, 
                                             Modello VARCHAR(255) NOT NULL, 
@@ -159,7 +159,7 @@ namespace CarShopConsoleProject
                 try
                 {
                     command.ExecuteNonQuery();
-                    Console.WriteLine("Veicolo di prova(Auto) aggiunto correttamente");
+                    Console.WriteLine("\nVeicolo di prova(Auto) aggiunto correttamente");
                     Thread.Sleep(3000);
                 }
                 catch (OleDbException exc)
@@ -202,7 +202,7 @@ namespace CarShopConsoleProject
                 try
                 {
                     command.ExecuteNonQuery();
-                    Console.WriteLine("Veicolo di prova(Moto) aggiunto correttamente");
+                    Console.WriteLine("\nVeicolo di prova(Moto) aggiunto correttamente");
                     Thread.Sleep(3000);
                 }
                 catch (OleDbException exc)
@@ -251,7 +251,7 @@ namespace CarShopConsoleProject
                         Console.WriteLine($"\n{ex.Message}");
                     }
                 }
-                Thread.Sleep(5000);
+                Thread.Sleep(7000);
             }
         }
 
