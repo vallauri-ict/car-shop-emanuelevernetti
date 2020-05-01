@@ -55,7 +55,7 @@ namespace WindowsFormsAppProject
 
                                 if (reader.GetString(1) == "MOTO")
                                 {
-                                    Moto m = new Moto(reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), Convert.ToDouble(reader.GetInt32(6)), reader.GetDateTime(7),
+                                    Moto m = new Moto(reader.GetInt32(0), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), Convert.ToDouble(reader.GetInt32(6)), reader.GetDateTime(7),
                                         reader.GetBoolean(8), reader.GetBoolean(9), reader.GetInt32(10), reader.GetString(11), reader.GetString(12));
                                     bindingListVeicoli.Add(m);
 
@@ -64,7 +64,7 @@ namespace WindowsFormsAppProject
                                 }
                                 else
                                 {
-                                    Auto a = new Auto(reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), Convert.ToDouble(reader.GetInt32(6)), reader.GetDateTime(7),
+                                    Auto a = new Auto(reader.GetInt32(0), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), Convert.ToDouble(reader.GetInt32(6)), reader.GetDateTime(7),
                                         reader.GetBoolean(8), reader.GetBoolean(9), reader.GetInt32(10), Convert.ToInt32(reader.GetString(11)), reader.GetString(12));
                                     bindingListVeicoli.Add(a);
 
@@ -104,33 +104,33 @@ namespace WindowsFormsAppProject
 
         private void apriToolStripButton_Click(object sender, EventArgs e)
         {
-            bindingListVeicoli.Clear();
-            using (StreamReader sr = new StreamReader("veicoli.dat"))
-            {
-                if (sr == null)
-                {
-                    MessageBox.Show("Il file non è stato trovato");
-                }
-                else
-                {
-                    while (sr.Peek() != -1)
-                    {
-                        string s = sr.ReadLine();
-                        string[] aus = s.Split('|');
-                        if (aus[0] == "MOTO")
-                        {
-                            Moto m = new Moto(aus[1].ToString(), aus[2].ToString(), aus[3].ToString(), Convert.ToInt32(aus[4]), Convert.ToDouble(aus[5]), DateTime.Now, Convert.ToBoolean(aus[7]), Convert.ToBoolean(aus[8]), Convert.ToInt32(aus[9]), aus[10].ToString(), aus[11].ToString());
-                            bindingListVeicoli.Add(m);
-                        }
-                        else
-                        {
-                            Auto a = new Auto(aus[1].ToString(), aus[2].ToString(), aus[3].ToString(), Convert.ToInt32(aus[4]), Convert.ToDouble(aus[5]), DateTime.Now, Convert.ToBoolean(aus[7]), Convert.ToBoolean(aus[8]), Convert.ToInt32(aus[9]), Convert.ToInt32(aus[10]), aus[11].ToString());
-                            bindingListVeicoli.Add(a);
-                        }
-                    }
-                }
-            }
-            clsMetodi.caricaDgv(bindingListVeicoli, dgvVeicoli);
+            //bindingListVeicoli.Clear();
+            //using (StreamReader sr = new StreamReader("veicoli.dat"))
+            //{
+            //    if (sr == null)
+            //    {
+            //        MessageBox.Show("Il file non è stato trovato");
+            //    }
+            //    else
+            //    {
+            //        while (sr.Peek() != -1)
+            //        {
+            //            string s = sr.ReadLine();
+            //            string[] aus = s.Split('|');
+            //            if (aus[0] == "MOTO")
+            //            {
+            //                Moto m = new Moto(aus[1].ToString(), aus[2].ToString(), aus[3].ToString(), Convert.ToInt32(aus[4]), Convert.ToDouble(aus[5]), DateTime.Now, Convert.ToBoolean(aus[7]), Convert.ToBoolean(aus[8]), Convert.ToInt32(aus[9]), aus[10].ToString(), aus[11].ToString());
+            //                bindingListVeicoli.Add(m);
+            //            }
+            //            else
+            //            {
+            //                Auto a = new Auto(aus[1].ToString(), aus[2].ToString(), aus[3].ToString(), Convert.ToInt32(aus[4]), Convert.ToDouble(aus[5]), DateTime.Now, Convert.ToBoolean(aus[7]), Convert.ToBoolean(aus[8]), Convert.ToInt32(aus[9]), Convert.ToInt32(aus[10]), aus[11].ToString());
+            //                bindingListVeicoli.Add(a);
+            //            }
+            //        }
+            //    }
+            //}
+            //clsMetodi.caricaDgv(bindingListVeicoli, dgvVeicoli);
         }
 
         private void salvaToolStripButton_Click(object sender, EventArgs e)
@@ -140,24 +140,24 @@ namespace WindowsFormsAppProject
 
         public void salva()
         {
-            using (StreamWriter sw = new StreamWriter("veicoli.dat", false))
-            {
-                string s = null;
-                for (int i = 0; i < bindingListVeicoli.Count; i++)
-                {
-                    if (bindingListVeicoli[i].GetType().ToString().Contains("Auto"))
-                    {
-                        s = "AUTO|" + bindingListVeicoli[i].Marca + "|" + bindingListVeicoli[i].Modello + "|" + bindingListVeicoli[i].Colore + "|" + bindingListVeicoli[i].Cilindrata + "|" + bindingListVeicoli[i].PotenzaKw + "|" + bindingListVeicoli[i].Immatricolazione + "|" + bindingListVeicoli[i].IsUsato + "|" + bindingListVeicoli[i].IsKmZero + "|" + bindingListVeicoli[i].KmPercorsi + "|" + (bindingListVeicoli[i] as Auto).NumAirbag + "|" + bindingListVeicoli[i].Path;
-                        sw.WriteLine(s);
-                    }
-                    else
-                    {
-                        s = "MOTO|" + bindingListVeicoli[i].Marca + "|" + bindingListVeicoli[i].Modello + "|" + bindingListVeicoli[i].Colore + "|" + bindingListVeicoli[i].Cilindrata + "|" + bindingListVeicoli[i].PotenzaKw + "|" + bindingListVeicoli[i].Immatricolazione + "|" + bindingListVeicoli[i].IsUsato + "|" + bindingListVeicoli[i].IsKmZero + "|" + bindingListVeicoli[i].KmPercorsi + "|" + (bindingListVeicoli[i] as Moto).MarcaSella + "|" + bindingListVeicoli[i].Path;
-                        sw.WriteLine(s);
-                    }
-                }
-            }
-            docModified = false;
+            //using (StreamWriter sw = new StreamWriter("veicoli.dat", false))
+            //{
+            //    string s = null;
+            //    for (int i = 0; i < bindingListVeicoli.Count; i++)
+            //    {
+            //        if (bindingListVeicoli[i].GetType().ToString().Contains("Auto"))
+            //        {
+            //            s = "AUTO|" + bindingListVeicoli[i].Marca + "|" + bindingListVeicoli[i].Modello + "|" + bindingListVeicoli[i].Colore + "|" + bindingListVeicoli[i].Cilindrata + "|" + bindingListVeicoli[i].PotenzaKw + "|" + bindingListVeicoli[i].Immatricolazione + "|" + bindingListVeicoli[i].IsUsato + "|" + bindingListVeicoli[i].IsKmZero + "|" + bindingListVeicoli[i].KmPercorsi + "|" + (bindingListVeicoli[i] as Auto).NumAirbag + "|" + bindingListVeicoli[i].Path;
+            //            sw.WriteLine(s);
+            //        }
+            //        else
+            //        {
+            //            s = "MOTO|" + bindingListVeicoli[i].Marca + "|" + bindingListVeicoli[i].Modello + "|" + bindingListVeicoli[i].Colore + "|" + bindingListVeicoli[i].Cilindrata + "|" + bindingListVeicoli[i].PotenzaKw + "|" + bindingListVeicoli[i].Immatricolazione + "|" + bindingListVeicoli[i].IsUsato + "|" + bindingListVeicoli[i].IsKmZero + "|" + bindingListVeicoli[i].KmPercorsi + "|" + (bindingListVeicoli[i] as Moto).MarcaSella + "|" + bindingListVeicoli[i].Path;
+            //            sw.WriteLine(s);
+            //        }
+            //    }
+            //}
+            //docModified = false;
         }
 
         private void stampaToolStripButton_Click(object sender, EventArgs e)

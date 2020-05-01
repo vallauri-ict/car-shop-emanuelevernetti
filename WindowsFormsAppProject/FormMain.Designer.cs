@@ -42,9 +42,10 @@
             this.toolStripComboBoxFiltro = new System.Windows.Forms.ToolStripComboBox();
             this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.dgvVeicoli = new System.Windows.Forms.DataGridView();
-            this.veicoloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnEliminaVeicolo = new System.Windows.Forms.ToolStripButton();
+            this.veicoloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.colCodVeicolo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coloreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,9 +57,11 @@
             this.kmPercorsiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.veicoloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeicoli)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -158,6 +161,7 @@
             this.dgvVeicoli.AutoGenerateColumns = false;
             this.dgvVeicoli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVeicoli.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colCodVeicolo,
             this.marcaDataGridViewTextBoxColumn,
             this.modelloDataGridViewTextBoxColumn,
             this.coloreDataGridViewTextBoxColumn,
@@ -169,17 +173,13 @@
             this.kmPercorsiDataGridViewTextBoxColumn,
             this.colInfo,
             this.pathDataGridViewTextBoxColumn});
-            this.dgvVeicoli.DataSource = this.veicoloBindingSource1;
+            this.dgvVeicoli.DataSource = this.veicoloBindingSource;
             this.dgvVeicoli.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvVeicoli.Location = new System.Drawing.Point(0, 25);
             this.dgvVeicoli.Name = "dgvVeicoli";
             this.dgvVeicoli.RowHeadersWidth = 40;
             this.dgvVeicoli.Size = new System.Drawing.Size(952, 362);
             this.dgvVeicoli.TabIndex = 2;
-            // 
-            // veicoloBindingSource1
-            // 
-            this.veicoloBindingSource1.DataSource = typeof(VenditaVeicoliDllProject.Veicolo);
             // 
             // btnEliminaVeicolo
             // 
@@ -190,6 +190,15 @@
             this.btnEliminaVeicolo.Size = new System.Drawing.Size(91, 22);
             this.btnEliminaVeicolo.Text = "Elimina veicolo";
             this.btnEliminaVeicolo.Click += new System.EventHandler(this.btnEliminaVeicolo_Click);
+            // 
+            // veicoloBindingSource1
+            // 
+            this.veicoloBindingSource1.DataSource = typeof(VenditaVeicoliDllProject.Veicolo);
+            // 
+            // colCodVeicolo
+            // 
+            this.colCodVeicolo.HeaderText = "CodVeicolo";
+            this.colCodVeicolo.Name = "colCodVeicolo";
             // 
             // marcaDataGridViewTextBoxColumn
             // 
@@ -258,6 +267,10 @@
             this.pathDataGridViewTextBoxColumn.HeaderText = "Path";
             this.pathDataGridViewTextBoxColumn.Name = "pathDataGridViewTextBoxColumn";
             // 
+            // veicoloBindingSource
+            // 
+            this.veicoloBindingSource.DataSource = typeof(VenditaVeicoliDllProject.Veicolo);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,6 +286,7 @@
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeicoli)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,6 +308,7 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBoxFiltro;
         private System.Windows.Forms.ToolStripButton btnEliminaVeicolo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodVeicolo;
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelloDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn coloreDataGridViewTextBoxColumn;
@@ -305,6 +320,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kmPercorsiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn colInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn pathDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource veicoloBindingSource;
     }
 }
 

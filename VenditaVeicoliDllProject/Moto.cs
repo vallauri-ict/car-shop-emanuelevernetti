@@ -7,12 +7,15 @@ namespace VenditaVeicoliDllProject
     {
         private string marcaSella;
 
-        public Moto(string marca, string modello, string colore, int cilindrata, double potenzaKw, DateTime immatricolazione, bool isUsato, bool isKmZero, int kmPercorsi, string marcaSella, string path) : base(marca, modello, colore, cilindrata, potenzaKw, immatricolazione, isUsato, isKmZero, kmPercorsi, path)
+        public Moto(int codVeicolo, string marca, string modello, string colore, int cilindrata, double potenzaKw, DateTime immatricolazione, bool isUsato, bool isKmZero, int kmPercorsi, string marcaSella, string path) : base(codVeicolo, marca, modello, colore, cilindrata, potenzaKw, immatricolazione, isUsato, isKmZero, kmPercorsi, path)
         {
             this.MarcaSella = marcaSella;
         }
 
-        public string MarcaSella { get => marcaSella; set => marcaSella = value; }
+        public string MarcaSella
+        {
+            get => marcaSella; set => marcaSella = value;
+        }
 
         public override string ToString()
         {

@@ -9,6 +9,7 @@ namespace VenditaVeicoliDllProject
     public abstract class Veicolo
     {
         #region Variabili private
+        private int codVeicolo;
         private string marca;
         private string modello;
         private string colore;
@@ -21,10 +22,13 @@ namespace VenditaVeicoliDllProject
         private string path;
         #endregion
 
-        public Veicolo() { }
-
-        public Veicolo(string marca, string modello, string colore, int cilindrata, double potenzaKw, DateTime immatricolazione, bool isUsato, bool isKmZero, int kmPercorsi, string path)
+        public Veicolo()
         {
+        }
+
+        public Veicolo(int codVeicolo, string marca, string modello, string colore, int cilindrata, double potenzaKw, DateTime immatricolazione, bool isUsato, bool isKmZero, int kmPercorsi, string path)
+        {
+            this.CodVeicolo = codVeicolo;
             this.Marca = marca;
             this.Modello = modello;
             this.Colore = colore;
@@ -38,16 +42,50 @@ namespace VenditaVeicoliDllProject
 
         }
 
-        public string Marca { get => marca.ToUpper(); set => marca = value; }
-        public string Modello { get => modello; set => modello = value; }
-        public string Colore { get => colore; set => colore = value; }
-        public int Cilindrata { get => cilindrata; set => cilindrata = value; }
-        public double PotenzaKw { get => potenzaKw; set => potenzaKw = value; }
-        public DateTime Immatricolazione { get => immatricolazione; set => immatricolazione = value; }
-        public bool IsUsato { get => isUsato; set => isUsato = value; }
-        public bool IsKmZero { get => isKmZero; set => isKmZero = value; }
-        public int KmPercorsi { get => kmPercorsi; set => kmPercorsi = value; }
-        public string Path { get => path; set => path = value; }
+        public int CodVeicolo
+        {
+            get => codVeicolo; set => codVeicolo = value;
+        }
+        public string Marca
+        {
+            get => marca.ToUpper(); set => marca = value;
+        }
+        public string Modello
+        {
+            get => modello; set => modello = value;
+        }
+        public string Colore
+        {
+            get => colore; set => colore = value;
+        }
+        public int Cilindrata
+        {
+            get => cilindrata; set => cilindrata = value;
+        }
+        public double PotenzaKw
+        {
+            get => potenzaKw; set => potenzaKw = value;
+        }
+        public DateTime Immatricolazione
+        {
+            get => immatricolazione; set => immatricolazione = value;
+        }
+        public bool IsUsato
+        {
+            get => isUsato; set => isUsato = value;
+        }
+        public bool IsKmZero
+        {
+            get => isKmZero; set => isKmZero = value;
+        }
+        public int KmPercorsi
+        {
+            get => kmPercorsi; set => kmPercorsi = value;
+        }
+        public string Path
+        {
+            get => path; set => path = value;
+        }
 
         public override string ToString()
         {

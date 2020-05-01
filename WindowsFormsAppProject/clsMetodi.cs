@@ -142,12 +142,14 @@ namespace WindowsFormsAppProject
                 if (lista[i] is Auto)
                 {
                     dgv.Rows[i].HeaderCell.Value = "AUTO";
-                    dgv.Rows[i].Cells[9].Value = "N° airbag: " + (lista[i] as Auto).NumAirbag.ToString();
+                    dgv.Rows[i].Cells[0].Value = lista[i].CodVeicolo;
+                    dgv.Rows[i].Cells[10].Value = "Num airbag: " + (lista[i] as Auto).NumAirbag;
                 }
                 else
                 {
                     dgv.Rows[i].HeaderCell.Value = "MOTO";
-                    dgv.Rows[i].Cells[9].Value = "Marca sella: " + (lista[i] as Moto).MarcaSella;
+                    dgv.Rows[i].Cells[0].Value = lista[i].CodVeicolo;
+                    dgv.Rows[i].Cells[10].Value = "Marca sella: " + (lista[i] as Moto).MarcaSella;
                 }
             }
             dgv.AutoResizeColumns();

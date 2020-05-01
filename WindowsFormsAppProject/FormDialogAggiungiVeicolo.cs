@@ -112,7 +112,7 @@ namespace WindowsFormsAppProject
                 else if (cmbTipoVeicolo.SelectedIndex == 0)
                 {
 
-                    bindingListVeicoli.Add(new Auto(txtMarca.Text, txtModello.Text, cmbColore.Text, Convert.ToInt32(nudCilindrata.Value), Convert.ToDouble(txtPotenzakW.Text), Convert.ToDateTime(dtpImmatricolazione.Value), usato, kmZero, Convert.ToInt32(nudKmPercorsi.Value), Convert.ToInt32(nudNumeroAirbag.Value), path));
+                    //bindingListVeicoli.Add(new Auto(txtMarca.Text, txtModello.Text, cmbColore.Text, Convert.ToInt32(nudCilindrata.Value), Convert.ToDouble(txtPotenzakW.Text), Convert.ToDateTime(dtpImmatricolazione.Value), usato, kmZero, Convert.ToInt32(nudKmPercorsi.Value), Convert.ToInt32(nudNumeroAirbag.Value), path));
                     clsMetodi.caricaDgv(bindingListVeicoli, ((DataGridView)formMain.Controls["dgvVeicoli"]));
                     clsMetodi.checkMarca(txtMarca.Text);
                     clsMetodi.checkColore(cmbColore.Text);
@@ -158,7 +158,7 @@ namespace WindowsFormsAppProject
                 }
                 else
                 {
-                    bindingListVeicoli.Add(new Moto(txtMarca.Text, txtModello.Text, cmbColore.Text, Convert.ToInt32(nudCilindrata.Value), Convert.ToDouble(txtPotenzakW.Text), Convert.ToDateTime(dtpImmatricolazione.Value), usato, kmZero, Convert.ToInt32(nudKmPercorsi.Value), txtSella.Text, path));
+                    //bindingListVeicoli.Add(new Moto(txtMarca.Text, txtModello.Text, cmbColore.Text, Convert.ToInt32(nudCilindrata.Value), Convert.ToDouble(txtPotenzakW.Text), Convert.ToDateTime(dtpImmatricolazione.Value), usato, kmZero, Convert.ToInt32(nudKmPercorsi.Value), txtSella.Text, path));
                     clsMetodi.caricaDgv(bindingListVeicoli, ((DataGridView)formMain.Controls["dgvVeicoli"]));
                     clsMetodi.checkMarca(txtMarca.Text);
                     clsMetodi.checkColore(cmbColore.Text);
