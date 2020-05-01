@@ -86,6 +86,7 @@ namespace WindowsFormsAppProject
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
+                        Application.Exit();
                     }
                 }
             }
@@ -230,14 +231,39 @@ namespace WindowsFormsAppProject
                 try
                 {
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Veicolo eliminato");
-                    Application.Restart();
+                    bool state = deleteItem(pos);
+                    if (state)
+                    {
+                        MessageBox.Show("Veicolo eliminato correttamente");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Codice errato");
+                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private bool deleteItem(int pos)
+        {
+            int i = 0;
+            bool trovato = false;
+            while ((!trovato) && (i < bindingListVeicoli.Count))
+            {
+                if (bindingListVeicoli[i].CodVeicolo == pos)
+                {
+                    return true;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+            return false;
         }
     }
 }

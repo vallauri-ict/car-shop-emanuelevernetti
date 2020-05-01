@@ -409,6 +409,7 @@
             // openFileDialog
             // 
             this.openFileDialog.FileName = "openFileDialog1";
+            this.openFileDialog.Filter = "Image Files(*.JPG)|*.JPG";
             // 
             // btnScegliFile
             // 

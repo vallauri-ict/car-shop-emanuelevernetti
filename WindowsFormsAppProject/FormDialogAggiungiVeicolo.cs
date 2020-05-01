@@ -17,8 +17,6 @@ namespace WindowsFormsAppProject
         string DBPath = "";
         string path = "";
         string f = "";
-        int pos = Int32.MinValue;
-        OleDbConnection connection;
 
         public FormDialogAggiungiVeicolo(BindingList<Veicolo> list, FormMain f)
         {
@@ -37,6 +35,8 @@ namespace WindowsFormsAppProject
         private void btnAggiungi_Click(object sender, EventArgs e)
         {
             string s = "";
+            int i = 0; //per immagine
+            int j = 0; //per codice
             if (filePicked)
             {
                 bool usato;
@@ -113,10 +113,26 @@ namespace WindowsFormsAppProject
                 else if (cmbTipoVeicolo.SelectedIndex == 0)
                 {
                     OleDbConnection con = new OleDbConnection(connStr);
+                    con.Open();
+                    OleDbCommand c = new OleDbCommand();
+                    c.Connection = con;
+                    c.CommandText = "SELECT * FROM Veicoli";
+
+                    OleDbDataReader r = c.ExecuteReader();
+
+                    if (r.HasRows)
+                    {
+                        while (r.Read())
+                        {
+                            i++;
+                        }
+                    }
+                    path = i + ".jpg";
+
+
                     using (con)
                     {
                         OleDbCommand command = new OleDbCommand();
-                        con.Open();
                         command.Connection = con;
 
                         command.CommandText = "INSERT INTO Veicoli (Tipologia, Marca, Modello, Colore, Cilindrata, PotenzaKw, Immatricolazione, IsUsato, IsKmZero, KmPercorsi, Informazioni, Immagine) VALUES" +
@@ -138,46 +154,56 @@ namespace WindowsFormsAppProject
                         command.Prepare();
 
                         command.ExecuteNonQuery();
-                        command.CommandText = "SELECT * FROM Veicoli WHERE Immagine=@immagine";
+                        con.Close();
 
-                        OleDbDataReader r = command.ExecuteReader();
-                        while (r.Read())
+                        OleDbCommand command2 = new OleDbCommand();
+                        command2.Connection = con;
+                        con.Open();
+                        command2.CommandText = "SELECT CodVeicolo FROM Veicoli";
+
+                        OleDbDataReader r2 = command2.ExecuteReader();
+
+                        if (r2.HasRows)
                         {
-                            int i = r.GetInt32(0);
+                            while (r2.Read())
+                            {
+                                j = r2.GetInt32(0);
+                            }
                         }
-
                     }
-                    //bindingListVeicoli.Add(new Auto(txtMarca.Text, txtModello.Text, cmbColore.Text, Convert.ToInt32(nudCilindrata.Value), Convert.ToDouble(txtPotenzakW.Text), Convert.ToDateTime(dtpImmatricolazione.Value), usato, kmZero, Convert.ToInt32(nudKmPercorsi.Value), Convert.ToInt32(nudNumeroAirbag.Value), path));
+
+                    bindingListVeicoli.Add(new Auto(j, txtMarca.Text, txtModello.Text, cmbColore.Text, Convert.ToInt32(nudCilindrata.Value), Convert.ToDouble(txtPotenzakW.Text), Convert.ToDateTime(dtpImmatricolazione.Value.ToShortDateString()), usato, kmZero, Convert.ToInt32(nudKmPercorsi.Value), Convert.ToInt32(nudNumeroAirbag.Value), (i + ".jpg")));
                     clsMetodi.caricaDgv(bindingListVeicoli, ((DataGridView)formMain.Controls["dgvVeicoli"]));
                     clsMetodi.checkMarca(txtMarca.Text);
                     clsMetodi.checkColore(cmbColore.Text);
-                    File.Copy(f, "img/" + Path.GetFileName(f));
+                    File.Copy(f, "img/" + i + ".jpg");
                     formMain.salva();
-
-                    //Aggiunta al DB
-
+                    con.Close();
                     this.Close();
                 }
                 else
                 {
-                    //bindingListVeicoli.Add(new Moto(txtMarca.Text, txtModello.Text, cmbColore.Text, Convert.ToInt32(nudCilindrata.Value), Convert.ToDouble(txtPotenzakW.Text), Convert.ToDateTime(dtpImmatricolazione.Value), usato, kmZero, Convert.ToInt32(nudKmPercorsi.Value), txtSella.Text, path));
-                    clsMetodi.caricaDgv(bindingListVeicoli, ((DataGridView)formMain.Controls["dgvVeicoli"]));
-                    clsMetodi.checkMarca(txtMarca.Text);
-                    clsMetodi.checkColore(cmbColore.Text);
+                    OleDbConnection con = new OleDbConnection(connStr);
+                    con.Open();
+                    OleDbCommand c = new OleDbCommand();
+                    c.Connection = con;
+                    c.CommandText = "SELECT * FROM Veicoli";
 
-                    var fileName = "sourceFile.txt";
-                    var destinationFolder = Environment.CurrentDirectory + "\\img"; //directory delle immagini
-                    var destination = Path.Combine(destinationFolder, fileName);
+                    OleDbDataReader r = c.ExecuteReader();
 
-                    File.Copy(f, "img/" + Path.GetFileName(f));
-                    formMain.salva();
+                    if (r.HasRows)
+                    {
+                        while (r.Read())
+                        {
+                            i++;
+                        }
+                    }
+                    path = i + ".jpg";
 
-                    //Aggiunta al DB
-                    using (connection)
+                    using (con)
                     {
                         OleDbCommand command = new OleDbCommand();
-                        connection.Open();
-                        command.Connection = connection;
+                        command.Connection = con;
 
                         command.CommandText = "INSERT INTO Veicoli (Tipologia, Marca, Modello, Colore, Cilindrata, PotenzaKw, Immatricolazione, IsUsato, IsKmZero, KmPercorsi, Informazioni, Immagine) VALUES" +
                             "(@tipologia, @marca, @modello, @colore, @cilindrata, @potenzakw, @immatricolazione, @isusato, @iskmzero, @iskmpercorsi, @informazioni, @immagine)";
@@ -198,7 +224,31 @@ namespace WindowsFormsAppProject
                         command.Prepare();
 
                         command.ExecuteNonQuery();
+                        con.Close();
+
+                        OleDbCommand command2 = new OleDbCommand();
+                        command2.Connection = con;
+                        con.Open();
+                        command2.CommandText = "SELECT CodVeicolo FROM Veicoli";
+
+                        OleDbDataReader r2 = command2.ExecuteReader();
+
+                        if (r2.HasRows)
+                        {
+                            while (r2.Read())
+                            {
+                                j = r2.GetInt32(0);
+                            }
+                        }
                     }
+
+                    bindingListVeicoli.Add(new Moto(j, txtMarca.Text, txtModello.Text, cmbColore.Text, Convert.ToInt32(nudCilindrata.Value), Convert.ToDouble(txtPotenzakW.Text), Convert.ToDateTime(dtpImmatricolazione.Value.ToShortDateString()), usato, kmZero, Convert.ToInt32(nudKmPercorsi.Value), txtSella.Text, (i + ".jpg")));
+                    clsMetodi.caricaDgv(bindingListVeicoli, ((DataGridView)formMain.Controls["dgvVeicoli"]));
+                    clsMetodi.checkMarca(txtMarca.Text);
+                    clsMetodi.checkColore(cmbColore.Text);
+                    File.Copy(f, "img/" + i + ".jpg");
+                    formMain.salva();
+                    con.Close();
                     this.Close();
                 }
             }
@@ -254,7 +304,6 @@ namespace WindowsFormsAppProject
 
         private void btnScegliFile_Click(object sender, EventArgs e)
         {
-            pos = bindingListVeicoli.Count + 1;
             openFileDialog.ShowDialog();
             f = openFileDialog.FileName;
             if ((f != "openFileDialog1") && (f != ""))
