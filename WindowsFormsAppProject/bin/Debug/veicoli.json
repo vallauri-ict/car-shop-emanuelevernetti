@@ -1,67 +1,58 @@
 [
   {
-    "MarcaSella": "1",
-    "Marca": "MARCA1",
-    "Modello": "modello1",
+    "NumAirbag": 1,
+    "CodVeicolo": 21,
+    "Marca": "A",
+    "Modello": "a",
     "Colore": "Bianco",
     "Cilindrata": 500,
     "PotenzaKw": 100.0,
-    "Immatricolazione": "2020-08-04T00:00:00",
+    "Immatricolazione": "2020-05-01T00:00:00",
     "IsUsato": false,
     "IsKmZero": true,
     "KmPercorsi": 0,
-    "Path": "img/img0.jpg"
+    "Path": "0.jpg"
   },
   {
     "NumAirbag": 1,
-    "Marca": "MARCA2",
-    "Modello": "modello2",
+    "CodVeicolo": 22,
+    "Marca": "B",
+    "Modello": "b",
     "Colore": "Bianco",
     "Cilindrata": 500,
     "PotenzaKw": 100.0,
-    "Immatricolazione": "2020-04-19T00:00:00",
+    "Immatricolazione": "2020-05-01T00:00:00",
     "IsUsato": false,
     "IsKmZero": true,
     "KmPercorsi": 0,
-    "Path": "img/img1.jpg"
+    "Path": "1.jpg"
   },
   {
-    "NumAirbag": 1,
-    "Marca": "MARCA3",
-    "Modello": "modello3",
+    "MarcaSella": "sella2",
+    "CodVeicolo": 23,
+    "Marca": "C",
+    "Modello": "c",
     "Colore": "Bianco",
     "Cilindrata": 500,
     "PotenzaKw": 100.0,
-    "Immatricolazione": "2020-04-20T00:00:00",
+    "Immatricolazione": "2020-05-01T00:00:00",
     "IsUsato": false,
     "IsKmZero": true,
     "KmPercorsi": 0,
-    "Path": "img/img2.jpg"
+    "Path": "2.jpg"
   },
   {
-    "NumAirbag": 1,
-    "Marca": "MARCA4",
-    "Modello": "modello4",
+    "MarcaSella": "sella5",
+    "CodVeicolo": 24,
+    "Marca": "D",
+    "Modello": "d",
     "Colore": "Bianco",
     "Cilindrata": 500,
     "PotenzaKw": 100.0,
-    "Immatricolazione": "2020-04-20T00:00:00",
+    "Immatricolazione": "2020-05-01T00:00:00",
     "IsUsato": false,
     "IsKmZero": true,
     "KmPercorsi": 0,
-    "Path": "img/img3.jpg"
-  },
-  {
-    "MarcaSella": "sella1",
-    "Marca": "MARCA5",
-    "Modello": "modello5",
-    "Colore": "Bianco",
-    "Cilindrata": 500,
-    "PotenzaKw": 100.0,
-    "Immatricolazione": "2020-04-21T22:45:34.1130395+02:00",
-    "IsUsato": false,
-    "IsKmZero": true,
-    "KmPercorsi": 0,
-    "Path": "C:\\Users\\emanu\\Desktop\\imgMotoTest.jpg"
+    "Path": "3.jpg"
   }
 ]

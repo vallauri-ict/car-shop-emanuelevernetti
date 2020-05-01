@@ -48,7 +48,7 @@ namespace WindowsFormsAppProject
                         {
                             while (reader.Read()) //restituisce true finchè ci sono ancora delle righe
                             {
-                                Console.WriteLine("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}",
+                                Console.WriteLine("{0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} | {9} | {10} | {11} | {12}",
                                     reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5),
                                     reader.GetInt32(6), reader.GetDateTime(7), reader.GetBoolean(8), reader.GetBoolean(9), reader.GetInt32(10),
                                     reader.GetString(11), reader.GetString(12));
