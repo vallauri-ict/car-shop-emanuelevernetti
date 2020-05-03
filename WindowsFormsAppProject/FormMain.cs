@@ -92,7 +92,7 @@ namespace WindowsFormsAppProject
             }
             else
             {
-                MessageBox.Show("Set connection string first");
+                MessageBox.Show("Impostare la stringa di connessione");
             }
         }
 
@@ -221,30 +221,37 @@ namespace WindowsFormsAppProject
 
         private void btnEliminaVeicolo_Click(object sender, EventArgs e)
         {
-            int pos = Convert.ToInt32(Interaction.InputBox("Inserisci il codice univoco del veicolo da eliminare"));
-            OleDbConnection con = new OleDbConnection(connStr);
-            using (con)
+            try
             {
-                OleDbCommand command = new OleDbCommand("DELETE FROM Veicoli WHERE CodVeicolo=@pos", con);
-                con.Open();
-                command.Parameters.Add("@pos", OleDbType.Integer).Value = pos;
-                try
+                int pos = Convert.ToInt32(Interaction.InputBox("Inserisci il codice univoco del veicolo da eliminare", "Elimina veicolo", "Codice del veicolo da eliminare"));
+                OleDbConnection con = new OleDbConnection(connStr);
+                using (con)
                 {
-                    command.ExecuteNonQuery();
-                    bool state = deleteItem(pos);
-                    if (state)
+                    OleDbCommand command = new OleDbCommand("DELETE FROM Veicoli WHERE CodVeicolo=@pos", con);
+                    con.Open();
+                    command.Parameters.Add("@pos", OleDbType.Integer).Value = pos;
+                    try
                     {
-                        MessageBox.Show("Veicolo eliminato correttamente");
+                        command.ExecuteNonQuery();
+                        bool state = deleteItem(pos);
+                        if (state)
+                        {
+                            MessageBox.Show("Veicolo eliminato correttamente");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Codice errato");
+                        }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Codice errato");
+                        MessageBox.Show(ex.Message);
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -256,6 +263,8 @@ namespace WindowsFormsAppProject
             {
                 if (bindingListVeicoli[i].CodVeicolo == pos)
                 {
+                    File.Delete("img/" + bindingListVeicoli[i].Path);
+                    bindingListVeicoli.RemoveAt(i);
                     return true;
                 }
                 else

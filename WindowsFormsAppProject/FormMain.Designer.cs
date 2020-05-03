@@ -32,19 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.nuovoToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.apriToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.salvaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.stampaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonHtml = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripComboBoxFiltro = new System.Windows.Forms.ToolStripComboBox();
+            this.btnEliminaVeicolo = new System.Windows.Forms.ToolStripButton();
             this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.dgvVeicoli = new System.Windows.Forms.DataGridView();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnEliminaVeicolo = new System.Windows.Forms.ToolStripButton();
-            this.veicoloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.colCodVeicolo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,25 +54,25 @@
             this.colInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.veicoloBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.veicoloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeicoli)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuovoToolStripButton,
-            this.apriToolStripButton,
-            this.salvaToolStripButton,
             this.stampaToolStripButton,
+            this.btnEliminaVeicolo,
             this.toolStripSeparator,
             this.toolStripButtonHtml,
             this.toolStripSeparator1,
             this.toolStripLabel1,
-            this.toolStripComboBoxFiltro,
-            this.btnEliminaVeicolo});
+            this.toolStripComboBoxFiltro});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(952, 25);
@@ -92,26 +88,6 @@
             this.nuovoToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.nuovoToolStripButton.Text = "&Nuovo";
             this.nuovoToolStripButton.Click += new System.EventHandler(this.nuovoToolStripButton_Click);
-            // 
-            // apriToolStripButton
-            // 
-            this.apriToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.apriToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("apriToolStripButton.Image")));
-            this.apriToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.apriToolStripButton.Name = "apriToolStripButton";
-            this.apriToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.apriToolStripButton.Text = "&Apri";
-            this.apriToolStripButton.Click += new System.EventHandler(this.apriToolStripButton_Click);
-            // 
-            // salvaToolStripButton
-            // 
-            this.salvaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.salvaToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("salvaToolStripButton.Image")));
-            this.salvaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.salvaToolStripButton.Name = "salvaToolStripButton";
-            this.salvaToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.salvaToolStripButton.Text = "&Salva";
-            this.salvaToolStripButton.Click += new System.EventHandler(this.salvaToolStripButton_Click);
             // 
             // stampaToolStripButton
             // 
@@ -130,11 +106,11 @@
             // 
             // toolStripButtonHtml
             // 
-            this.toolStripButtonHtml.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButtonHtml.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonHtml.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonHtml.Image")));
             this.toolStripButtonHtml.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonHtml.Name = "toolStripButtonHtml";
-            this.toolStripButtonHtml.Size = new System.Drawing.Size(125, 22);
+            this.toolStripButtonHtml.Size = new System.Drawing.Size(23, 22);
             this.toolStripButtonHtml.Text = "Visualizza pagina web";
             this.toolStripButtonHtml.Click += new System.EventHandler(this.toolStripButtonHtml_Click);
             // 
@@ -154,6 +130,16 @@
             this.toolStripComboBoxFiltro.Name = "toolStripComboBoxFiltro";
             this.toolStripComboBoxFiltro.Size = new System.Drawing.Size(121, 25);
             this.toolStripComboBoxFiltro.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBoxFiltro_SelectedIndexChanged);
+            // 
+            // btnEliminaVeicolo
+            // 
+            this.btnEliminaVeicolo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnEliminaVeicolo.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminaVeicolo.Image")));
+            this.btnEliminaVeicolo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminaVeicolo.Name = "btnEliminaVeicolo";
+            this.btnEliminaVeicolo.Size = new System.Drawing.Size(23, 22);
+            this.btnEliminaVeicolo.Text = "Elimina veicolo";
+            this.btnEliminaVeicolo.Click += new System.EventHandler(this.btnEliminaVeicolo_Click);
             // 
             // dgvVeicoli
             // 
@@ -180,20 +166,6 @@
             this.dgvVeicoli.RowHeadersWidth = 40;
             this.dgvVeicoli.Size = new System.Drawing.Size(952, 362);
             this.dgvVeicoli.TabIndex = 2;
-            // 
-            // btnEliminaVeicolo
-            // 
-            this.btnEliminaVeicolo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnEliminaVeicolo.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminaVeicolo.Image")));
-            this.btnEliminaVeicolo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminaVeicolo.Name = "btnEliminaVeicolo";
-            this.btnEliminaVeicolo.Size = new System.Drawing.Size(91, 22);
-            this.btnEliminaVeicolo.Text = "Elimina veicolo";
-            this.btnEliminaVeicolo.Click += new System.EventHandler(this.btnEliminaVeicolo_Click);
-            // 
-            // veicoloBindingSource1
-            // 
-            this.veicoloBindingSource1.DataSource = typeof(VenditaVeicoliDllProject.Veicolo);
             // 
             // colCodVeicolo
             // 
@@ -271,6 +243,10 @@
             // 
             this.veicoloBindingSource.DataSource = typeof(VenditaVeicoliDllProject.Veicolo);
             // 
+            // veicoloBindingSource1
+            // 
+            this.veicoloBindingSource1.DataSource = typeof(VenditaVeicoliDllProject.Veicolo);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,14 +255,14 @@
             this.Controls.Add(this.dgvVeicoli);
             this.Controls.Add(this.toolStrip1);
             this.Name = "FormMain";
-            this.Text = "SALONE VENDITA VEICOLI NUOVI E USATI";
+            this.Text = "SALONE VENDITA VEICOLI";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeicoli)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,8 +271,6 @@
         #endregion
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton nuovoToolStripButton;
-        private System.Windows.Forms.ToolStripButton apriToolStripButton;
-        private System.Windows.Forms.ToolStripButton salvaToolStripButton;
         private System.Windows.Forms.ToolStripButton stampaToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Drawing.Printing.PrintDocument printDocument;
