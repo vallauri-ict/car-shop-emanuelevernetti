@@ -141,24 +141,24 @@ namespace WindowsFormsAppProject
 
         public void salva()
         {
-            //using (StreamWriter sw = new StreamWriter("veicoli.dat", false))
-            //{
-            //    string s = null;
-            //    for (int i = 0; i < bindingListVeicoli.Count; i++)
-            //    {
-            //        if (bindingListVeicoli[i].GetType().ToString().Contains("Auto"))
-            //        {
-            //            s = "AUTO|" + bindingListVeicoli[i].Marca + "|" + bindingListVeicoli[i].Modello + "|" + bindingListVeicoli[i].Colore + "|" + bindingListVeicoli[i].Cilindrata + "|" + bindingListVeicoli[i].PotenzaKw + "|" + bindingListVeicoli[i].Immatricolazione + "|" + bindingListVeicoli[i].IsUsato + "|" + bindingListVeicoli[i].IsKmZero + "|" + bindingListVeicoli[i].KmPercorsi + "|" + (bindingListVeicoli[i] as Auto).NumAirbag + "|" + bindingListVeicoli[i].Path;
-            //            sw.WriteLine(s);
-            //        }
-            //        else
-            //        {
-            //            s = "MOTO|" + bindingListVeicoli[i].Marca + "|" + bindingListVeicoli[i].Modello + "|" + bindingListVeicoli[i].Colore + "|" + bindingListVeicoli[i].Cilindrata + "|" + bindingListVeicoli[i].PotenzaKw + "|" + bindingListVeicoli[i].Immatricolazione + "|" + bindingListVeicoli[i].IsUsato + "|" + bindingListVeicoli[i].IsKmZero + "|" + bindingListVeicoli[i].KmPercorsi + "|" + (bindingListVeicoli[i] as Moto).MarcaSella + "|" + bindingListVeicoli[i].Path;
-            //            sw.WriteLine(s);
-            //        }
-            //    }
-            //}
-            //docModified = false;
+            using (StreamWriter sw = new StreamWriter("veicoli.dat", false))
+            {
+                string s = null;
+                for (int i = 0; i < bindingListVeicoli.Count; i++)
+                {
+                    if (bindingListVeicoli[i].GetType().ToString().Contains("Auto"))
+                    {
+                        s = "AUTO|" + bindingListVeicoli[i].CodVeicolo + "|" + bindingListVeicoli[i].Marca + "|" + bindingListVeicoli[i].Modello + "|" + bindingListVeicoli[i].Colore + "|" + bindingListVeicoli[i].Cilindrata + "|" + bindingListVeicoli[i].PotenzaKw + "|" + bindingListVeicoli[i].Immatricolazione + "|" + bindingListVeicoli[i].IsUsato + "|" + bindingListVeicoli[i].IsKmZero + "|" + bindingListVeicoli[i].KmPercorsi + "|" + (bindingListVeicoli[i] as Auto).NumAirbag + "|" + bindingListVeicoli[i].Path;
+                        sw.WriteLine(s);
+                    }
+                    else
+                    {
+                        s = "MOTO|" + bindingListVeicoli[i].CodVeicolo + "|" + bindingListVeicoli[i].Marca + "|" + bindingListVeicoli[i].Modello + "|" + bindingListVeicoli[i].Colore + "|" + bindingListVeicoli[i].Cilindrata + "|" + bindingListVeicoli[i].PotenzaKw + "|" + bindingListVeicoli[i].Immatricolazione + "|" + bindingListVeicoli[i].IsUsato + "|" + bindingListVeicoli[i].IsKmZero + "|" + bindingListVeicoli[i].KmPercorsi + "|" + (bindingListVeicoli[i] as Moto).MarcaSella + "|" + bindingListVeicoli[i].Path;
+                        sw.WriteLine(s);
+                    }
+                }
+            }
+            docModified = false;
         }
 
         private void stampaToolStripButton_Click(object sender, EventArgs e)
@@ -166,7 +166,6 @@ namespace WindowsFormsAppProject
             clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "Marca");
             FormVisualizzazioneVolantino fv = new FormVisualizzazioneVolantino(bindingListVeicoli, this);
             fv.Show();
-            Utils.SerializeToJson(bindingListVeicoli, "veicoli.json");
         }
 
         private void toolStripButtonHtml_Click(object sender, EventArgs e)
@@ -273,6 +272,11 @@ namespace WindowsFormsAppProject
                 }
             }
             return false;
+        }
+
+        private void JsonToolStripButton_Click(object sender, EventArgs e)
+        {
+            Utils.SerializeToJson(bindingListVeicoli, "veicoli.json");
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Data.OleDb;
 using System.IO;
 using System.Threading;
+using VenditaVeicoliDllProject;
 
 namespace CarShopConsoleProject
 {
@@ -40,29 +41,9 @@ namespace CarShopConsoleProject
                             visualizzaListaVeicoli();
                             break;
                         }
-                    case '5':
-                        {
-                            esportaInJson();
-                            break;
-                        }
-                    case '6':
-                        {
-                            esportaInXml();
-                            break;
-                        }
-                    case '7':
-                        {
-                            esportaInWord();
-                            break;
-                        }
-                    case '8':
-                        {
-                            esportaInExcel();
-                            break;
-                        }
                     default:
                         {
-
+                     
                         }
                         break;
                 }
@@ -78,10 +59,8 @@ namespace CarShopConsoleProject
             Console.WriteLine("2 - Aggiungi elemento di esempio (Auto)");
             Console.WriteLine("3 - Aggiungi elemento di esempio (Moto)");
             Console.WriteLine("4 - Visualizza l'elenco completo dei veicoli");
-            Console.WriteLine("5 - Esporta in .json");
-            Console.WriteLine("6 - Esporta in .xml");
-            Console.WriteLine("7 - Esporta in .docx");
-            Console.WriteLine("8 - Esporta in .xlsx");
+            Console.WriteLine("5 - ...");
+            Console.WriteLine("6 - ...");
             Console.WriteLine("\nX - ESCI\n");
         }
 
@@ -152,7 +131,7 @@ namespace CarShopConsoleProject
                 command.Parameters.Add("@iskmzero", OleDbType.Boolean).Value = true;
                 command.Parameters.Add("@kmpercorsi", OleDbType.Integer).Value = 0;
                 command.Parameters.Add("@informazioni", OleDbType.VarChar, 255).Value = "4";
-                command.Parameters.Add("@immagine", OleDbType.VarChar, 255).Value = "imgTest";
+                command.Parameters.Add("@immagine", OleDbType.VarChar, 255).Value = "test.jpg";
 
                 command.Prepare();
 
@@ -195,7 +174,7 @@ namespace CarShopConsoleProject
                 command.Parameters.Add("@iskmzero", OleDbType.Boolean).Value = true;
                 command.Parameters.Add("@kmpercorsi", OleDbType.Integer).Value = 0;
                 command.Parameters.Add("@informazioni", OleDbType.VarChar, 255).Value = "sellaTest";
-                command.Parameters.Add("@immagine", OleDbType.VarChar, 255).Value = "imgTest";
+                command.Parameters.Add("@immagine", OleDbType.VarChar, 255).Value = "test.jpg";
 
                 command.Prepare();
 
@@ -254,54 +233,5 @@ namespace CarShopConsoleProject
                 Thread.Sleep(7000);
             }
         }
-
-        private static void esportaInJson()
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void esportaInXml()
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void esportaInWord()
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void esportaInExcel()
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void aggiungiEsempio()
-        {
-            if (connStr != null)
-            {
-                OleDbConnection con = new OleDbConnection(connStr);
-                using (con)
-                {
-                    con.Open();
-
-                    OleDbCommand cmd = new OleDbCommand();
-                    cmd.Connection = con;
-
-                    // string badQuery = "INSERT INTO cars(name, price) VALUES('" + carName + "'," + carPrice + ")";
-                    string query = "INSERT INTO cars(name, price) VALUES(@name, @price)";
-                    cmd.CommandText = query;
-                    cmd.Parameters.Add(new OleDbParameter("@name", OleDbType.VarChar, 255)).Value = "";
-                    cmd.Parameters.Add("@price", OleDbType.Integer).Value = "";
-                    cmd.Prepare();
-
-                    cmd.ExecuteNonQuery();
-
-                    Console.WriteLine("\n\nVeicolo inserito correttamente");
-                    Thread.Sleep(3000);
-                }
-            }
-        }
-
-
     }
 }

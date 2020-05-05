@@ -320,7 +320,6 @@ C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormVisualizzazioneVolantino.resources
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.Properties.Resources.resources
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.GenerateResource.cache
-C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CoreCompileInputs.cache
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CopyComplete
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.exe
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.pdb

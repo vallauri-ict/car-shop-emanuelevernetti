@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VenditaVeicoliDllProject\VenditaVeicoliDllProject.csproj">
+      <Project>{54cc9c64-6a52-4847-86ce-6c8586aaa2d0}</Project>
+      <Name>VenditaVeicoliDllProject</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
