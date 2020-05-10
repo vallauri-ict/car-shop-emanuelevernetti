@@ -323,3 +323,4 @@ C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CopyComplete
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.exe
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.pdb
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CoreCompileInputs.cache

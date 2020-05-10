@@ -354,7 +354,7 @@ namespace WindowsFormsAppProject
             }
             else
             {
-                //MessageBox.Show("La lista è vuota");
+                //MessageBox.Show("La lista è vuota. Caricare degli elementi tramite l'apposito pulsante");
             }
         }
     }

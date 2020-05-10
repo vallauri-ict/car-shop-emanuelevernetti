@@ -35,8 +35,12 @@ namespace WindowsFormsAppProject
         private void btnAggiungi_Click(object sender, EventArgs e)
         {
             string s = "";
-            int i = 0; //per immagine
-            int j = 0; //per codice
+            int j = 0;
+            if (rdbImgNo.Checked)
+            {
+                path = "img/NoImage.jpg";
+                filePicked = true;
+            }
             if (filePicked)
             {
                 bool usato;
@@ -110,34 +114,43 @@ namespace WindowsFormsAppProject
                     MessageBox.Show("Inserire i dati correttamente." +
                         "\nI dati da correggere sono:\n" + s);
                 }
-                else if (cmbTipoVeicolo.SelectedIndex == 0)
+                else if (cmbTipoVeicolo.SelectedIndex == 0) //AUTO
                 {
                     OleDbConnection con = new OleDbConnection(connStr);
                     con.Open();
-                    OleDbCommand c = new OleDbCommand();
-                    c.Connection = con;
-                    c.CommandText = "SELECT * FROM Veicoli";
 
-                    OleDbDataReader r = c.ExecuteReader();
+                    OleDbCommand command2 = new OleDbCommand();
+                    command2.Connection = con;
+                    command2.CommandText = "SELECT CodVeicolo FROM Veicoli";
 
-                    if (r.HasRows)
+                    OleDbDataReader r2 = command2.ExecuteReader();
+
+                    if (r2.HasRows)
                     {
-                        while (r.Read())
+                        while (r2.Read())
                         {
-                            i++;
+                            j = r2.GetInt32(0);
                         }
+                        j++;
                     }
-                    path = i + ".jpg";
 
+                    if (rdbImgSì.Checked)
+                    {
+                        path = "img/" + j + ".jpg";
+                        File.Copy(f, "img/" + j + ".jpg");
+                    }
+
+                    bindingListVeicoli.Add(new Auto(j, txtMarca.Text, txtModello.Text, cmbColore.Text, Convert.ToInt32(nudCilindrata.Value), Convert.ToDouble(txtPotenzakW.Text), Convert.ToDateTime(dtpImmatricolazione.Value.ToShortDateString()), usato, kmZero, Convert.ToInt32(nudKmPercorsi.Value), Convert.ToInt32(nudNumeroAirbag.Value), path));
 
                     using (con)
                     {
                         OleDbCommand command = new OleDbCommand();
                         command.Connection = con;
 
-                        command.CommandText = "INSERT INTO Veicoli (Tipologia, Marca, Modello, Colore, Cilindrata, PotenzaKw, Immatricolazione, IsUsato, IsKmZero, KmPercorsi, Informazioni, Immagine) VALUES" +
-                            "(@tipologia, @marca, @modello, @colore, @cilindrata, @potenzakw, @immatricolazione, @isusato, @iskmzero, @iskmpercorsi, @informazioni, @immagine)";
+                        command.CommandText = "INSERT INTO Veicoli (CodVeicolo, Tipologia, Marca, Modello, Colore, Cilindrata, PotenzaKw, Immatricolazione, IsUsato, IsKmZero, KmPercorsi, Informazioni, Immagine) VALUES" +
+                            "(@codveicolo, @tipologia, @marca, @modello, @colore, @cilindrata, @potenzakw, @immatricolazione, @isusato, @iskmzero, @kmpercorsi, @informazioni, @immagine)";
 
+                        command.Parameters.Add("@codveicolo", OleDbType.Integer).Value = j;
                         command.Parameters.Add(new OleDbParameter("@tipologia", OleDbType.VarChar, 255)).Value = cmbTipoVeicolo.Text;
                         command.Parameters.Add("@marca", OleDbType.VarChar, 255).Value = txtMarca.Text;
                         command.Parameters.Add("@modello", OleDbType.VarChar, 255).Value = txtModello.Text;
@@ -155,59 +168,52 @@ namespace WindowsFormsAppProject
 
                         command.ExecuteNonQuery();
                         con.Close();
-
-                        OleDbCommand command2 = new OleDbCommand();
-                        command2.Connection = con;
-                        con.Open();
-                        command2.CommandText = "SELECT CodVeicolo FROM Veicoli";
-
-                        OleDbDataReader r2 = command2.ExecuteReader();
-
-                        if (r2.HasRows)
-                        {
-                            while (r2.Read())
-                            {
-                                j = r2.GetInt32(0);
-                            }
-                        }
                     }
 
-                    bindingListVeicoli.Add(new Auto(j, txtMarca.Text, txtModello.Text, cmbColore.Text, Convert.ToInt32(nudCilindrata.Value), Convert.ToDouble(txtPotenzakW.Text), Convert.ToDateTime(dtpImmatricolazione.Value.ToShortDateString()), usato, kmZero, Convert.ToInt32(nudKmPercorsi.Value), Convert.ToInt32(nudNumeroAirbag.Value), (i + ".jpg")));
                     clsMetodi.caricaDgv(bindingListVeicoli, ((DataGridView)formMain.Controls["dgvVeicoli"]));
                     clsMetodi.checkMarca(txtMarca.Text);
                     clsMetodi.checkColore(cmbColore.Text);
-                    File.Copy(f, "img/" + i + ".jpg");
                     formMain.salva();
                     con.Close();
                     this.Close();
                 }
-                else
+                else //MOTO
                 {
                     OleDbConnection con = new OleDbConnection(connStr);
                     con.Open();
-                    OleDbCommand c = new OleDbCommand();
-                    c.Connection = con;
-                    c.CommandText = "SELECT * FROM Veicoli";
 
-                    OleDbDataReader r = c.ExecuteReader();
+                    OleDbCommand command2 = new OleDbCommand();
+                    command2.Connection = con;
+                    command2.CommandText = "SELECT CodVeicolo FROM Veicoli";
 
-                    if (r.HasRows)
+                    OleDbDataReader r2 = command2.ExecuteReader();
+
+                    if (r2.HasRows)
                     {
-                        while (r.Read())
+                        while (r2.Read())
                         {
-                            i++;
+                            j = r2.GetInt32(0);
                         }
+                        j++;
                     }
-                    path = i + ".jpg";
+
+                    if (rdbImgSì.Checked)
+                    {
+                        path = "img/" + j + ".jpg";
+                        File.Copy(f, "img/" + j + ".jpg");
+                    }
+
+                    bindingListVeicoli.Add(new Moto(j, txtMarca.Text, txtModello.Text, cmbColore.Text, Convert.ToInt32(nudCilindrata.Value), Convert.ToDouble(txtPotenzakW.Text), Convert.ToDateTime(dtpImmatricolazione.Value.ToShortDateString()), usato, kmZero, Convert.ToInt32(nudKmPercorsi.Value), txtSella.Text, path));
 
                     using (con)
                     {
                         OleDbCommand command = new OleDbCommand();
                         command.Connection = con;
 
-                        command.CommandText = "INSERT INTO Veicoli (Tipologia, Marca, Modello, Colore, Cilindrata, PotenzaKw, Immatricolazione, IsUsato, IsKmZero, KmPercorsi, Informazioni, Immagine) VALUES" +
-                            "(@tipologia, @marca, @modello, @colore, @cilindrata, @potenzakw, @immatricolazione, @isusato, @iskmzero, @iskmpercorsi, @informazioni, @immagine)";
+                        command.CommandText = "INSERT INTO Veicoli (CodVeicolo, Tipologia, Marca, Modello, Colore, Cilindrata, PotenzaKw, Immatricolazione, IsUsato, IsKmZero, KmPercorsi, Informazioni, Immagine) VALUES" +
+                            "(@codveicolo, @tipologia, @marca, @modello, @colore, @cilindrata, @potenzakw, @immatricolazione, @isusato, @iskmzero, @kmpercorsi, @informazioni, @immagine)";
 
+                        command.Parameters.Add("@codveicolo", OleDbType.Integer).Value = j;
                         command.Parameters.Add(new OleDbParameter("@tipologia", OleDbType.VarChar, 255)).Value = cmbTipoVeicolo.Text;
                         command.Parameters.Add("@marca", OleDbType.VarChar, 255).Value = txtMarca.Text;
                         command.Parameters.Add("@modello", OleDbType.VarChar, 255).Value = txtModello.Text;
@@ -218,35 +224,18 @@ namespace WindowsFormsAppProject
                         command.Parameters.Add("@isusato", OleDbType.Boolean).Value = usato;
                         command.Parameters.Add("@iskmzero", OleDbType.Boolean).Value = kmZero;
                         command.Parameters.Add("@kmpercorsi", OleDbType.Integer).Value = Convert.ToInt32(nudKmPercorsi.Value);
-                        command.Parameters.Add("@informazioni", OleDbType.VarChar, 255).Value = txtSella.Text;
+                        command.Parameters.Add("@informazioni", OleDbType.VarChar, 255).Value = nudNumeroAirbag.Value.ToString();
                         command.Parameters.Add("@immagine", OleDbType.VarChar, 255).Value = path;
 
                         command.Prepare();
 
                         command.ExecuteNonQuery();
                         con.Close();
-
-                        OleDbCommand command2 = new OleDbCommand();
-                        command2.Connection = con;
-                        con.Open();
-                        command2.CommandText = "SELECT CodVeicolo FROM Veicoli";
-
-                        OleDbDataReader r2 = command2.ExecuteReader();
-
-                        if (r2.HasRows)
-                        {
-                            while (r2.Read())
-                            {
-                                j = r2.GetInt32(0);
-                            }
-                        }
                     }
 
-                    bindingListVeicoli.Add(new Moto(j, txtMarca.Text, txtModello.Text, cmbColore.Text, Convert.ToInt32(nudCilindrata.Value), Convert.ToDouble(txtPotenzakW.Text), Convert.ToDateTime(dtpImmatricolazione.Value.ToShortDateString()), usato, kmZero, Convert.ToInt32(nudKmPercorsi.Value), txtSella.Text, (i + ".jpg")));
                     clsMetodi.caricaDgv(bindingListVeicoli, ((DataGridView)formMain.Controls["dgvVeicoli"]));
                     clsMetodi.checkMarca(txtMarca.Text);
                     clsMetodi.checkColore(cmbColore.Text);
-                    File.Copy(f, "img/" + i + ".jpg");
                     formMain.salva();
                     con.Close();
                     this.Close();
@@ -262,6 +251,13 @@ namespace WindowsFormsAppProject
         {
             cmbTipoVeicolo.SelectedIndex = 0;
             cmbColore.SelectedIndex = 0;
+            rdbKmZeroSì.Checked = true;
+            rdbUsatoNo.Checked = true;
+            nudKmPercorsi.Minimum = 0;
+            nudKmPercorsi.Value = 0;
+            nudKmPercorsi.Enabled = false;
+            rdbImgSì.Checked = true;
+            btnScegliFile.Enabled = true;
         }
 
         private void cmbTipoVeicolo_SelectedIndexChanged(object sender, EventArgs e)
@@ -283,22 +279,40 @@ namespace WindowsFormsAppProject
             if (rdbKmZeroSì.Checked)
             {
                 nudKmPercorsi.Minimum = 0;
+                nudKmPercorsi.Value = 0;
+                nudKmPercorsi.Enabled = false;
             }
             else
             {
                 nudKmPercorsi.Minimum = 1;
+                nudKmPercorsi.Value = 1;
+                nudKmPercorsi.Enabled = true;
             }
         }
 
         private void rdbUsatoSì_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdbUsatoSì.Checked)
+            if (rdbUsatoSì.Checked && rdbKmZeroNo.Checked)
             {
                 nudKmPercorsi.Minimum = 1;
+                nudKmPercorsi.Value = 1;
+                nudKmPercorsi.Enabled = true;
+                nudKmPercorsi.Enabled = true;
             }
             else
             {
-                nudKmPercorsi.Minimum = 0;
+                if (rdbKmZeroSì.Checked)
+                {
+                    nudKmPercorsi.Minimum = 0;
+                    nudKmPercorsi.Value = 0;
+                    nudKmPercorsi.Enabled = false;
+                }
+                else
+                {
+                    nudKmPercorsi.Minimum = 1;
+                    nudKmPercorsi.Value = 1;
+                    nudKmPercorsi.Enabled = true;
+                }
             }
         }
 
@@ -314,6 +328,24 @@ namespace WindowsFormsAppProject
             else
             {
                 filePicked = false;
+            }
+        }
+
+        private void rdbImgNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbImgNo.Checked)
+            {
+                btnScegliFile.Enabled = false;
+                path = null;
+            }
+        }
+
+        private void rdbImgSì_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbImgSì.Checked)
+            {
+                btnScegliFile.Enabled = true;
+                path = null;
             }
         }
     }

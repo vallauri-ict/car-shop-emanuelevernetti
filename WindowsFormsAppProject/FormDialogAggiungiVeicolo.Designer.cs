@@ -37,7 +37,7 @@
             this.lblKmPercorsi = new System.Windows.Forms.Label();
             this.groupBoxKmZero = new System.Windows.Forms.GroupBox();
             this.rdbKmZeroSì = new System.Windows.Forms.RadioButton();
-            this.radrdbKmZeroNo = new System.Windows.Forms.RadioButton();
+            this.rdbKmZeroNo = new System.Windows.Forms.RadioButton();
             this.groupBoxUsato = new System.Windows.Forms.GroupBox();
             this.rdbUsatoSì = new System.Windows.Forms.RadioButton();
             this.rdbUsatoNo = new System.Windows.Forms.RadioButton();
@@ -60,6 +60,9 @@
             this.lblSella = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.btnScegliFile = new System.Windows.Forms.Button();
+            this.groupBoxImmagine = new System.Windows.Forms.GroupBox();
+            this.rdbImgSì = new System.Windows.Forms.RadioButton();
+            this.rdbImgNo = new System.Windows.Forms.RadioButton();
             this.groupBoxCaratteristicheVeicolo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCilindrata)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudKmPercorsi)).BeginInit();
@@ -68,6 +71,7 @@
             this.groupBoxCaratteristicheAuto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumeroAirbag)).BeginInit();
             this.groupBoxCaratteristicheMoto.SuspendLayout();
+            this.groupBoxImmagine.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbTipoVeicolo
@@ -133,7 +137,7 @@
             // 
             this.nudCilindrata.Location = new System.Drawing.Point(104, 89);
             this.nudCilindrata.Maximum = new decimal(new int[] {
-            2000,
+            8000,
             0,
             0,
             0});
@@ -146,7 +150,7 @@
             this.nudCilindrata.Size = new System.Drawing.Size(100, 20);
             this.nudCilindrata.TabIndex = 25;
             this.nudCilindrata.Value = new decimal(new int[] {
-            500,
+            1000,
             0,
             0,
             0});
@@ -175,7 +179,7 @@
             // groupBoxKmZero
             // 
             this.groupBoxKmZero.Controls.Add(this.rdbKmZeroSì);
-            this.groupBoxKmZero.Controls.Add(this.radrdbKmZeroNo);
+            this.groupBoxKmZero.Controls.Add(this.rdbKmZeroNo);
             this.groupBoxKmZero.Location = new System.Drawing.Point(111, 161);
             this.groupBoxKmZero.Name = "groupBoxKmZero";
             this.groupBoxKmZero.Size = new System.Drawing.Size(93, 45);
@@ -196,16 +200,16 @@
             this.rdbKmZeroSì.UseVisualStyleBackColor = true;
             this.rdbKmZeroSì.CheckedChanged += new System.EventHandler(this.rdbKmZeroSì_CheckedChanged);
             // 
-            // radrdbKmZeroNo
+            // rdbKmZeroNo
             // 
-            this.radrdbKmZeroNo.AutoSize = true;
-            this.radrdbKmZeroNo.Location = new System.Drawing.Point(46, 19);
-            this.radrdbKmZeroNo.Name = "radrdbKmZeroNo";
-            this.radrdbKmZeroNo.Size = new System.Drawing.Size(39, 17);
-            this.radrdbKmZeroNo.TabIndex = 19;
-            this.radrdbKmZeroNo.TabStop = true;
-            this.radrdbKmZeroNo.Text = "No";
-            this.radrdbKmZeroNo.UseVisualStyleBackColor = true;
+            this.rdbKmZeroNo.AutoSize = true;
+            this.rdbKmZeroNo.Location = new System.Drawing.Point(46, 19);
+            this.rdbKmZeroNo.Name = "rdbKmZeroNo";
+            this.rdbKmZeroNo.Size = new System.Drawing.Size(39, 17);
+            this.rdbKmZeroNo.TabIndex = 19;
+            this.rdbKmZeroNo.TabStop = true;
+            this.rdbKmZeroNo.Text = "No";
+            this.rdbKmZeroNo.UseVisualStyleBackColor = true;
             // 
             // groupBoxUsato
             // 
@@ -318,6 +322,7 @@
             // 
             // txtMarca
             // 
+            this.txtMarca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMarca.Location = new System.Drawing.Point(104, 22);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(100, 20);
@@ -413,7 +418,7 @@
             // 
             // btnScegliFile
             // 
-            this.btnScegliFile.Location = new System.Drawing.Point(12, 374);
+            this.btnScegliFile.Location = new System.Drawing.Point(12, 456);
             this.btnScegliFile.Name = "btnScegliFile";
             this.btnScegliFile.Size = new System.Drawing.Size(260, 23);
             this.btnScegliFile.TabIndex = 9;
@@ -421,12 +426,48 @@
             this.btnScegliFile.UseVisualStyleBackColor = true;
             this.btnScegliFile.Click += new System.EventHandler(this.btnScegliFile_Click);
             // 
+            // groupBoxImmagine
+            // 
+            this.groupBoxImmagine.Controls.Add(this.rdbImgSì);
+            this.groupBoxImmagine.Controls.Add(this.rdbImgNo);
+            this.groupBoxImmagine.Location = new System.Drawing.Point(12, 375);
+            this.groupBoxImmagine.Name = "groupBoxImmagine";
+            this.groupBoxImmagine.Size = new System.Drawing.Size(260, 75);
+            this.groupBoxImmagine.TabIndex = 28;
+            this.groupBoxImmagine.TabStop = false;
+            this.groupBoxImmagine.Text = "Vuoi aggiungere un\'immagine?";
+            // 
+            // rdbImgSì
+            // 
+            this.rdbImgSì.AutoSize = true;
+            this.rdbImgSì.Checked = true;
+            this.rdbImgSì.Location = new System.Drawing.Point(87, 34);
+            this.rdbImgSì.Name = "rdbImgSì";
+            this.rdbImgSì.Size = new System.Drawing.Size(34, 17);
+            this.rdbImgSì.TabIndex = 20;
+            this.rdbImgSì.TabStop = true;
+            this.rdbImgSì.Text = "Sì";
+            this.rdbImgSì.UseVisualStyleBackColor = true;
+            this.rdbImgSì.CheckedChanged += new System.EventHandler(this.rdbImgSì_CheckedChanged);
+            // 
+            // rdbImgNo
+            // 
+            this.rdbImgNo.AutoSize = true;
+            this.rdbImgNo.Location = new System.Drawing.Point(127, 34);
+            this.rdbImgNo.Name = "rdbImgNo";
+            this.rdbImgNo.Size = new System.Drawing.Size(39, 17);
+            this.rdbImgNo.TabIndex = 21;
+            this.rdbImgNo.Text = "No";
+            this.rdbImgNo.UseVisualStyleBackColor = true;
+            this.rdbImgNo.CheckedChanged += new System.EventHandler(this.rdbImgNo_CheckedChanged);
+            // 
             // FormDialogAggiungiVeicolo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnAnnulla;
             this.ClientSize = new System.Drawing.Size(284, 524);
+            this.Controls.Add(this.groupBoxImmagine);
             this.Controls.Add(this.btnScegliFile);
             this.Controls.Add(this.groupBoxCaratteristicheMoto);
             this.Controls.Add(this.groupBoxCaratteristicheAuto);
@@ -451,6 +492,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudNumeroAirbag)).EndInit();
             this.groupBoxCaratteristicheMoto.ResumeLayout(false);
             this.groupBoxCaratteristicheMoto.PerformLayout();
+            this.groupBoxImmagine.ResumeLayout(false);
+            this.groupBoxImmagine.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -469,14 +512,13 @@
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label lblPotenzakW;
         private System.Windows.Forms.ComboBox cmbColore;
-        private System.Windows.Forms.TextBox txtPotenzakW;
         private System.Windows.Forms.DateTimePicker dtpImmatricolazione;
         private System.Windows.Forms.Label lblImmatricolazione;
         private System.Windows.Forms.RadioButton rdbUsatoNo;
         private System.Windows.Forms.RadioButton rdbUsatoSì;
         private System.Windows.Forms.GroupBox groupBoxKmZero;
         private System.Windows.Forms.RadioButton rdbKmZeroSì;
-        private System.Windows.Forms.RadioButton radrdbKmZeroNo;
+        private System.Windows.Forms.RadioButton rdbKmZeroNo;
         private System.Windows.Forms.GroupBox groupBoxUsato;
         private System.Windows.Forms.NumericUpDown nudKmPercorsi;
         private System.Windows.Forms.Label lblKmPercorsi;
@@ -489,5 +531,9 @@
         private System.Windows.Forms.Label lblSella;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button btnScegliFile;
+        private System.Windows.Forms.TextBox txtPotenzakW;
+        private System.Windows.Forms.GroupBox groupBoxImmagine;
+        private System.Windows.Forms.RadioButton rdbImgSì;
+        private System.Windows.Forms.RadioButton rdbImgNo;
     }
 }

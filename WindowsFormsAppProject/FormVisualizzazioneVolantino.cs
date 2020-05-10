@@ -39,7 +39,7 @@ namespace WindowsFormsAppProject
             for (int i = 0; i < listVeicoli.Count; i++)
             {
                 dgvPictures.Rows.Add();
-                dgvPictures.Rows[i].Cells["colPicture"].Value = Image.FromFile("img/" + listVeicoli[i].Path);
+                dgvPictures.Rows[i].Cells["colPicture"].Value = Image.FromFile(listVeicoli[i].Path);
                 dgvPictures.Columns["colPicture"].Width = 200;
             }
             dgvPictures.AutoResizeRows();

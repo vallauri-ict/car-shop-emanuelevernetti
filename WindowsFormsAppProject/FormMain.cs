@@ -2,7 +2,6 @@
 using System.ComponentModel;
 using System.Data.OleDb;
 using System.Diagnostics;
-using System.Drawing.Printing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -17,18 +16,21 @@ namespace WindowsFormsAppProject
         private string connStr;
 
         BindingList<Veicolo> bindingListVeicoli;
-        PageSettings pageSettings = new PageSettings();
-        bool docModified = false;
+
         string path;
         OleDbConnection connection;
 
         public FormMain()
         {
             InitializeComponent();
+
             bindingListVeicoli = new BindingList<Veicolo>();
+
             clsMetodi.settaDgv(dgvVeicoli);
+
             path = Directory.GetParent(Application.StartupPath).Parent.Parent.FullName + "\\Utilities\\Veicoli.accdb";
             connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path;
+
             connection = new OleDbConnection(connStr);
         }
 
@@ -48,10 +50,6 @@ namespace WindowsFormsAppProject
                         {
                             while (reader.Read()) //restituisce true finchè ci sono ancora delle righe
                             {
-                                Console.WriteLine("{0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} | {9} | {10} | {11} | {12}",
-                                    reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5),
-                                    reader.GetInt32(6), reader.GetDateTime(7), reader.GetBoolean(8), reader.GetBoolean(9), reader.GetInt32(10),
-                                    reader.GetString(11), reader.GetString(12));
 
                                 if (reader.GetString(1) == "MOTO")
                                 {
@@ -77,16 +75,15 @@ namespace WindowsFormsAppProject
                         {
                             Console.WriteLine("No rows found");
                         }
-                        clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "Marca");
+                        clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "CodVeicolo");
                         clsMetodi.caricaDgv(bindingListVeicoli, dgvVeicoli);
-                        object[] vet = { "Marca", "Modello", "Colore", "Cilindrata", "PotenzaKw", "Immatricolazione", "IsUsato", "IsKmZero", "KmPercorsi" };
+                        object[] vet = { "CodVeicolo", "Marca", "Modello", "Colore", "Cilindrata", "PotenzaKw", "Immatricolazione", "IsUsato", "IsKmZero", "KmPercorsi" };
                         toolStripComboBoxFiltro.Items.AddRange(vet);
                         toolStripComboBoxFiltro.SelectedIndex = 0;
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
-                        Application.Exit();
                     }
                 }
             }
@@ -98,40 +95,8 @@ namespace WindowsFormsAppProject
 
         private void nuovoToolStripButton_Click(object sender, EventArgs e)
         {
-            int prevCount = bindingListVeicoli.Count;
             FormDialogAggiungiVeicolo dialogAggiungi = new FormDialogAggiungiVeicolo(bindingListVeicoli, this);
             dialogAggiungi.ShowDialog();
-        }
-
-        private void apriToolStripButton_Click(object sender, EventArgs e)
-        {
-            //bindingListVeicoli.Clear();
-            //using (StreamReader sr = new StreamReader("veicoli.dat"))
-            //{
-            //    if (sr == null)
-            //    {
-            //        MessageBox.Show("Il file non è stato trovato");
-            //    }
-            //    else
-            //    {
-            //        while (sr.Peek() != -1)
-            //        {
-            //            string s = sr.ReadLine();
-            //            string[] aus = s.Split('|');
-            //            if (aus[0] == "MOTO")
-            //            {
-            //                Moto m = new Moto(aus[1].ToString(), aus[2].ToString(), aus[3].ToString(), Convert.ToInt32(aus[4]), Convert.ToDouble(aus[5]), DateTime.Now, Convert.ToBoolean(aus[7]), Convert.ToBoolean(aus[8]), Convert.ToInt32(aus[9]), aus[10].ToString(), aus[11].ToString());
-            //                bindingListVeicoli.Add(m);
-            //            }
-            //            else
-            //            {
-            //                Auto a = new Auto(aus[1].ToString(), aus[2].ToString(), aus[3].ToString(), Convert.ToInt32(aus[4]), Convert.ToDouble(aus[5]), DateTime.Now, Convert.ToBoolean(aus[7]), Convert.ToBoolean(aus[8]), Convert.ToInt32(aus[9]), Convert.ToInt32(aus[10]), aus[11].ToString());
-            //                bindingListVeicoli.Add(a);
-            //            }
-            //        }
-            //    }
-            //}
-            //clsMetodi.caricaDgv(bindingListVeicoli, dgvVeicoli);
         }
 
         private void salvaToolStripButton_Click(object sender, EventArgs e)
@@ -141,6 +106,7 @@ namespace WindowsFormsAppProject
 
         public void salva()
         {
+            clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "CodVeicolo");
             using (StreamWriter sw = new StreamWriter("veicoli.dat", false))
             {
                 string s = null;
@@ -158,67 +124,36 @@ namespace WindowsFormsAppProject
                     }
                 }
             }
-            docModified = false;
         }
 
-        private void stampaToolStripButton_Click(object sender, EventArgs e)
+        private void modificaToolStripButton_Click(object sender, EventArgs e)
         {
-            clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "Marca");
-            FormVisualizzazioneVolantino fv = new FormVisualizzazioneVolantino(bindingListVeicoli, this);
-            fv.Show();
-        }
-
-        private void toolStripButtonHtml_Click(object sender, EventArgs e)
-        {
-            string html = File.ReadAllText(".\\www\\index-skeleton.html");
-            string s = "";
-            int index = 0;
-            for (int i = 0; i < bindingListVeicoli.Count; i++)
+            try
             {
-                if (bindingListVeicoli[i] is Auto)
+                int pos = Convert.ToInt32(Interaction.InputBox("Inserisci il codice univoco del veicolo da modificare", "Modifica veicolo", "Codice del veicolo da modificare"));
+                OleDbConnection con = new OleDbConnection(connStr);
+                using (con)
                 {
-                    s += "<div class='auto' id=" + index + ">" + bindingListVeicoli[i].Marca + " " + bindingListVeicoli[i].Modello + "</div>";
-                    index++;
-                }
-                else
-                {
-                    s += "<div class='moto' id=" + index + ">" + bindingListVeicoli[i].Marca + " " + bindingListVeicoli[i].Modello + "</div>";
-                    index++;
+                    OleDbCommand command = new OleDbCommand("", con);
+                    con.Open();
+                    command.Parameters.Add("@pos", OleDbType.Integer).Value = pos;
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
-            html = html.Replace("{{mainContent}}", s);
-            File.WriteAllText(".\\www\\index.html", html);
-            Process.Start(".\\www\\index.html");
-        }
-
-        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (docModified)
+            catch (Exception ex)
             {
-                DialogResult dg = MessageBox.Show("Sono state apportate delle modifiche, si desidera salvarle?", "Attenzione", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
-                if (dg == DialogResult.Yes)
-                {
-                    salva();
-                }
-                else if (dg == DialogResult.No)
-                {
-                    MessageBox.Show("Le modifiche non sono state salvate.", "Uscita");
-                }
-                else
-                {
-                    e.Cancel = true;
-                }
+                MessageBox.Show(ex.Message);
             }
         }
 
-        private void toolStripComboBoxFiltro_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string s = toolStripComboBoxFiltro.Text;
-            clsMetodi.ordinaListaVeicoli(bindingListVeicoli, s);
-            clsMetodi.caricaDgv(bindingListVeicoli, dgvVeicoli);
-        }
-
-        private void btnEliminaVeicolo_Click(object sender, EventArgs e)
+        private void eliminaToolStripButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -262,9 +197,17 @@ namespace WindowsFormsAppProject
             {
                 if (bindingListVeicoli[i].CodVeicolo == pos)
                 {
-                    File.Delete("img/" + bindingListVeicoli[i].Path);
-                    bindingListVeicoli.RemoveAt(i);
-                    return true;
+                    if (bindingListVeicoli[i].Path == "img/NoImage.jpg")
+                    {
+                        bindingListVeicoli.RemoveAt(i);
+                        return true;
+                    }
+                    else
+                    {
+                        File.Delete(bindingListVeicoli[i].Path);
+                        bindingListVeicoli.RemoveAt(i);
+                        return true;
+                    }
                 }
                 else
                 {
@@ -274,9 +217,72 @@ namespace WindowsFormsAppProject
             return false;
         }
 
+        private void stampaToolStripButton_Click(object sender, EventArgs e)
+        {
+            clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "CodVeicolo");
+            FormVisualizzazioneVolantino fv = new FormVisualizzazioneVolantino(bindingListVeicoli, this);
+            fv.Show();
+        }
+
         private void JsonToolStripButton_Click(object sender, EventArgs e)
         {
-            Utils.SerializeToJson(bindingListVeicoli, "veicoli.json");
+            try
+            {
+                Utils.SerializeToJson(bindingListVeicoli, "veicoli.json");
+                DialogResult dg = MessageBox.Show("Dati esportati correttamente, vuoi aprire il file creato?", "JSON", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dg == DialogResult.Yes)
+                {
+                    Process.Start("veicoli.json");
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+        }
+
+        private void HTMLToolStripButton_Click(object sender, EventArgs e)
+        {
+            clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "CodVeicolo");
+            string html = File.ReadAllText(".\\www\\index-skeleton.html");
+            string s = "";
+            int index = 0;
+            for (int i = 0; i < bindingListVeicoli.Count; i++)
+            {
+                if (bindingListVeicoli[i] is Auto)
+                {
+                    s += "<div class='auto' id=" + index + ">" + bindingListVeicoli[i].Marca + " " + bindingListVeicoli[i].Modello + "</div>";
+                    index++;
+                }
+                else
+                {
+                    s += "<div class='moto' id=" + index + ">" + bindingListVeicoli[i].Marca + " " + bindingListVeicoli[i].Modello + "</div>";
+                    index++;
+                }
+            }
+            html = html.Replace("{{mainContent}}", s);
+            File.WriteAllText(".\\www\\index.html", html);
+            Process.Start(".\\www\\index.html");
+        }
+
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dg = MessageBox.Show("Sei sicuro di voler uscire?", "Attenzione", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dg == DialogResult.Yes)
+            {
+                salva();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void toolStripComboBoxFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string s = toolStripComboBoxFiltro.Text;
+            clsMetodi.ordinaListaVeicoli(bindingListVeicoli, s);
+            clsMetodi.caricaDgv(bindingListVeicoli, dgvVeicoli);
         }
     }
 }

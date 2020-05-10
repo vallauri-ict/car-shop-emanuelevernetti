@@ -5,3 +5,6 @@ C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\obj\
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\obj\Debug\ConsoleAppProject.csproj.CoreCompileInputs.cache
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\obj\Debug\ConsoleAppProject.exe
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\obj\Debug\ConsoleAppProject.pdb
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\bin\Debug\VenditaVeicoliDllProject.dll
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\bin\Debug\VenditaVeicoliDllProject.pdb
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\obj\Debug\ConsoleAppProject.csproj.CopyComplete

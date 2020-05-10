@@ -34,9 +34,10 @@
             this.nuovoToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.salvaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.stampaToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminaVeicolo = new System.Windows.Forms.ToolStripButton();
+            this.JsonToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.eliminaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButtonHtml = new System.Windows.Forms.ToolStripButton();
+            this.HTMLToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripComboBoxFiltro = new System.Windows.Forms.ToolStripComboBox();
@@ -56,12 +57,10 @@
             this.pathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.veicoloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.veicoloBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.JsonToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.modificaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeicoli)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -69,11 +68,12 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuovoToolStripButton,
             this.salvaToolStripButton,
+            this.modificaToolStripButton,
+            this.eliminaToolStripButton,
             this.stampaToolStripButton,
             this.JsonToolStripButton,
-            this.btnEliminaVeicolo,
             this.toolStripSeparator,
-            this.toolStripButtonHtml,
+            this.HTMLToolStripButton,
             this.toolStripSeparator1,
             this.toolStripLabel1,
             this.toolStripComboBoxFiltro});
@@ -113,30 +113,40 @@
             this.stampaToolStripButton.Text = "&Stampa";
             this.stampaToolStripButton.Click += new System.EventHandler(this.stampaToolStripButton_Click);
             // 
-            // btnEliminaVeicolo
+            // JsonToolStripButton
             // 
-            this.btnEliminaVeicolo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnEliminaVeicolo.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminaVeicolo.Image")));
-            this.btnEliminaVeicolo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminaVeicolo.Name = "btnEliminaVeicolo";
-            this.btnEliminaVeicolo.Size = new System.Drawing.Size(23, 22);
-            this.btnEliminaVeicolo.Text = "&Elimina";
-            this.btnEliminaVeicolo.Click += new System.EventHandler(this.btnEliminaVeicolo_Click);
+            this.JsonToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.JsonToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("JsonToolStripButton.Image")));
+            this.JsonToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.JsonToolStripButton.Name = "JsonToolStripButton";
+            this.JsonToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.JsonToolStripButton.Text = "&Json";
+            this.JsonToolStripButton.Click += new System.EventHandler(this.JsonToolStripButton_Click);
+            // 
+            // eliminaToolStripButton
+            // 
+            this.eliminaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.eliminaToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("eliminaToolStripButton.Image")));
+            this.eliminaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.eliminaToolStripButton.Name = "eliminaToolStripButton";
+            this.eliminaToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.eliminaToolStripButton.Text = "&Elimina";
+            this.eliminaToolStripButton.Click += new System.EventHandler(this.eliminaToolStripButton_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
             this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButtonHtml
+            // HTMLToolStripButton
             // 
-            this.toolStripButtonHtml.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonHtml.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonHtml.Image")));
-            this.toolStripButtonHtml.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonHtml.Name = "toolStripButtonHtml";
-            this.toolStripButtonHtml.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButtonHtml.Text = "&Web";
-            this.toolStripButtonHtml.Click += new System.EventHandler(this.toolStripButtonHtml_Click);
+            this.HTMLToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.HTMLToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("HTMLToolStripButton.Image")));
+            this.HTMLToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.HTMLToolStripButton.Name = "HTMLToolStripButton";
+            this.HTMLToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.HTMLToolStripButton.Text = "&Web";
+            this.HTMLToolStripButton.Click += new System.EventHandler(this.HTMLToolStripButton_Click);
             // 
             // toolStripSeparator1
             // 
@@ -257,19 +267,15 @@
             // 
             this.veicoloBindingSource.DataSource = typeof(VenditaVeicoliDllProject.Veicolo);
             // 
-            // veicoloBindingSource1
+            // modificaToolStripButton
             // 
-            this.veicoloBindingSource1.DataSource = typeof(VenditaVeicoliDllProject.Veicolo);
-            // 
-            // JsonToolStripButton
-            // 
-            this.JsonToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.JsonToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("JsonToolStripButton.Image")));
-            this.JsonToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.JsonToolStripButton.Name = "JsonToolStripButton";
-            this.JsonToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.JsonToolStripButton.Text = "&Json";
-            this.JsonToolStripButton.Click += new System.EventHandler(this.JsonToolStripButton_Click);
+            this.modificaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.modificaToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("modificaToolStripButton.Image")));
+            this.modificaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.modificaToolStripButton.Name = "modificaToolStripButton";
+            this.modificaToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.modificaToolStripButton.Text = "&Modifica";
+            this.modificaToolStripButton.Click += new System.EventHandler(this.modificaToolStripButton_Click);
             // 
             // FormMain
             // 
@@ -279,14 +285,13 @@
             this.Controls.Add(this.dgvVeicoli);
             this.Controls.Add(this.toolStrip1);
             this.Name = "FormMain";
-            this.Text = "SALONE VENDITA VEICOLI";
+            this.Text = "VENDITA VEICOLI";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeicoli)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,14 +303,16 @@
         private System.Windows.Forms.ToolStripButton stampaToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Drawing.Printing.PrintDocument printDocument;
-        private System.Windows.Forms.ToolStripButton toolStripButtonHtml;
+        private System.Windows.Forms.ToolStripButton HTMLToolStripButton;
         private System.Windows.Forms.DataGridView dgvVeicoli;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.BindingSource veicoloBindingSource1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBoxFiltro;
-        private System.Windows.Forms.ToolStripButton btnEliminaVeicolo;
+        private System.Windows.Forms.ToolStripButton eliminaToolStripButton;
+        private System.Windows.Forms.BindingSource veicoloBindingSource;
+        private System.Windows.Forms.ToolStripButton salvaToolStripButton;
+        private System.Windows.Forms.ToolStripButton JsonToolStripButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodVeicolo;
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelloDataGridViewTextBoxColumn;
@@ -318,9 +325,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kmPercorsiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn colInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn pathDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource veicoloBindingSource;
-        private System.Windows.Forms.ToolStripButton salvaToolStripButton;
-        private System.Windows.Forms.ToolStripButton JsonToolStripButton;
+        private System.Windows.Forms.ToolStripButton modificaToolStripButton;
     }
 }
 

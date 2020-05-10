@@ -2,7 +2,8 @@
 using System.Data.OleDb;
 using System.IO;
 using System.Threading;
-using VenditaVeicoliDllProject;
+
+using ConsoleAppProject;
 
 namespace CarShopConsoleProject
 {
@@ -41,15 +42,21 @@ namespace CarShopConsoleProject
                             visualizzaListaVeicoli();
                             break;
                         }
-                    default:
+                    case '5':
                         {
-                     
+                            cancellaRecords();
+                            break;
                         }
-                        break;
+                    case '6':
+                        {
+                            cancellaTabellaVeicoli();
+                            break;
+                        }
                 }
             }
             while (scelta != 'X' && scelta != 'x');
         }
+
 
         private static void menu()
         {
@@ -59,8 +66,8 @@ namespace CarShopConsoleProject
             Console.WriteLine("2 - Aggiungi elemento di esempio (Auto)");
             Console.WriteLine("3 - Aggiungi elemento di esempio (Moto)");
             Console.WriteLine("4 - Visualizza l'elenco completo dei veicoli");
-            Console.WriteLine("5 - ...");
-            Console.WriteLine("6 - ...");
+            Console.WriteLine("5 - Cancella tutti i record della tabella veicoli");
+            Console.WriteLine("6 - Cancella la tabella veicoli");
             Console.WriteLine("\nX - ESCI\n");
         }
 
@@ -79,7 +86,7 @@ namespace CarShopConsoleProject
                     try
                     {
                         cmd.CommandText = @"CREATE TABLE Veicoli(
-                                            CodVeicolo AUTOINCREMENT NOT NULL PRIMARY KEY, 
+                                            CodVeicolo INT NOT NULL PRIMARY KEY, 
                                             Tipologia VARCHAR(255) NOT NULL, 
                                             Marca VARCHAR(255) NOT NULL, 
                                             Modello VARCHAR(255) NOT NULL, 
@@ -131,7 +138,7 @@ namespace CarShopConsoleProject
                 command.Parameters.Add("@iskmzero", OleDbType.Boolean).Value = true;
                 command.Parameters.Add("@kmpercorsi", OleDbType.Integer).Value = 0;
                 command.Parameters.Add("@informazioni", OleDbType.VarChar, 255).Value = "4";
-                command.Parameters.Add("@immagine", OleDbType.VarChar, 255).Value = "test.jpg";
+                command.Parameters.Add("@immagine", OleDbType.VarChar, 255).Value = "img/test.jpg";
 
                 command.Prepare();
 
@@ -174,7 +181,7 @@ namespace CarShopConsoleProject
                 command.Parameters.Add("@iskmzero", OleDbType.Boolean).Value = true;
                 command.Parameters.Add("@kmpercorsi", OleDbType.Integer).Value = 0;
                 command.Parameters.Add("@informazioni", OleDbType.VarChar, 255).Value = "sellaTest";
-                command.Parameters.Add("@immagine", OleDbType.VarChar, 255).Value = "test.jpg";
+                command.Parameters.Add("@immagine", OleDbType.VarChar, 255).Value = "img/test.jpg";
 
                 command.Prepare();
 
@@ -231,6 +238,62 @@ namespace CarShopConsoleProject
                     }
                 }
                 Thread.Sleep(7000);
+            }
+        }
+
+        private static void cancellaRecords()
+        {
+            if (connStr != null)
+            {
+                OleDbConnection con = new OleDbConnection(connStr);
+                using (con)
+                {
+                    con.Open();
+
+                    OleDbCommand com = new OleDbCommand("DELETE FROM Veicoli", con);
+                    try
+                    {
+                        com.ExecuteNonQuery();
+                        Console.WriteLine("\nRecord eliminati correttamente");
+                        Thread.Sleep(3000);
+                        Utils.cancellaFiles();
+
+                    }
+                    catch (Exception exc)
+                    {
+                        Console.WriteLine("\n\n" + exc.Message);
+                        Thread.Sleep(3000);
+                        return;
+                    }
+                }
+            }
+        }
+
+        private static void cancellaTabellaVeicoli()
+        {
+            if (connStr != null)
+            {
+                OleDbConnection con = new OleDbConnection(connStr);
+                using (con)
+                {
+                    con.Open();
+
+                    OleDbCommand com = new OleDbCommand("DROP TABLE Veicoli", con);
+
+                    try
+                    {
+                        com.ExecuteNonQuery();
+                        Console.WriteLine("\nTabella eliminata correttamente");
+                        Thread.Sleep(3000);
+                        Utils.cancellaFiles();
+                    }
+                    catch (Exception exc)
+                    {
+                        Console.WriteLine("\n\n" + exc.Message);
+                        Thread.Sleep(3000);
+                        return;
+                    }
+                }
             }
         }
     }
