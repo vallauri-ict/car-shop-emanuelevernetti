@@ -1,0 +1,11 @@
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VeicoliDLL\bin\Debug\VeicoliDLL.dll
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VeicoliDLL\bin\Debug\VeicoliDLL.pdb
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VeicoliDLL\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VeicoliDLL\bin\Debug\System.IO.Packaging.dll
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VeicoliDLL\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VeicoliDLL\bin\Debug\System.IO.Packaging.xml
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VeicoliDLL\obj\Debug\VeicoliDLL.csprojAssemblyReference.cache
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VeicoliDLL\obj\Debug\VeicoliDLL.csproj.CoreCompileInputs.cache
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VeicoliDLL\obj\Debug\VeicoliDLL.csproj.CopyComplete
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VeicoliDLL\obj\Debug\VeicoliDLL.dll
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VeicoliDLL\obj\Debug\VeicoliDLL.pdb

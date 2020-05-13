@@ -8,3 +8,11 @@ C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\obj\
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\bin\Debug\VenditaVeicoliDllProject.dll
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\bin\Debug\VenditaVeicoliDllProject.pdb
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\obj\Debug\ConsoleAppProject.csproj.CopyComplete
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\bin\Debug\System.IO.Packaging.dll
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\bin\Debug\VeicoliDLL.dll
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\bin\Debug\System.IO.Packaging.xml
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\ConsoleAppProject\bin\Debug\VeicoliDLL.pdb

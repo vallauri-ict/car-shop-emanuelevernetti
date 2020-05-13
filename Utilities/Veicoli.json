@@ -1,0 +1,72 @@
+[
+  {
+    "NumAirbag": 5,
+    "CodVeicolo": 0,
+    "Marca": "ALFA ROMEO",
+    "Modello": "Stelvio",
+    "Colore": "Rosso",
+    "Cilindrata": 1995,
+    "PotenzaKw": 148.0,
+    "Immatricolazione": "2020-05-10T00:00:00",
+    "IsUsato": false,
+    "IsKmZero": true,
+    "KmPercorsi": 0,
+    "Path": "img/0.jpg"
+  },
+  {
+    "NumAirbag": 3,
+    "CodVeicolo": 1,
+    "Marca": "ALFA ROMEO",
+    "Modello": "Giulietta",
+    "Colore": "Bianco",
+    "Cilindrata": 1368,
+    "PotenzaKw": 88.0,
+    "Immatricolazione": "2020-05-10T00:00:00",
+    "IsUsato": false,
+    "IsKmZero": true,
+    "KmPercorsi": 0,
+    "Path": "img/1.jpg"
+  },
+  {
+    "NumAirbag": 1,
+    "CodVeicolo": 2,
+    "Marca": "AUDI",
+    "Modello": "A8",
+    "Colore": "Nero",
+    "Cilindrata": 2995,
+    "PotenzaKw": 420.0,
+    "Immatricolazione": "2020-05-10T00:00:00",
+    "IsUsato": false,
+    "IsKmZero": true,
+    "KmPercorsi": 0,
+    "Path": "img/2.jpg"
+  },
+  {
+    "MarcaSella": "1",
+    "CodVeicolo": 3,
+    "Marca": "BMW",
+    "Modello": "F 750 GS",
+    "Colore": "Bianco",
+    "Cilindrata": 853,
+    "PotenzaKw": 35.0,
+    "Immatricolazione": "2020-05-10T00:00:00",
+    "IsUsato": false,
+    "IsKmZero": true,
+    "KmPercorsi": 0,
+    "Path": "img/NoImage.jpg"
+  },
+  {
+    "NumAirbag": 4,
+    "CodVeicolo": 4,
+    "Marca": "FIAT",
+    "Modello": "Punto",
+    "Colore": "Bianco",
+    "Cilindrata": 1000,
+    "PotenzaKw": 60.0,
+    "Immatricolazione": "2020-05-13T00:00:00",
+    "IsUsato": false,
+    "IsKmZero": true,
+    "KmPercorsi": 0,
+    "Path": "img/NoImage.jpg"
+  }
+]

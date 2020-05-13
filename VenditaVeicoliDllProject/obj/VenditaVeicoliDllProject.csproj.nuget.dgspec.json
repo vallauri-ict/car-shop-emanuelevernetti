@@ -4,6 +4,17 @@
     "C:\\Users\\emanu\\Documents\\GitHub\\car-shop-emanuelevernetti\\VenditaVeicoliDllProject\\VenditaVeicoliDllProject.csproj": {}
   },
   "projects": {
+    "C:\\Users\\emanu\\Documents\\GitHub\\car-shop-emanuelevernetti\\VeicoliDLL\\VeicoliDLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\emanu\\Documents\\GitHub\\car-shop-emanuelevernetti\\VeicoliDLL\\VeicoliDLL.csproj",
+        "projectName": "VeicoliDLL",
+        "projectPath": "C:\\Users\\emanu\\Documents\\GitHub\\car-shop-emanuelevernetti\\VeicoliDLL\\VeicoliDLL.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
     "C:\\Users\\emanu\\Documents\\GitHub\\car-shop-emanuelevernetti\\VenditaVeicoliDllProject\\VenditaVeicoliDllProject.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -26,7 +37,11 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\emanu\\Documents\\GitHub\\car-shop-emanuelevernetti\\VeicoliDLL\\VeicoliDLL.csproj": {
+                "projectPath": "C:\\Users\\emanu\\Documents\\GitHub\\car-shop-emanuelevernetti\\VeicoliDLL\\VeicoliDLL.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -38,6 +53,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[2.10.1, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

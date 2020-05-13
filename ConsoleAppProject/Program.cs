@@ -3,7 +3,7 @@ using System.Data.OleDb;
 using System.IO;
 using System.Threading;
 
-using ConsoleAppProject;
+using VenditaVeicoliDllProject;
 
 namespace CarShopConsoleProject
 {
@@ -44,10 +44,15 @@ namespace CarShopConsoleProject
                         }
                     case '5':
                         {
-                            cancellaRecords();
+                            Utils.esportaInWord();
                             break;
                         }
                     case '6':
+                        {
+                            cancellaRecords();
+                            break;
+                        }
+                    case '7':
                         {
                             cancellaTabellaVeicoli();
                             break;
@@ -66,8 +71,9 @@ namespace CarShopConsoleProject
             Console.WriteLine("2 - Aggiungi elemento di esempio (Auto)");
             Console.WriteLine("3 - Aggiungi elemento di esempio (Moto)");
             Console.WriteLine("4 - Visualizza l'elenco completo dei veicoli");
-            Console.WriteLine("5 - Cancella tutti i record della tabella veicoli");
-            Console.WriteLine("6 - Cancella la tabella veicoli");
+            Console.WriteLine("5 - Esporta i dati in un file .docx");
+            Console.WriteLine("6 - Cancella tutti i record della tabella veicoli");
+            Console.WriteLine("7 - Cancella la tabella veicoli");
             Console.WriteLine("\nX - ESCI\n");
         }
 
@@ -256,7 +262,7 @@ namespace CarShopConsoleProject
                         com.ExecuteNonQuery();
                         Console.WriteLine("\nRecord eliminati correttamente");
                         Thread.Sleep(3000);
-                        Utils.cancellaFiles();
+                        cancellaFiles();
 
                     }
                     catch (Exception exc)
@@ -285,7 +291,7 @@ namespace CarShopConsoleProject
                         com.ExecuteNonQuery();
                         Console.WriteLine("\nTabella eliminata correttamente");
                         Thread.Sleep(3000);
-                        Utils.cancellaFiles();
+                        cancellaFiles();
                     }
                     catch (Exception exc)
                     {
@@ -295,6 +301,21 @@ namespace CarShopConsoleProject
                     }
                 }
             }
+        }
+
+        private static void cancellaFiles()
+        {
+            DirectoryInfo di = new DirectoryInfo($"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\WindowsFormsAppProject\\bin\\Debug\\img");
+
+            foreach (FileInfo file in di.GetFiles())
+            {
+                if (file.Name != "NoImage.jpg")
+                {
+                    file.Delete();
+                }
+            }
+            Console.WriteLine("\nFiles eliminati correttamente");
+            Thread.Sleep(3000);
         }
     }
 }

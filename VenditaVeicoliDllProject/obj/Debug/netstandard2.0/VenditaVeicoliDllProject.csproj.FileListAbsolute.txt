@@ -123,3 +123,7 @@ C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProje
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.AssemblyInfo.cs
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.dll
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.pdb
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VeicoliDLL.dll
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\bin\Debug\netstandard2.0\VeicoliDLL.pdb
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csproj.CoreCompileInputs.cache
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\VenditaVeicoliDllProject\obj\Debug\netstandard2.0\VenditaVeicoliDllProject.csproj.CopyComplete

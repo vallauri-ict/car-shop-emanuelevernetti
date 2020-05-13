@@ -28,7 +28,7 @@ namespace WindowsFormsAppProject
 
             clsMetodi.settaDgv(dgvVeicoli);
 
-            path = Directory.GetParent(Application.StartupPath).Parent.Parent.FullName + "\\Utilities\\Veicoli.accdb";
+            path = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Utilities\\Veicoli.accdb";
             connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path;
 
             connection = new OleDbConnection(connStr);
@@ -48,7 +48,7 @@ namespace WindowsFormsAppProject
 
                         if (reader.HasRows)
                         {
-                            while (reader.Read()) //restituisce true finchè ci sono ancora delle righe
+                            while (reader.Read())
                             {
 
                                 if (reader.GetString(1) == "MOTO")
@@ -114,12 +114,12 @@ namespace WindowsFormsAppProject
                 {
                     if (bindingListVeicoli[i].GetType().ToString().Contains("Auto"))
                     {
-                        s = "AUTO|" + bindingListVeicoli[i].CodVeicolo + "|" + bindingListVeicoli[i].Marca + "|" + bindingListVeicoli[i].Modello + "|" + bindingListVeicoli[i].Colore + "|" + bindingListVeicoli[i].Cilindrata + "|" + bindingListVeicoli[i].PotenzaKw + "|" + bindingListVeicoli[i].Immatricolazione + "|" + bindingListVeicoli[i].IsUsato + "|" + bindingListVeicoli[i].IsKmZero + "|" + bindingListVeicoli[i].KmPercorsi + "|" + (bindingListVeicoli[i] as Auto).NumAirbag + "|" + bindingListVeicoli[i].Path;
+                        s = "AUTO|" + bindingListVeicoli[i].CodVeicolo + "|" + bindingListVeicoli[i].Marca + "|" + bindingListVeicoli[i].Modello + "|" + bindingListVeicoli[i].Colore + "|" + bindingListVeicoli[i].Cilindrata + "|" + bindingListVeicoli[i].PotenzaKw + "|" + bindingListVeicoli[i].Immatricolazione.ToShortDateString() + "|" + bindingListVeicoli[i].IsUsato + "|" + bindingListVeicoli[i].IsKmZero + "|" + bindingListVeicoli[i].KmPercorsi + "|" + (bindingListVeicoli[i] as Auto).NumAirbag + "|" + bindingListVeicoli[i].Path;
                         sw.WriteLine(s);
                     }
                     else
                     {
-                        s = "MOTO|" + bindingListVeicoli[i].CodVeicolo + "|" + bindingListVeicoli[i].Marca + "|" + bindingListVeicoli[i].Modello + "|" + bindingListVeicoli[i].Colore + "|" + bindingListVeicoli[i].Cilindrata + "|" + bindingListVeicoli[i].PotenzaKw + "|" + bindingListVeicoli[i].Immatricolazione + "|" + bindingListVeicoli[i].IsUsato + "|" + bindingListVeicoli[i].IsKmZero + "|" + bindingListVeicoli[i].KmPercorsi + "|" + (bindingListVeicoli[i] as Moto).MarcaSella + "|" + bindingListVeicoli[i].Path;
+                        s = "MOTO|" + bindingListVeicoli[i].CodVeicolo + "|" + bindingListVeicoli[i].Marca + "|" + bindingListVeicoli[i].Modello + "|" + bindingListVeicoli[i].Colore + "|" + bindingListVeicoli[i].Cilindrata + "|" + bindingListVeicoli[i].PotenzaKw + "|" + bindingListVeicoli[i].Immatricolazione.ToShortDateString() + "|" + bindingListVeicoli[i].IsUsato + "|" + bindingListVeicoli[i].IsKmZero + "|" + bindingListVeicoli[i].KmPercorsi + "|" + (bindingListVeicoli[i] as Moto).MarcaSella + "|" + bindingListVeicoli[i].Path;
                         sw.WriteLine(s);
                     }
                 }
@@ -228,11 +228,12 @@ namespace WindowsFormsAppProject
         {
             try
             {
-                Utils.SerializeToJson(bindingListVeicoli, "veicoli.json");
-                DialogResult dg = MessageBox.Show("Dati esportati correttamente, vuoi aprire il file creato?", "JSON", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                string filepath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Utilities\\Veicoli.json";
+                Utils.SerializeToJson(bindingListVeicoli, filepath);
+                DialogResult dg = MessageBox.Show("Documento creato correttamente, desideri aprirlo?", "JSON", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dg == DialogResult.Yes)
                 {
-                    Process.Start("veicoli.json");
+                    Process.Start(filepath);
                 }
             }
             catch (Exception exc)
@@ -283,6 +284,45 @@ namespace WindowsFormsAppProject
             string s = toolStripComboBoxFiltro.Text;
             clsMetodi.ordinaListaVeicoli(bindingListVeicoli, s);
             clsMetodi.caricaDgv(bindingListVeicoli, dgvVeicoli);
+        }
+
+        private void WordToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Utils.esportaInWord();
+                DialogResult dg = MessageBox.Show("Documento creato correttamente, desideri aprirlo?", "Word", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dg == DialogResult.Yes)
+                {
+                    string filepath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Utilities\\Veicoli.docx";
+                    Process.Start(filepath);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
+
+        private void ExcelToolStripButton_Click(object sender, EventArgs e)
+        {
+            clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "CodVeicolo");
+            try
+            {
+                string filepath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Utilities\\Veicoli.csv";
+                Utils.SerializeToCsv(bindingListVeicoli, filepath);
+                DialogResult dg = MessageBox.Show("Documento creato correttamente, desideri aprirlo?", "CSV", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dg == DialogResult.Yes)
+                {
+                    Process.Start(filepath);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

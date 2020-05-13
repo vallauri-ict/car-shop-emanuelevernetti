@@ -23,7 +23,7 @@ namespace WindowsFormsAppProject
             InitializeComponent();
             bindingListVeicoli = list;
             this.formMain = f;
-            DBPath = Directory.GetParent(Application.StartupPath).Parent.Parent.FullName + "\\Utilities\\Veicoli.accdb";
+            DBPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Utilities\\Veicoli.accdb";
             connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + DBPath;
         }
 

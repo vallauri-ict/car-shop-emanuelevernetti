@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
@@ -8,10 +7,17 @@ using System.Reflection;
 using System.Text;
 using System.Xml.Serialization;
 
+using Newtonsoft.Json;
+
+
+
 namespace VenditaVeicoliDllProject
 {
     [Serializable]
-    public class SerializableBindingList<T> : BindingList<T> { }
+    public class SerializableBindingList<T> : BindingList<T>
+    {
+
+    }
 
     public class Utils
     {
@@ -41,6 +47,11 @@ namespace VenditaVeicoliDllProject
             return csvdata.ToString();
         }
 
+        public static void esportaInWord()
+        {
+            VeicoliDLL.Utilities.esportaInWord();
+        }
+
         public static void SerializeToCsv<T>(IEnumerable<T> objectlist, string pathName, string separator = "|")
         {
             IEnumerable<string> dataToSave = Utils.ToCsv(objectlist, separator);
@@ -59,6 +70,5 @@ namespace VenditaVeicoliDllProject
             string json = JsonConvert.SerializeObject(objectlist, Formatting.Indented);
             File.WriteAllText(pathName, json);
         }
-
     }
 }

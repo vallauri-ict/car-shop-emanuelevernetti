@@ -324,3 +324,9 @@ C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.exe
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.pdb
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.CoreCompileInputs.cache
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\bin\Debug\System.IO.Packaging.dll
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\bin\Debug\VeicoliDLL.dll
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\bin\Debug\System.IO.Packaging.xml
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\bin\Debug\VeicoliDLL.pdb

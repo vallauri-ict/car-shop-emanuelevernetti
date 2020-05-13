@@ -33,9 +33,11 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.nuovoToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.salvaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.modificaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.eliminaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.stampaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.JsonToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.eliminaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.WordToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.HTMLToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -44,6 +46,8 @@
             this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.dgvVeicoli = new System.Windows.Forms.DataGridView();
             this.colCodVeicolo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coloreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,11 +57,9 @@
             this.isUsatoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.isKmZeroDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.kmPercorsiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.veicoloBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.modificaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.ExcelToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeicoli)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource)).BeginInit();
@@ -72,6 +74,8 @@
             this.eliminaToolStripButton,
             this.stampaToolStripButton,
             this.JsonToolStripButton,
+            this.WordToolStripButton,
+            this.ExcelToolStripButton,
             this.toolStripSeparator,
             this.HTMLToolStripButton,
             this.toolStripSeparator1,
@@ -103,6 +107,26 @@
             this.salvaToolStripButton.Text = "&Salva";
             this.salvaToolStripButton.Click += new System.EventHandler(this.salvaToolStripButton_Click);
             // 
+            // modificaToolStripButton
+            // 
+            this.modificaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.modificaToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("modificaToolStripButton.Image")));
+            this.modificaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.modificaToolStripButton.Name = "modificaToolStripButton";
+            this.modificaToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.modificaToolStripButton.Text = "&Modifica";
+            this.modificaToolStripButton.Click += new System.EventHandler(this.modificaToolStripButton_Click);
+            // 
+            // eliminaToolStripButton
+            // 
+            this.eliminaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.eliminaToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("eliminaToolStripButton.Image")));
+            this.eliminaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.eliminaToolStripButton.Name = "eliminaToolStripButton";
+            this.eliminaToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.eliminaToolStripButton.Text = "&Elimina";
+            this.eliminaToolStripButton.Click += new System.EventHandler(this.eliminaToolStripButton_Click);
+            // 
             // stampaToolStripButton
             // 
             this.stampaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -123,15 +147,15 @@
             this.JsonToolStripButton.Text = "&Json";
             this.JsonToolStripButton.Click += new System.EventHandler(this.JsonToolStripButton_Click);
             // 
-            // eliminaToolStripButton
+            // WordToolStripButton
             // 
-            this.eliminaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.eliminaToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("eliminaToolStripButton.Image")));
-            this.eliminaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.eliminaToolStripButton.Name = "eliminaToolStripButton";
-            this.eliminaToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.eliminaToolStripButton.Text = "&Elimina";
-            this.eliminaToolStripButton.Click += new System.EventHandler(this.eliminaToolStripButton_Click);
+            this.WordToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.WordToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("WordToolStripButton.Image")));
+            this.WordToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.WordToolStripButton.Name = "WordToolStripButton";
+            this.WordToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.WordToolStripButton.Text = "toolStripButton1";
+            this.WordToolStripButton.Click += new System.EventHandler(this.WordToolStripButton_Click);
             // 
             // toolStripSeparator
             // 
@@ -196,6 +220,13 @@
             this.colCodVeicolo.HeaderText = "CodVeicolo";
             this.colCodVeicolo.Name = "colCodVeicolo";
             // 
+            // colInfo
+            // 
+            this.colInfo.HeaderText = "Informazioni";
+            this.colInfo.Name = "colInfo";
+            this.colInfo.ReadOnly = true;
+            this.colInfo.ToolTipText = "Informazioni sul veicolo";
+            // 
             // marcaDataGridViewTextBoxColumn
             // 
             this.marcaDataGridViewTextBoxColumn.DataPropertyName = "Marca";
@@ -250,13 +281,6 @@
             this.kmPercorsiDataGridViewTextBoxColumn.HeaderText = "KmPercorsi";
             this.kmPercorsiDataGridViewTextBoxColumn.Name = "kmPercorsiDataGridViewTextBoxColumn";
             // 
-            // colInfo
-            // 
-            this.colInfo.HeaderText = "Informazioni";
-            this.colInfo.Name = "colInfo";
-            this.colInfo.ReadOnly = true;
-            this.colInfo.ToolTipText = "Informazioni sul veicolo";
-            // 
             // pathDataGridViewTextBoxColumn
             // 
             this.pathDataGridViewTextBoxColumn.DataPropertyName = "Path";
@@ -267,15 +291,15 @@
             // 
             this.veicoloBindingSource.DataSource = typeof(VenditaVeicoliDllProject.Veicolo);
             // 
-            // modificaToolStripButton
+            // ExcelToolStripButton
             // 
-            this.modificaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.modificaToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("modificaToolStripButton.Image")));
-            this.modificaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.modificaToolStripButton.Name = "modificaToolStripButton";
-            this.modificaToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.modificaToolStripButton.Text = "&Modifica";
-            this.modificaToolStripButton.Click += new System.EventHandler(this.modificaToolStripButton_Click);
+            this.ExcelToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ExcelToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ExcelToolStripButton.Image")));
+            this.ExcelToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ExcelToolStripButton.Name = "ExcelToolStripButton";
+            this.ExcelToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.ExcelToolStripButton.Text = "toolStripButton1";
+            this.ExcelToolStripButton.Click += new System.EventHandler(this.ExcelToolStripButton_Click);
             // 
             // FormMain
             // 
@@ -326,6 +350,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn pathDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripButton modificaToolStripButton;
+        private System.Windows.Forms.ToolStripButton WordToolStripButton;
+        private System.Windows.Forms.ToolStripButton ExcelToolStripButton;
     }
 }
 
