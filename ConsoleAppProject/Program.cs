@@ -9,16 +9,16 @@ namespace CarShopConsoleProject
 {
     public class Program
     {
-        static string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.accdb";
+        static string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities\\Veicoli.accdb";
         static string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path;
 
         static void Main(string[] args)
         {
-            if (!((Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities"))))
+            if (!((Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities"))))
             {
-                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities");
+                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities");
             }
-            if (!(File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.accdb")))
+            if (!(File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities\\Veicoli.accdb")))
             {
                 var cat = new ADOX.Catalog();
                 cat.Create(connStr);

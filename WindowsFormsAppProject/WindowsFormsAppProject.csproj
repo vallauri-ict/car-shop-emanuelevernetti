@@ -71,17 +71,23 @@
     <Compile Include="FormDettagliVeicolo.Designer.cs">
       <DependentUpon>FormDettagliVeicolo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDialogAggiungiVeicolo.cs">
+    <Compile Include="FormAggiungiVeicolo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDialogAggiungiVeicolo.Designer.cs">
-      <DependentUpon>FormDialogAggiungiVeicolo.cs</DependentUpon>
+    <Compile Include="FormAggiungiVeicolo.Designer.cs">
+      <DependentUpon>FormAggiungiVeicolo.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModificaVeicolo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificaVeicolo.Designer.cs">
+      <DependentUpon>FormModificaVeicolo.cs</DependentUpon>
     </Compile>
     <Compile Include="FormVisualizzazioneVolantino.cs">
       <SubType>Form</SubType>
@@ -94,11 +100,14 @@
     <EmbeddedResource Include="FormDettagliVeicolo.resx">
       <DependentUpon>FormDettagliVeicolo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDialogAggiungiVeicolo.resx">
-      <DependentUpon>FormDialogAggiungiVeicolo.cs</DependentUpon>
+    <EmbeddedResource Include="FormAggiungiVeicolo.resx">
+      <DependentUpon>FormAggiungiVeicolo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificaVeicolo.resx">
+      <DependentUpon>FormModificaVeicolo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVisualizzazioneVolantino.resx">
       <DependentUpon>FormVisualizzazioneVolantino.cs</DependentUpon>

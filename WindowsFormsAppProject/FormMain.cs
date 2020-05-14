@@ -1,4 +1,5 @@
-﻿using System;
+﻿//VERNETTI EMANUELE
+using System;
 using System.ComponentModel;
 using System.Data.OleDb;
 using System.Diagnostics;
@@ -27,21 +28,21 @@ namespace WindowsFormsAppProject
         public FormMain()
         {
             InitializeComponent();
-            path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.accdb";
+            path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities\\Veicoli.accdb";
             connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path;
 
-            if (!((Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities"))))
+            if (!((Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities"))))
             {
-                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities");
+                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities");
 
             }
-            if (!((Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\img"))))
+            if (!((Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities\\img"))))
             {
-                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\img");
+                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities\\img");
                 Bitmap bmp = new Bitmap(200, 200);
-                bmp.Save((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\img/NoImage.jpg"), ImageFormat.Jpeg);
+                bmp.Save((Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities\\img/NoImage.jpg"), ImageFormat.Jpeg);
             }
-            if (!(File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.accdb")))
+            if (!(File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities\\Veicoli.accdb")))
             {
                 var cat = new Catalog();
                 cat.Create(connStr);
@@ -126,7 +127,7 @@ namespace WindowsFormsAppProject
 
         private void nuovoToolStripButton_Click(object sender, EventArgs e)
         {
-            FormDialogAggiungiVeicolo dialogAggiungi = new FormDialogAggiungiVeicolo(bindingListVeicoli, this);
+            FormAggiungiVeicolo dialogAggiungi = new FormAggiungiVeicolo(bindingListVeicoli, this);
             dialogAggiungi.ShowDialog();
         }
 
@@ -140,7 +141,7 @@ namespace WindowsFormsAppProject
             if (bindingListVeicoli.Count != 0)
             {
                 clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "CodVeicolo");
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.dat";
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities\\Veicoli.dat";
                 using (StreamWriter sw = new StreamWriter(path, false))
                 {
                     string s = null;
@@ -165,22 +166,10 @@ namespace WindowsFormsAppProject
         {
             try
             {
-                int pos = Convert.ToInt32(Interaction.InputBox("Inserisci il codice univoco del veicolo da modificare", "Modifica veicolo", "Codice del veicolo da modificare"));
-                OleDbConnection con = new OleDbConnection(connStr);
-                using (con)
-                {
-                    OleDbCommand command = new OleDbCommand("", con);
-                    con.Open();
-                    command.Parameters.Add("@pos", OleDbType.Integer).Value = pos;
-                    try
-                    {
-                        command.ExecuteNonQuery();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                }
+                int cod = Convert.ToInt32(Interaction.InputBox("Inserisci il codice univoco del veicolo da modificare", "Modifica veicolo", "Codice del veicolo da modificare"));
+                FormModificaVeicolo fmv = new FormModificaVeicolo(this, bindingListVeicoli, cod);
+                fmv.ShowDialog();
+                clsMetodi.caricaDgv(bindingListVeicoli, dgvVeicoli);
             }
             catch (Exception ex)
             {
@@ -232,7 +221,7 @@ namespace WindowsFormsAppProject
             {
                 if (bindingListVeicoli[i].CodVeicolo == pos)
                 {
-                    if (bindingListVeicoli[i].Path == Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\img/NoImage.jpg")
+                    if (bindingListVeicoli[i].Path == Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities\\img/NoImage.jpg")
                     {
                         bindingListVeicoli.RemoveAt(i);
                         return true;
@@ -264,7 +253,7 @@ namespace WindowsFormsAppProject
             try
             {
                 clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "CodVeicolo");
-                string filepath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.json";
+                string filepath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities\\Veicoli.json";
                 Utils.SerializeToJson(bindingListVeicoli, filepath);
                 DialogResult dg = MessageBox.Show("Documento creato correttamente, desideri aprirlo?", "JSON", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dg == DialogResult.Yes)
@@ -330,7 +319,7 @@ namespace WindowsFormsAppProject
                 DialogResult dg = MessageBox.Show("Documento creato correttamente, desideri aprirlo?", "Word", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dg == DialogResult.Yes)
                 {
-                    string filepath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.docx";
+                    string filepath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities\\Veicoli.docx";
                     Process.Start(filepath);
                 }
             }
@@ -347,7 +336,7 @@ namespace WindowsFormsAppProject
             clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "CodVeicolo");
             try
             {
-                string filepath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.csv";
+                string filepath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities\\Veicoli.csv";
                 Utils.SerializeToCsv(bindingListVeicoli, filepath);
                 DialogResult dg = MessageBox.Show("Documento creato correttamente, desideri aprirlo?", "CSV", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dg == DialogResult.Yes)

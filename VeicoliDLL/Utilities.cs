@@ -15,7 +15,7 @@ namespace VeicoliDLL
     {
         public static void esportaInWord()
         {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.accdb";
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities\\Veicoli.accdb";
             string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path;
 
             if (connStr != null)
@@ -30,7 +30,7 @@ namespace VeicoliDLL
 
                     if (reader.HasRows)
                     {
-                        string filepath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.docx";
+                        string filepath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities\\Veicoli.docx";
                         WordprocessingDocument doc = WordprocessingDocument.Create(filepath, WordprocessingDocumentType.Document);
 
                         MainDocumentPart mainPart = doc.AddMainDocumentPart();

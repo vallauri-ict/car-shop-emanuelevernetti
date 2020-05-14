@@ -315,7 +315,6 @@ C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\bin\Debug\VenditaVeicoliDllProject.pdb
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csprojAssemblyReference.cache
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDettagliVeicolo.resources
-C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDialogAggiungiVeicolo.resources
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormMain.resources
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormVisualizzazioneVolantino.resources
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.Properties.Resources.resources
@@ -353,7 +352,6 @@ C:\Users\emanu\Desktop\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debu
 C:\Users\emanu\Desktop\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\Interop.ADOX.dll
 C:\Users\emanu\Desktop\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.csproj.ResolveComReference.cache
 C:\Users\emanu\Desktop\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDettagliVeicolo.resources
-C:\Users\emanu\Desktop\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormDialogAggiungiVeicolo.resources
 C:\Users\emanu\Desktop\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormMain.resources
 C:\Users\emanu\Desktop\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormVisualizzazioneVolantino.resources
 C:\Users\emanu\Desktop\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.Properties.Resources.resources
@@ -365,6 +363,10 @@ C:\Users\emanu\Desktop\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debu
 C:\Users\emanu\Desktop\car-shop-emanuelevernetti\WindowsFormsAppProject\bin\Debug\ConsoleAppProject.exe
 C:\Users\emanu\Desktop\car-shop-emanuelevernetti\WindowsFormsAppProject\bin\Debug\ConsoleAppProject.pdb
 C:\Users\emanu\Desktop\car-shop-emanuelevernetti\WindowsFormsAppProject\bin\Debug\ConsoleAppProject.exe.config
+C:\Users\emanu\Desktop\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormAggiungiVeicolo.resources
+C:\Users\emanu\Desktop\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormModificaVeicolo.resources
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\bin\Debug\ConsoleAppProject.exe
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\bin\Debug\ConsoleAppProject.pdb
 C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\bin\Debug\ConsoleAppProject.exe.config
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormAggiungiVeicolo.resources
+C:\Users\emanu\Documents\GitHub\car-shop-emanuelevernetti\WindowsFormsAppProject\obj\Debug\WindowsFormsAppProject.FormModificaVeicolo.resources
