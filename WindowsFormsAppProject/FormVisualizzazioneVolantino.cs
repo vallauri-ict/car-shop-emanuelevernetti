@@ -22,20 +22,6 @@ namespace WindowsFormsAppProject
 
         private void FormVisualizzazioneVolantino_Load(object sender, EventArgs e)
         {
-            toolStripComboBoxMarca.Items.Add("Tutti");
-            toolStripComboBoxColore.Items.Add("Tutti");
-            toolStripComboBoxMarca.SelectedIndex = 0;
-            toolStripComboBoxColore.SelectedIndex = 0;
-            dgvPictures.RowTemplate.Height = 150;
-            dgvPictures.RowHeadersVisible = false;
-            for (int i = 0; i < clsVariabili.listaMarche.Count; i++)
-            {
-                toolStripComboBoxMarca.Items.Add(clsVariabili.listaMarche[i]);
-            }
-            for (int i = 0; i < clsVariabili.listaColori.Count; i++)
-            {
-                toolStripComboBoxColore.Items.Add(clsVariabili.listaColori[i]);
-            }
             for (int i = 0; i < listVeicoli.Count; i++)
             {
                 dgvPictures.Rows.Add();

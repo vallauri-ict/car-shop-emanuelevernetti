@@ -137,6 +137,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConsoleAppProject\ConsoleAppProject.csproj">
+      <Project>{564036b1-2b88-4804-bf7b-6a1ca9b6d576}</Project>
+      <Name>ConsoleAppProject</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VenditaVeicoliDllProject\VenditaVeicoliDllProject.csproj">
       <Project>{54CC9C64-6A52-4847-86CE-6C8586AAA2D0}</Project>
       <Name>VenditaVeicoliDllProject</Name>
@@ -577,6 +581,17 @@
   <ItemGroup>
     <Folder Include="bin\Release\" />
     <Folder Include="www\bootstrap\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADOX">
+      <Guid>{00000600-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions />

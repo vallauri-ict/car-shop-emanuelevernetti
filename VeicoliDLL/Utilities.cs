@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data.OleDb;
 using System.Diagnostics;
-using System.IO;
 using System.Threading;
 
 using DocumentFormat.OpenXml;
@@ -16,7 +15,7 @@ namespace VeicoliDLL
     {
         public static void esportaInWord()
         {
-            string path = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Utilities\\Veicoli.accdb";
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.accdb";
             string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path;
 
             if (connStr != null)
@@ -31,7 +30,7 @@ namespace VeicoliDLL
 
                     if (reader.HasRows)
                     {
-                        string filepath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Utilities\\Veicoli.docx";
+                        string filepath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.docx";
                         WordprocessingDocument doc = WordprocessingDocument.Create(filepath, WordprocessingDocumentType.Document);
 
                         MainDocumentPart mainPart = doc.AddMainDocumentPart();

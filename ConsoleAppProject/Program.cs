@@ -9,11 +9,21 @@ namespace CarShopConsoleProject
 {
     public class Program
     {
-        public static string path = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Utilities\\Veicoli.accdb";
-        public static string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path;
+        static string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.accdb";
+        static string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path;
 
         static void Main(string[] args)
         {
+            if (!((Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities"))))
+            {
+                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities");
+            }
+            if (!(File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.accdb")))
+            {
+                var cat = new ADOX.Catalog();
+                cat.Create(connStr);
+            }
+
             char scelta;
             do
             {
@@ -29,30 +39,20 @@ namespace CarShopConsoleProject
                         }
                     case '2':
                         {
-                            aggiungiEsempioAuto();
+                            visualizzaListaVeicoli();
                             break;
                         }
                     case '3':
                         {
-                            aggiungiEsempioMoto();
+                            Utils.esportaInWord();
                             break;
                         }
                     case '4':
                         {
-                            visualizzaListaVeicoli();
-                            break;
-                        }
-                    case '5':
-                        {
-                            Utils.esportaInWord();
-                            break;
-                        }
-                    case '6':
-                        {
                             cancellaRecords();
                             break;
                         }
-                    case '7':
+                    case '5':
                         {
                             cancellaTabellaVeicoli();
                             break;
@@ -68,16 +68,14 @@ namespace CarShopConsoleProject
             Console.Clear();
             Console.WriteLine("\t*** CAR SHOP - DB MANAGEMENT ***\n");
             Console.WriteLine("1 - Crea tabella 'Veicoli' ");
-            Console.WriteLine("2 - Aggiungi elemento di esempio (Auto)");
-            Console.WriteLine("3 - Aggiungi elemento di esempio (Moto)");
-            Console.WriteLine("4 - Visualizza l'elenco completo dei veicoli");
-            Console.WriteLine("5 - Esporta i dati in un file .docx");
-            Console.WriteLine("6 - Cancella tutti i record della tabella veicoli");
-            Console.WriteLine("7 - Cancella la tabella veicoli");
+            Console.WriteLine("2 - Visualizza l'elenco completo dei veicoli");
+            Console.WriteLine("3 - Esporta i dati in un file .docx");
+            Console.WriteLine("4 - Cancella tutti i record della tabella veicoli");
+            Console.WriteLine("5 - Cancella la tabella veicoli");
             Console.WriteLine("\nX - ESCI\n");
         }
 
-        private static void creaTabella()
+        public static void creaTabella()
         {
             if (connStr != null)
             {
@@ -116,92 +114,6 @@ namespace CarShopConsoleProject
 
                     Console.WriteLine("\n\nTabella creata correttamente");
                     Thread.Sleep(1500);
-                }
-            }
-        }
-
-        private static void aggiungiEsempioAuto()
-        {
-            OleDbConnection connection = new OleDbConnection(connStr);
-
-            using (connection)
-            {
-                OleDbCommand command = new OleDbCommand();
-                connection.Open();
-                command.Connection = connection;
-
-                command.CommandText = "INSERT INTO Veicoli (Tipologia, Marca, Modello, Colore, Cilindrata, PotenzaKw, Immatricolazione, IsUsato, IsKmZero, KmPercorsi, Informazioni, Immagine) VALUES" +
-                    "(@tipologia, @marca, @modello, @colore, @cilindrata, @potenzakw, @immatricolazione, @isusato, @iskmzero, @iskmpercorsi, @informazioni, @immagine)";
-
-                command.Parameters.Add(new OleDbParameter("@tipologia", OleDbType.VarChar, 255)).Value = "AUTO";
-                command.Parameters.Add("@marca", OleDbType.VarChar, 255).Value = "marcaTest";
-                command.Parameters.Add("@modello", OleDbType.VarChar, 255).Value = "modelloTest";
-                command.Parameters.Add("@colore", OleDbType.VarChar, 255).Value = "Nero";
-                command.Parameters.Add("@cilindrata", OleDbType.Integer).Value = 500;
-                command.Parameters.Add("@potenzakw", OleDbType.Integer).Value = 100;
-                command.Parameters.Add("@immatricolazione", OleDbType.Date).Value = (DateTime.Now).ToShortDateString();
-                command.Parameters.Add("@isusato", OleDbType.Boolean).Value = false;
-                command.Parameters.Add("@iskmzero", OleDbType.Boolean).Value = true;
-                command.Parameters.Add("@kmpercorsi", OleDbType.Integer).Value = 0;
-                command.Parameters.Add("@informazioni", OleDbType.VarChar, 255).Value = "4";
-                command.Parameters.Add("@immagine", OleDbType.VarChar, 255).Value = "img/test.jpg";
-
-                command.Prepare();
-
-                try
-                {
-                    command.ExecuteNonQuery();
-                    Console.WriteLine("\nVeicolo di prova(Auto) aggiunto correttamente");
-                    Thread.Sleep(3000);
-                }
-                catch (OleDbException exc)
-                {
-                    Console.WriteLine("\n\n" + exc.Message);
-                    Thread.Sleep(3000);
-                    return;
-                }
-            }
-        }
-
-        private static void aggiungiEsempioMoto()
-        {
-            OleDbConnection connection = new OleDbConnection(connStr);
-
-            using (connection)
-            {
-                OleDbCommand command = new OleDbCommand();
-                connection.Open();
-                command.Connection = connection;
-
-                command.CommandText = "INSERT INTO Veicoli (Tipologia, Marca, Modello, Colore, Cilindrata, PotenzaKw, Immatricolazione, IsUsato, IsKmZero, KmPercorsi, Informazioni, Immagine) VALUES" +
-                    "(@tipologia, @marca, @modello, @colore, @cilindrata, @potenzakw, @immatricolazione, @isusato, @iskmzero, @iskmpercorsi, @informazioni, @immagine)";
-
-                command.Parameters.Add(new OleDbParameter("@tipologia", OleDbType.VarChar, 255)).Value = "MOTO";
-                command.Parameters.Add("@marca", OleDbType.VarChar, 255).Value = "marcaTest";
-                command.Parameters.Add("@modello", OleDbType.VarChar, 255).Value = "modelloTest";
-                command.Parameters.Add("@colore", OleDbType.VarChar, 255).Value = "Nero";
-                command.Parameters.Add("@cilindrata", OleDbType.Integer).Value = 500;
-                command.Parameters.Add("@potenzakw", OleDbType.Integer).Value = 100;
-                command.Parameters.Add("@immatricolazione", OleDbType.Date).Value = (DateTime.Now).ToShortDateString();
-                command.Parameters.Add("@isusato", OleDbType.Boolean).Value = false;
-                command.Parameters.Add("@iskmzero", OleDbType.Boolean).Value = true;
-                command.Parameters.Add("@kmpercorsi", OleDbType.Integer).Value = 0;
-                command.Parameters.Add("@informazioni", OleDbType.VarChar, 255).Value = "sellaTest";
-                command.Parameters.Add("@immagine", OleDbType.VarChar, 255).Value = "img/test.jpg";
-
-                command.Prepare();
-
-                try
-                {
-                    command.ExecuteNonQuery();
-                    Console.WriteLine("\nVeicolo di prova(Moto) aggiunto correttamente");
-                    Thread.Sleep(3000);
-                }
-                catch (OleDbException exc)
-                {
-                    Console.WriteLine("\n\n" + exc.Message);
-                    Thread.Sleep(3000);
-                    return;
                 }
             }
         }

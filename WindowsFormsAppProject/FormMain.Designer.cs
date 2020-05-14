@@ -38,6 +38,7 @@
             this.stampaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.JsonToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.WordToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.ExcelToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.HTMLToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -45,9 +46,9 @@
             this.toolStripComboBoxFiltro = new System.Windows.Forms.ToolStripComboBox();
             this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.dgvVeicoli = new System.Windows.Forms.DataGridView();
-            this.colCodVeicolo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.veicoloBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.colCodVeicolo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coloreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,9 +58,8 @@
             this.isUsatoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.isKmZeroDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.kmPercorsiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.veicoloBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ExcelToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVeicoli)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.veicoloBindingSource)).BeginInit();
@@ -154,8 +154,18 @@
             this.WordToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.WordToolStripButton.Name = "WordToolStripButton";
             this.WordToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.WordToolStripButton.Text = "toolStripButton1";
+            this.WordToolStripButton.Text = "&Export in .docx format";
             this.WordToolStripButton.Click += new System.EventHandler(this.WordToolStripButton_Click);
+            // 
+            // ExcelToolStripButton
+            // 
+            this.ExcelToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ExcelToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ExcelToolStripButton.Image")));
+            this.ExcelToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ExcelToolStripButton.Name = "ExcelToolStripButton";
+            this.ExcelToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.ExcelToolStripButton.Text = "&Export in .csv format";
+            this.ExcelToolStripButton.Click += new System.EventHandler(this.ExcelToolStripButton_Click);
             // 
             // toolStripSeparator
             // 
@@ -215,17 +225,14 @@
             this.dgvVeicoli.Size = new System.Drawing.Size(952, 362);
             this.dgvVeicoli.TabIndex = 2;
             // 
+            // veicoloBindingSource
+            // 
+            this.veicoloBindingSource.DataSource = typeof(VenditaVeicoliDllProject.Veicolo);
+            // 
             // colCodVeicolo
             // 
             this.colCodVeicolo.HeaderText = "CodVeicolo";
             this.colCodVeicolo.Name = "colCodVeicolo";
-            // 
-            // colInfo
-            // 
-            this.colInfo.HeaderText = "Informazioni";
-            this.colInfo.Name = "colInfo";
-            this.colInfo.ReadOnly = true;
-            this.colInfo.ToolTipText = "Informazioni sul veicolo";
             // 
             // marcaDataGridViewTextBoxColumn
             // 
@@ -281,25 +288,19 @@
             this.kmPercorsiDataGridViewTextBoxColumn.HeaderText = "KmPercorsi";
             this.kmPercorsiDataGridViewTextBoxColumn.Name = "kmPercorsiDataGridViewTextBoxColumn";
             // 
+            // colInfo
+            // 
+            this.colInfo.HeaderText = "Informazioni";
+            this.colInfo.Name = "colInfo";
+            this.colInfo.ReadOnly = true;
+            this.colInfo.ToolTipText = "Informazioni sul veicolo";
+            // 
             // pathDataGridViewTextBoxColumn
             // 
             this.pathDataGridViewTextBoxColumn.DataPropertyName = "Path";
             this.pathDataGridViewTextBoxColumn.HeaderText = "Path";
             this.pathDataGridViewTextBoxColumn.Name = "pathDataGridViewTextBoxColumn";
-            // 
-            // veicoloBindingSource
-            // 
-            this.veicoloBindingSource.DataSource = typeof(VenditaVeicoliDllProject.Veicolo);
-            // 
-            // ExcelToolStripButton
-            // 
-            this.ExcelToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ExcelToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ExcelToolStripButton.Image")));
-            this.ExcelToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ExcelToolStripButton.Name = "ExcelToolStripButton";
-            this.ExcelToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.ExcelToolStripButton.Text = "toolStripButton1";
-            this.ExcelToolStripButton.Click += new System.EventHandler(this.ExcelToolStripButton_Click);
+            this.pathDataGridViewTextBoxColumn.Visible = false;
             // 
             // FormMain
             // 
@@ -337,6 +338,9 @@
         private System.Windows.Forms.BindingSource veicoloBindingSource;
         private System.Windows.Forms.ToolStripButton salvaToolStripButton;
         private System.Windows.Forms.ToolStripButton JsonToolStripButton;
+        private System.Windows.Forms.ToolStripButton modificaToolStripButton;
+        private System.Windows.Forms.ToolStripButton WordToolStripButton;
+        private System.Windows.Forms.ToolStripButton ExcelToolStripButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodVeicolo;
         private System.Windows.Forms.DataGridViewTextBoxColumn marcaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelloDataGridViewTextBoxColumn;
@@ -349,9 +353,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kmPercorsiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn colInfo;
         private System.Windows.Forms.DataGridViewTextBoxColumn pathDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStripButton modificaToolStripButton;
-        private System.Windows.Forms.ToolStripButton WordToolStripButton;
-        private System.Windows.Forms.ToolStripButton ExcelToolStripButton;
     }
 }
 

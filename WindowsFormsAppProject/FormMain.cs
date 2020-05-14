@@ -2,8 +2,12 @@
 using System.ComponentModel;
 using System.Data.OleDb;
 using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
+
+using ADOX;
 
 using Microsoft.VisualBasic;
 
@@ -23,14 +27,42 @@ namespace WindowsFormsAppProject
         public FormMain()
         {
             InitializeComponent();
+            path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.accdb";
+            connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path;
+
+            if (!((Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities"))))
+            {
+                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities");
+
+            }
+            if (!((Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\img"))))
+            {
+                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\img");
+                Bitmap bmp = new Bitmap(200, 200);
+                bmp.Save((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\img/NoImage.jpg"), ImageFormat.Jpeg);
+            }
+            if (!(File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.accdb")))
+            {
+                var cat = new Catalog();
+                cat.Create(connStr);
+                DialogResult dg = MessageBox.Show("Database creato correttamente.\nSi desidera creare anche la tabella 'Veicoli' (necessaria per il corretto funzionamento del programma", "DB", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dg == DialogResult.Yes)
+                {
+                    try
+                    {
+                        CarShopConsoleProject.Program.creaTabella();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+
+            }
 
             bindingListVeicoli = new BindingList<Veicolo>();
 
             clsMetodi.settaDgv(dgvVeicoli);
-
-            path = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Utilities\\Veicoli.accdb";
-            connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path;
-
             connection = new OleDbConnection(connStr);
         }
 
@@ -38,53 +70,52 @@ namespace WindowsFormsAppProject
         {
             if (connStr != null)
             {
-                using (connection)
+                try
                 {
-                    OleDbCommand command = new OleDbCommand("SELECT * FROM Veicoli", connection);
-                    connection.Open();
-                    try
+                    using (connection)
                     {
-                        OleDbDataReader reader = command.ExecuteReader();
-
-                        if (reader.HasRows)
+                        OleDbCommand command = new OleDbCommand("SELECT * FROM Veicoli", connection);
+                        connection.Open();
+                        try
                         {
-                            while (reader.Read())
+                            OleDbDataReader reader = command.ExecuteReader();
+
+                            if (reader.HasRows)
                             {
-
-                                if (reader.GetString(1) == "MOTO")
+                                while (reader.Read())
                                 {
-                                    Moto m = new Moto(reader.GetInt32(0), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), Convert.ToDouble(reader.GetInt32(6)), reader.GetDateTime(7),
-                                        reader.GetBoolean(8), reader.GetBoolean(9), reader.GetInt32(10), reader.GetString(11), reader.GetString(12));
-                                    bindingListVeicoli.Add(m);
 
-                                    clsMetodi.checkMarca(reader.GetString(2));
-                                    clsMetodi.checkColore(reader.GetString(4));
-                                }
-                                else
-                                {
-                                    Auto a = new Auto(reader.GetInt32(0), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), Convert.ToDouble(reader.GetInt32(6)), reader.GetDateTime(7),
-                                        reader.GetBoolean(8), reader.GetBoolean(9), reader.GetInt32(10), Convert.ToInt32(reader.GetString(11)), reader.GetString(12));
-                                    bindingListVeicoli.Add(a);
-
-                                    clsMetodi.checkMarca(reader.GetString(2));
-                                    clsMetodi.checkColore(reader.GetString(4));
+                                    if (reader.GetString(1) == "MOTO")
+                                    {
+                                        Moto m = new Moto(reader.GetInt32(0), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), Convert.ToDouble(reader.GetInt32(6)), reader.GetDateTime(7), reader.GetBoolean(8), reader.GetBoolean(9), reader.GetInt32(10), reader.GetString(11), reader.GetString(12));
+                                        bindingListVeicoli.Add(m);
+                                    }
+                                    else
+                                    {
+                                        Auto a = new Auto(reader.GetInt32(0), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetInt32(5), Convert.ToDouble(reader.GetInt32(6)), reader.GetDateTime(7), reader.GetBoolean(8), reader.GetBoolean(9), reader.GetInt32(10), Convert.ToInt32(reader.GetString(11)), reader.GetString(12));
+                                        bindingListVeicoli.Add(a);
+                                    }
                                 }
                             }
+                            else
+                            {
+                                Console.WriteLine("No rows found");
+                            }
+                            clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "CodVeicolo");
+                            clsMetodi.caricaDgv(bindingListVeicoli, dgvVeicoli);
+                            object[] vet = { "CodVeicolo", "Marca", "Modello", "Colore", "Cilindrata", "PotenzaKw", "Immatricolazione", "IsUsato", "IsKmZero", "KmPercorsi" };
+                            toolStripComboBoxFiltro.Items.AddRange(vet);
+                            toolStripComboBoxFiltro.SelectedIndex = 0;
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            Console.WriteLine("No rows found");
+                            MessageBox.Show(ex.Message);
                         }
-                        clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "CodVeicolo");
-                        clsMetodi.caricaDgv(bindingListVeicoli, dgvVeicoli);
-                        object[] vet = { "CodVeicolo", "Marca", "Modello", "Colore", "Cilindrata", "PotenzaKw", "Immatricolazione", "IsUsato", "IsKmZero", "KmPercorsi" };
-                        toolStripComboBoxFiltro.Items.AddRange(vet);
-                        toolStripComboBoxFiltro.SelectedIndex = 0;
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
             }
             else
@@ -106,21 +137,25 @@ namespace WindowsFormsAppProject
 
         public void salva()
         {
-            clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "CodVeicolo");
-            using (StreamWriter sw = new StreamWriter("veicoli.dat", false))
+            if (bindingListVeicoli.Count != 0)
             {
-                string s = null;
-                for (int i = 0; i < bindingListVeicoli.Count; i++)
+                clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "CodVeicolo");
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.dat";
+                using (StreamWriter sw = new StreamWriter(path, false))
                 {
-                    if (bindingListVeicoli[i].GetType().ToString().Contains("Auto"))
+                    string s = null;
+                    for (int i = 0; i < bindingListVeicoli.Count; i++)
                     {
-                        s = "AUTO|" + bindingListVeicoli[i].CodVeicolo + "|" + bindingListVeicoli[i].Marca + "|" + bindingListVeicoli[i].Modello + "|" + bindingListVeicoli[i].Colore + "|" + bindingListVeicoli[i].Cilindrata + "|" + bindingListVeicoli[i].PotenzaKw + "|" + bindingListVeicoli[i].Immatricolazione.ToShortDateString() + "|" + bindingListVeicoli[i].IsUsato + "|" + bindingListVeicoli[i].IsKmZero + "|" + bindingListVeicoli[i].KmPercorsi + "|" + (bindingListVeicoli[i] as Auto).NumAirbag + "|" + bindingListVeicoli[i].Path;
-                        sw.WriteLine(s);
-                    }
-                    else
-                    {
-                        s = "MOTO|" + bindingListVeicoli[i].CodVeicolo + "|" + bindingListVeicoli[i].Marca + "|" + bindingListVeicoli[i].Modello + "|" + bindingListVeicoli[i].Colore + "|" + bindingListVeicoli[i].Cilindrata + "|" + bindingListVeicoli[i].PotenzaKw + "|" + bindingListVeicoli[i].Immatricolazione.ToShortDateString() + "|" + bindingListVeicoli[i].IsUsato + "|" + bindingListVeicoli[i].IsKmZero + "|" + bindingListVeicoli[i].KmPercorsi + "|" + (bindingListVeicoli[i] as Moto).MarcaSella + "|" + bindingListVeicoli[i].Path;
-                        sw.WriteLine(s);
+                        if (bindingListVeicoli[i].GetType().ToString().Contains("Auto"))
+                        {
+                            s = "AUTO|" + bindingListVeicoli[i].CodVeicolo + "|" + bindingListVeicoli[i].Marca + "|" + bindingListVeicoli[i].Modello + "|" + bindingListVeicoli[i].Colore + "|" + bindingListVeicoli[i].Cilindrata + "|" + bindingListVeicoli[i].PotenzaKw + "|" + bindingListVeicoli[i].Immatricolazione.ToShortDateString() + "|" + bindingListVeicoli[i].IsUsato + "|" + bindingListVeicoli[i].IsKmZero + "|" + bindingListVeicoli[i].KmPercorsi + "|" + (bindingListVeicoli[i] as Auto).NumAirbag + "|" + bindingListVeicoli[i].Path;
+                            sw.WriteLine(s);
+                        }
+                        else
+                        {
+                            s = "MOTO|" + bindingListVeicoli[i].CodVeicolo + "|" + bindingListVeicoli[i].Marca + "|" + bindingListVeicoli[i].Modello + "|" + bindingListVeicoli[i].Colore + "|" + bindingListVeicoli[i].Cilindrata + "|" + bindingListVeicoli[i].PotenzaKw + "|" + bindingListVeicoli[i].Immatricolazione.ToShortDateString() + "|" + bindingListVeicoli[i].IsUsato + "|" + bindingListVeicoli[i].IsKmZero + "|" + bindingListVeicoli[i].KmPercorsi + "|" + (bindingListVeicoli[i] as Moto).MarcaSella + "|" + bindingListVeicoli[i].Path;
+                            sw.WriteLine(s);
+                        }
                     }
                 }
             }
@@ -197,7 +232,7 @@ namespace WindowsFormsAppProject
             {
                 if (bindingListVeicoli[i].CodVeicolo == pos)
                 {
-                    if (bindingListVeicoli[i].Path == "img/NoImage.jpg")
+                    if (bindingListVeicoli[i].Path == Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\img/NoImage.jpg")
                     {
                         bindingListVeicoli.RemoveAt(i);
                         return true;
@@ -228,7 +263,8 @@ namespace WindowsFormsAppProject
         {
             try
             {
-                string filepath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Utilities\\Veicoli.json";
+                clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "CodVeicolo");
+                string filepath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.json";
                 Utils.SerializeToJson(bindingListVeicoli, filepath);
                 DialogResult dg = MessageBox.Show("Documento creato correttamente, desideri aprirlo?", "JSON", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dg == DialogResult.Yes)
@@ -294,7 +330,7 @@ namespace WindowsFormsAppProject
                 DialogResult dg = MessageBox.Show("Documento creato correttamente, desideri aprirlo?", "Word", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dg == DialogResult.Yes)
                 {
-                    string filepath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Utilities\\Veicoli.docx";
+                    string filepath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.docx";
                     Process.Start(filepath);
                 }
             }
@@ -311,7 +347,7 @@ namespace WindowsFormsAppProject
             clsMetodi.ordinaListaVeicoli(bindingListVeicoli, "CodVeicolo");
             try
             {
-                string filepath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Utilities\\Veicoli.csv";
+                string filepath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.csv";
                 Utils.SerializeToCsv(bindingListVeicoli, filepath);
                 DialogResult dg = MessageBox.Show("Documento creato correttamente, desideri aprirlo?", "CSV", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dg == DialogResult.Yes)

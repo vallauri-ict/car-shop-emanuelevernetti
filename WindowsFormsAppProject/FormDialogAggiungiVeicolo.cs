@@ -23,7 +23,7 @@ namespace WindowsFormsAppProject
             InitializeComponent();
             bindingListVeicoli = list;
             this.formMain = f;
-            DBPath = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\Utilities\\Veicoli.accdb";
+            DBPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\Veicoli.accdb";
             connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + DBPath;
         }
 
@@ -38,7 +38,7 @@ namespace WindowsFormsAppProject
             int j = 0;
             if (rdbImgNo.Checked)
             {
-                path = "img/NoImage.jpg";
+                path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\img/NoImage.jpg";
                 filePicked = true;
             }
             if (filePicked)
@@ -136,8 +136,8 @@ namespace WindowsFormsAppProject
 
                     if (rdbImgSì.Checked)
                     {
-                        path = "img/" + j + ".jpg";
-                        File.Copy(f, "img/" + j + ".jpg");
+                        path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\img/" + j + ".jpg";
+                        File.Copy(f, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\img/" + j + ".jpg");
                     }
 
                     bindingListVeicoli.Add(new Auto(j, txtMarca.Text, txtModello.Text, cmbColore.Text, Convert.ToInt32(nudCilindrata.Value), Convert.ToDouble(txtPotenzakW.Text), Convert.ToDateTime(dtpImmatricolazione.Value.ToShortDateString()), usato, kmZero, Convert.ToInt32(nudKmPercorsi.Value), Convert.ToInt32(nudNumeroAirbag.Value), path));
@@ -199,8 +199,8 @@ namespace WindowsFormsAppProject
 
                     if (rdbImgSì.Checked)
                     {
-                        path = "img/" + j + ".jpg";
-                        File.Copy(f, "img/" + j + ".jpg");
+                        path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\img/" + j + ".jpg";
+                        File.Copy(f, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Utilities\\img/" + j + ".jpg");
                     }
 
                     bindingListVeicoli.Add(new Moto(j, txtMarca.Text, txtModello.Text, cmbColore.Text, Convert.ToInt32(nudCilindrata.Value), Convert.ToDouble(txtPotenzakW.Text), Convert.ToDateTime(dtpImmatricolazione.Value.ToShortDateString()), usato, kmZero, Convert.ToInt32(nudKmPercorsi.Value), txtSella.Text, path));

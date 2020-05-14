@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VenditaVeicoliDllProject", "VenditaVeicoliDllProject\VenditaVeicoliDllProject.csproj", "{54CC9C64-6A52-4847-86CE-6C8586AAA2D0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsAppProject", "WindowsFormsAppProject\WindowsFormsAppProject.csproj", "{6EED4E68-EE39-4AF8-AF72-CA4ED9D853AE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9A07001C-5431-4259-964B-D8FDC975EBAD} = {9A07001C-5431-4259-964B-D8FDC975EBAD}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppProject", "ConsoleAppProject\ConsoleAppProject.csproj", "{564036B1-2B88-4804-BF7B-6A1CA9B6D576}"
 EndProject
