@@ -216,17 +216,25 @@ namespace CarShopConsoleProject
 
         private static void cancellaFiles()
         {
-            DirectoryInfo di = new DirectoryInfo($"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName}\\WindowsFormsAppProject\\bin\\Debug\\img");
-
-            foreach (FileInfo file in di.GetFiles())
+            try
             {
-                if (file.Name != "NoImage.jpg")
+                DirectoryInfo di = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Utilities\\img");
+
+                foreach (FileInfo file in di.GetFiles())
                 {
-                    file.Delete();
+                    if (file.Name != "NoImage.jpg")
+                    {
+                        file.Delete();
+                    }
                 }
+                Console.WriteLine("\nFiles eliminati correttamente");
+                Thread.Sleep(3000);
             }
-            Console.WriteLine("\nFiles eliminati correttamente");
-            Thread.Sleep(3000);
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
         }
     }
 }
