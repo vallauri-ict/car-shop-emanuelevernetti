@@ -29,6 +29,26 @@
         private void InitializeComponent()
         {
             this.gpbMoto = new System.Windows.Forms.GroupBox();
+            this.txtMarcaSella = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtKmPercorsiMoto = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtKm0Moto = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtUsatoMoto = new System.Windows.Forms.TextBox();
+            this.txtImmatricolazioneMoto = new System.Windows.Forms.TextBox();
+            this.txtPotenzaKwMoto = new System.Windows.Forms.TextBox();
+            this.txtCilindrataMoto = new System.Windows.Forms.TextBox();
+            this.txtColoreMoto = new System.Windows.Forms.TextBox();
+            this.txtModelloMoto = new System.Windows.Forms.TextBox();
+            this.txtMarcaMoto = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.gpbAuto = new System.Windows.Forms.GroupBox();
             this.txtNumeroAirbag = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -50,26 +70,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.txtMarcaSella = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtKmPercorsiMoto = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtKm0Moto = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtUsatoMoto = new System.Windows.Forms.TextBox();
-            this.txtImmatricolazioneMoto = new System.Windows.Forms.TextBox();
-            this.txtPotenzaKwMoto = new System.Windows.Forms.TextBox();
-            this.txtCilindrataMoto = new System.Windows.Forms.TextBox();
-            this.txtColoreMoto = new System.Windows.Forms.TextBox();
-            this.txtModelloMoto = new System.Windows.Forms.TextBox();
-            this.txtMarcaMoto = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.gpbMoto.SuspendLayout();
             this.gpbAuto.SuspendLayout();
             this.SuspendLayout();
@@ -104,6 +104,166 @@
             this.gpbMoto.Text = "Moto";
             this.gpbMoto.Visible = false;
             // 
+            // txtMarcaSella
+            // 
+            this.txtMarcaSella.Location = new System.Drawing.Point(99, 252);
+            this.txtMarcaSella.Name = "txtMarcaSella";
+            this.txtMarcaSella.Size = new System.Drawing.Size(100, 20);
+            this.txtMarcaSella.TabIndex = 19;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 255);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(61, 13);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Marca sella";
+            // 
+            // txtKmPercorsiMoto
+            // 
+            this.txtKmPercorsiMoto.Location = new System.Drawing.Point(99, 225);
+            this.txtKmPercorsiMoto.Name = "txtKmPercorsiMoto";
+            this.txtKmPercorsiMoto.Size = new System.Drawing.Size(100, 20);
+            this.txtKmPercorsiMoto.TabIndex = 17;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 228);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 13);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Km percorsi";
+            // 
+            // txtKm0Moto
+            // 
+            this.txtKm0Moto.Location = new System.Drawing.Point(99, 199);
+            this.txtKm0Moto.Name = "txtKm0Moto";
+            this.txtKm0Moto.Size = new System.Drawing.Size(100, 20);
+            this.txtKm0Moto.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 202);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(28, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Km0";
+            // 
+            // txtUsatoMoto
+            // 
+            this.txtUsatoMoto.Location = new System.Drawing.Point(99, 173);
+            this.txtUsatoMoto.Name = "txtUsatoMoto";
+            this.txtUsatoMoto.Size = new System.Drawing.Size(100, 20);
+            this.txtUsatoMoto.TabIndex = 13;
+            // 
+            // txtImmatricolazioneMoto
+            // 
+            this.txtImmatricolazioneMoto.Location = new System.Drawing.Point(99, 147);
+            this.txtImmatricolazioneMoto.Name = "txtImmatricolazioneMoto";
+            this.txtImmatricolazioneMoto.Size = new System.Drawing.Size(100, 20);
+            this.txtImmatricolazioneMoto.TabIndex = 12;
+            // 
+            // txtPotenzaKwMoto
+            // 
+            this.txtPotenzaKwMoto.Location = new System.Drawing.Point(99, 121);
+            this.txtPotenzaKwMoto.Name = "txtPotenzaKwMoto";
+            this.txtPotenzaKwMoto.Size = new System.Drawing.Size(100, 20);
+            this.txtPotenzaKwMoto.TabIndex = 11;
+            // 
+            // txtCilindrataMoto
+            // 
+            this.txtCilindrataMoto.Location = new System.Drawing.Point(99, 94);
+            this.txtCilindrataMoto.Name = "txtCilindrataMoto";
+            this.txtCilindrataMoto.Size = new System.Drawing.Size(100, 20);
+            this.txtCilindrataMoto.TabIndex = 10;
+            // 
+            // txtColoreMoto
+            // 
+            this.txtColoreMoto.Location = new System.Drawing.Point(99, 67);
+            this.txtColoreMoto.Name = "txtColoreMoto";
+            this.txtColoreMoto.Size = new System.Drawing.Size(100, 20);
+            this.txtColoreMoto.TabIndex = 9;
+            // 
+            // txtModelloMoto
+            // 
+            this.txtModelloMoto.Location = new System.Drawing.Point(99, 40);
+            this.txtModelloMoto.Name = "txtModelloMoto";
+            this.txtModelloMoto.Size = new System.Drawing.Size(100, 20);
+            this.txtModelloMoto.TabIndex = 8;
+            // 
+            // txtMarcaMoto
+            // 
+            this.txtMarcaMoto.Location = new System.Drawing.Point(99, 13);
+            this.txtMarcaMoto.Name = "txtMarcaMoto";
+            this.txtMarcaMoto.Size = new System.Drawing.Size(100, 20);
+            this.txtMarcaMoto.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 176);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Usato";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 150);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(85, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Immatricolazione";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 124);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Potenza Kw";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Cilindrata";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Colore";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Modello";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Marca";
+            // 
             // gpbAuto
             // 
             this.gpbAuto.Controls.Add(this.txtNumeroAirbag);
@@ -126,7 +286,7 @@
             this.gpbAuto.Controls.Add(this.label18);
             this.gpbAuto.Controls.Add(this.label19);
             this.gpbAuto.Controls.Add(this.label20);
-            this.gpbAuto.Location = new System.Drawing.Point(259, 12);
+            this.gpbAuto.Location = new System.Drawing.Point(12, 12);
             this.gpbAuto.Name = "gpbAuto";
             this.gpbAuto.Size = new System.Drawing.Size(230, 290);
             this.gpbAuto.TabIndex = 20;
@@ -294,171 +454,11 @@
             this.label20.TabIndex = 0;
             this.label20.Text = "Marca";
             // 
-            // txtMarcaSella
-            // 
-            this.txtMarcaSella.Location = new System.Drawing.Point(99, 252);
-            this.txtMarcaSella.Name = "txtMarcaSella";
-            this.txtMarcaSella.Size = new System.Drawing.Size(100, 20);
-            this.txtMarcaSella.TabIndex = 19;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 255);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 13);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Marca sella";
-            // 
-            // txtKmPercorsiMoto
-            // 
-            this.txtKmPercorsiMoto.Location = new System.Drawing.Point(99, 225);
-            this.txtKmPercorsiMoto.Name = "txtKmPercorsiMoto";
-            this.txtKmPercorsiMoto.Size = new System.Drawing.Size(100, 20);
-            this.txtKmPercorsiMoto.TabIndex = 17;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 228);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 13);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Km percorsi";
-            // 
-            // txtKm0Moto
-            // 
-            this.txtKm0Moto.Location = new System.Drawing.Point(99, 199);
-            this.txtKm0Moto.Name = "txtKm0Moto";
-            this.txtKm0Moto.Size = new System.Drawing.Size(100, 20);
-            this.txtKm0Moto.TabIndex = 15;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 202);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(28, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Km0";
-            // 
-            // txtUsatoMoto
-            // 
-            this.txtUsatoMoto.Location = new System.Drawing.Point(99, 173);
-            this.txtUsatoMoto.Name = "txtUsatoMoto";
-            this.txtUsatoMoto.Size = new System.Drawing.Size(100, 20);
-            this.txtUsatoMoto.TabIndex = 13;
-            // 
-            // txtImmatricolazioneMoto
-            // 
-            this.txtImmatricolazioneMoto.Location = new System.Drawing.Point(99, 147);
-            this.txtImmatricolazioneMoto.Name = "txtImmatricolazioneMoto";
-            this.txtImmatricolazioneMoto.Size = new System.Drawing.Size(100, 20);
-            this.txtImmatricolazioneMoto.TabIndex = 12;
-            // 
-            // txtPotenzaKwMoto
-            // 
-            this.txtPotenzaKwMoto.Location = new System.Drawing.Point(99, 121);
-            this.txtPotenzaKwMoto.Name = "txtPotenzaKwMoto";
-            this.txtPotenzaKwMoto.Size = new System.Drawing.Size(100, 20);
-            this.txtPotenzaKwMoto.TabIndex = 11;
-            // 
-            // txtCilindrataMoto
-            // 
-            this.txtCilindrataMoto.Location = new System.Drawing.Point(99, 94);
-            this.txtCilindrataMoto.Name = "txtCilindrataMoto";
-            this.txtCilindrataMoto.Size = new System.Drawing.Size(100, 20);
-            this.txtCilindrataMoto.TabIndex = 10;
-            // 
-            // txtColoreMoto
-            // 
-            this.txtColoreMoto.Location = new System.Drawing.Point(99, 67);
-            this.txtColoreMoto.Name = "txtColoreMoto";
-            this.txtColoreMoto.Size = new System.Drawing.Size(100, 20);
-            this.txtColoreMoto.TabIndex = 9;
-            // 
-            // txtModelloMoto
-            // 
-            this.txtModelloMoto.Location = new System.Drawing.Point(99, 40);
-            this.txtModelloMoto.Name = "txtModelloMoto";
-            this.txtModelloMoto.Size = new System.Drawing.Size(100, 20);
-            this.txtModelloMoto.TabIndex = 8;
-            // 
-            // txtMarcaMoto
-            // 
-            this.txtMarcaMoto.Location = new System.Drawing.Point(99, 13);
-            this.txtMarcaMoto.Name = "txtMarcaMoto";
-            this.txtMarcaMoto.Size = new System.Drawing.Size(100, 20);
-            this.txtMarcaMoto.TabIndex = 7;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 176);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Usato";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 150);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Immatricolazione";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 124);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Potenza Kw";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 97);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Cilindrata";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Colore";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Modello";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Marca";
-            // 
             // FormDettagliVeicolo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 327);
+            this.ClientSize = new System.Drawing.Size(296, 327);
             this.Controls.Add(this.gpbAuto);
             this.Controls.Add(this.gpbMoto);
             this.Name = "FormDettagliVeicolo";

@@ -36,14 +36,14 @@ namespace WindowsFormsAppProject
             }
             if (lista[ind] is Auto)
             {
-                gpbMoto.Hide();
-                gpbAuto.Show();
+                gpbMoto.Visible = false;
+                gpbAuto.Visible = true;
                 assegnaControlliAuto();
             }
             else
             {
-                gpbAuto.Hide();
-                gpbMoto.Show();
+                gpbMoto.Visible = true;
+                gpbAuto.Visible = false;
                 assegnaControlliMoto();
             }
         }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.gpbAuto = new System.Windows.Forms.GroupBox();
+            this.chkKm0Auto = new System.Windows.Forms.CheckBox();
+            this.chkUsatoAuto = new System.Windows.Forms.CheckBox();
             this.txtNumeroAirbag = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtKmPercorsiAuto = new System.Windows.Forms.TextBox();
@@ -48,6 +50,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.gpbMoto = new System.Windows.Forms.GroupBox();
+            this.chkKm0Moto = new System.Windows.Forms.CheckBox();
+            this.chkUsatoMoto = new System.Windows.Forms.CheckBox();
             this.txtMarcaSella = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.txtKmPercorsiMoto = new System.Windows.Forms.TextBox();
@@ -66,10 +70,6 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.chkUsatoAuto = new System.Windows.Forms.CheckBox();
-            this.chkKm0Auto = new System.Windows.Forms.CheckBox();
-            this.chkUsatoMoto = new System.Windows.Forms.CheckBox();
-            this.chkKm0Moto = new System.Windows.Forms.CheckBox();
             this.btnAnnulla = new System.Windows.Forms.Button();
             this.btnModifica = new System.Windows.Forms.Button();
             this.gpbAuto.SuspendLayout();
@@ -98,13 +98,31 @@
             this.gpbAuto.Controls.Add(this.label18);
             this.gpbAuto.Controls.Add(this.label19);
             this.gpbAuto.Controls.Add(this.label20);
-            this.gpbAuto.Location = new System.Drawing.Point(250, 12);
+            this.gpbAuto.Location = new System.Drawing.Point(13, 12);
             this.gpbAuto.Name = "gpbAuto";
             this.gpbAuto.Size = new System.Drawing.Size(230, 290);
             this.gpbAuto.TabIndex = 22;
             this.gpbAuto.TabStop = false;
             this.gpbAuto.Text = "Auto";
             this.gpbAuto.Visible = false;
+            // 
+            // chkKm0Auto
+            // 
+            this.chkKm0Auto.AutoSize = true;
+            this.chkKm0Auto.Location = new System.Drawing.Point(99, 198);
+            this.chkKm0Auto.Name = "chkKm0Auto";
+            this.chkKm0Auto.Size = new System.Drawing.Size(15, 14);
+            this.chkKm0Auto.TabIndex = 21;
+            this.chkKm0Auto.UseVisualStyleBackColor = true;
+            // 
+            // chkUsatoAuto
+            // 
+            this.chkUsatoAuto.AutoSize = true;
+            this.chkUsatoAuto.Location = new System.Drawing.Point(99, 176);
+            this.chkUsatoAuto.Name = "chkUsatoAuto";
+            this.chkUsatoAuto.Size = new System.Drawing.Size(15, 14);
+            this.chkUsatoAuto.TabIndex = 20;
+            this.chkUsatoAuto.UseVisualStyleBackColor = true;
             // 
             // txtNumeroAirbag
             // 
@@ -282,6 +300,24 @@
             this.gpbMoto.Text = "Moto";
             this.gpbMoto.Visible = false;
             // 
+            // chkKm0Moto
+            // 
+            this.chkKm0Moto.AutoSize = true;
+            this.chkKm0Moto.Location = new System.Drawing.Point(99, 198);
+            this.chkKm0Moto.Name = "chkKm0Moto";
+            this.chkKm0Moto.Size = new System.Drawing.Size(15, 14);
+            this.chkKm0Moto.TabIndex = 23;
+            this.chkKm0Moto.UseVisualStyleBackColor = true;
+            // 
+            // chkUsatoMoto
+            // 
+            this.chkUsatoMoto.AutoSize = true;
+            this.chkUsatoMoto.Location = new System.Drawing.Point(99, 176);
+            this.chkUsatoMoto.Name = "chkUsatoMoto";
+            this.chkUsatoMoto.Size = new System.Drawing.Size(15, 14);
+            this.chkUsatoMoto.TabIndex = 22;
+            this.chkUsatoMoto.UseVisualStyleBackColor = true;
+            // 
             // txtMarcaSella
             // 
             this.txtMarcaSella.Location = new System.Drawing.Point(99, 252);
@@ -428,42 +464,6 @@
             this.label40.TabIndex = 0;
             this.label40.Text = "Marca";
             // 
-            // chkUsatoAuto
-            // 
-            this.chkUsatoAuto.AutoSize = true;
-            this.chkUsatoAuto.Location = new System.Drawing.Point(99, 176);
-            this.chkUsatoAuto.Name = "chkUsatoAuto";
-            this.chkUsatoAuto.Size = new System.Drawing.Size(15, 14);
-            this.chkUsatoAuto.TabIndex = 20;
-            this.chkUsatoAuto.UseVisualStyleBackColor = true;
-            // 
-            // chkKm0Auto
-            // 
-            this.chkKm0Auto.AutoSize = true;
-            this.chkKm0Auto.Location = new System.Drawing.Point(99, 198);
-            this.chkKm0Auto.Name = "chkKm0Auto";
-            this.chkKm0Auto.Size = new System.Drawing.Size(15, 14);
-            this.chkKm0Auto.TabIndex = 21;
-            this.chkKm0Auto.UseVisualStyleBackColor = true;
-            // 
-            // chkUsatoMoto
-            // 
-            this.chkUsatoMoto.AutoSize = true;
-            this.chkUsatoMoto.Location = new System.Drawing.Point(99, 176);
-            this.chkUsatoMoto.Name = "chkUsatoMoto";
-            this.chkUsatoMoto.Size = new System.Drawing.Size(15, 14);
-            this.chkUsatoMoto.TabIndex = 22;
-            this.chkUsatoMoto.UseVisualStyleBackColor = true;
-            // 
-            // chkKm0Moto
-            // 
-            this.chkKm0Moto.AutoSize = true;
-            this.chkKm0Moto.Location = new System.Drawing.Point(99, 198);
-            this.chkKm0Moto.Name = "chkKm0Moto";
-            this.chkKm0Moto.Size = new System.Drawing.Size(15, 14);
-            this.chkKm0Moto.TabIndex = 23;
-            this.chkKm0Moto.UseVisualStyleBackColor = true;
-            // 
             // btnAnnulla
             // 
             this.btnAnnulla.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -471,17 +471,17 @@
             this.btnAnnulla.Name = "btnAnnulla";
             this.btnAnnulla.Size = new System.Drawing.Size(230, 23);
             this.btnAnnulla.TabIndex = 24;
-            this.btnAnnulla.Text = "Annulla";
+            this.btnAnnulla.Text = "ANNULLA";
             this.btnAnnulla.UseVisualStyleBackColor = true;
             this.btnAnnulla.Click += new System.EventHandler(this.btnAnnulla_Click);
             // 
             // btnModifica
             // 
-            this.btnModifica.Location = new System.Drawing.Point(250, 307);
+            this.btnModifica.Location = new System.Drawing.Point(13, 337);
             this.btnModifica.Name = "btnModifica";
             this.btnModifica.Size = new System.Drawing.Size(230, 23);
             this.btnModifica.TabIndex = 25;
-            this.btnModifica.Text = "Modifica";
+            this.btnModifica.Text = "MODIFICA";
             this.btnModifica.UseVisualStyleBackColor = true;
             this.btnModifica.Click += new System.EventHandler(this.btnModifica_Click);
             // 
@@ -489,13 +489,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 343);
+            this.ClientSize = new System.Drawing.Size(254, 370);
             this.Controls.Add(this.btnModifica);
             this.Controls.Add(this.btnAnnulla);
             this.Controls.Add(this.gpbMoto);
             this.Controls.Add(this.gpbAuto);
             this.Name = "FormModificaVeicolo";
-            this.Text = "FormModificaVeicolo";
+            this.Text = "Modifica veicolo";
             this.Load += new System.EventHandler(this.FormModificaVeicolo_Load);
             this.gpbAuto.ResumeLayout(false);
             this.gpbAuto.PerformLayout();
