@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppProject", "Consol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeicoliDLL", "VeicoliDLL\VeicoliDLL.csproj", "{9A07001C-5431-4259-964B-D8FDC975EBAD}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupVeicoli", "SetupVeicoli\SetupVeicoli.vdproj", "{B9495B81-6D68-4943-A66B-60C54779B5F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,8 @@ Global
 		{9A07001C-5431-4259-964B-D8FDC975EBAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A07001C-5431-4259-964B-D8FDC975EBAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A07001C-5431-4259-964B-D8FDC975EBAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9495B81-6D68-4943-A66B-60C54779B5F2}.Debug|Any CPU.ActiveCfg = Debug
+		{B9495B81-6D68-4943-A66B-60C54779B5F2}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
